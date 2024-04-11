@@ -1,51 +1,54 @@
-# Protocol 2- Primary PCR
+# Amplicon Sequencing Protocol 1- Primary PCR
 
 ## Theory
-This protocol and the subsequent indexing steps were originally derived from a “Systematic improvement of amplicon marker gene methods for increased accuracy in microbiome studies” [doi:10.1038/nbt.3601](https://www.nature.com/articles/nbt.3601). The methods have been modified for our equipment and supplies, and the indexes have been switched to use dual error-correcting barcodes. **It is possible that portions of the original protocol have been copied verbatim in these protocols and the original manuscript should be cited for the method.**
+This protocol and the subsequent indexing steps were originally derived from a “Systematic improvement of amplicon marker gene methods for increased accuracy in microbiome studies” [doi:10.1038/nbt.3601](https://www.nature.com/articles/nbt.3601). The methods have been heavily modified to optimize throughput and minimize cost while also adapting to our equipment and supplies.
 
-To prevent against over-amplification, and thus massive amounts of reads lost to chimeras and other technical artifacts (>20%), the primary PCR is carried out as a quantitative PCR that provides real-time feed back on amplification. This gives information on if an amplicon has been formed and negates the needs to run any gels to check for amplication. The downside is that primer dimers that occur after cycle 25 may mask amplicons in low biomass samples. If studying low biomass samples (ex skin), 30 cycles of PCR should be run, and amplicons inspected by gel electrophoresis or similar method.
+The preparation of the amplicons is carried out in two steps (primary and indexing) for two main reasons: 1) it is more cost effective as it allows the same set of expensive dual unique indexes to be used for multiple targets and/or amplicon and metagenomic sequencing, and 2) it allows for the primary PCR to be conducted as a qPCR reaction which allows for real time monitoring of successful reaction and negates the need to run gels to verify amplification which is time consuming and expensive. Furthermore, qPCR is being carried out in 384 well plates which allows for heavily reduced reaction volumes and higher throughputs. Potentially an entire sequencing run can be prepared in a day.
 
-The goal of this protocol is to get mid-to-late amplification to carry forward for indexing. To get optimal amplification, a 10-fold dilution series is created and the optimal dilution is selected. In PCR, a 10-fold dilution corresponds to a delay of 3.3 cycles, thus 4x10-fold dilutions cover a range of ~13 cycles. PCR inhibition, which commonly happens with filter-based extractions, can be directly visualized here as 10-fold dilutions amplifying similarly (or better) than its undiluted stock. Remember there should be ~3 cycles between dilutions. Inhibition has not been seen with the Zymo approach, but has been seen with the Promega and Powersoil-based extractions. A direct cause of inhibition is carryover of ethanol containing wash buffer from column based approaches.
+Limiting amplification cycles helps prevent against over-amplification, and thus massive amounts of reads lost to chimeras and other technical artifacts (>20%), the primary PCR is carried out as a quantitative PCR that provides real-time feed back on amplification. The downside is that primer dimers that occur after cycle 25 may mask amplicons in low biomass samples. If studying low biomass samples (ex skin), 30-35 cycles of PCR should be run, and amplicons inspected by gel electrophoresis or similar method. Careful consideration of bacterial biomass and/or extent of host contamination should be considered and a pilot run should be carried out for non standard sample types (ex. feces).
 
-Another advantage of this amplification strategy is that you can mix and match 16S variable regions without ordering new indexes. A list of primers is attached below however it is reccomended to use V4_515Fmod_Nextera and V4_806Rmod_Nextera which are the revised EMP V4 primers. It is also possible to sequence multiple variable regions or combine 16S rRNA and ITS into a single run so long as the indexes do not overlap.
+Another advantage of this amplification strategy is that you can mix and match 16S variable regions and metagenomic sequencing (see **Table 1**). A list of primers is attached below however it is reccomended to use V4_515Fmod_Nextera and V4_806Rmod_Nextera which are the revised EMP V4 primers. It is also possible to sequence multiple variable regions or combine 16S rRNA and ITS into a single run so long as the indexes do not overlap.
+
+Before progressing, it is imperative that you have accurately captured the layout of your 96 well plate(s). Please use [this template](https://github.com/BisanzLab/OHMC_Colaboratory/edit/main/Templates/IndexTrackingSheet.xlsx) which will allow for seemless transition into sequencing. Be sure to enquire about which index plate you will use.
+
+Note: the mini-96 and multichannels pipette every other well.  See [this template](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx) to understand the layout.
 
 ## Materials
-- [ ] Opentrons OT-2 with 20ul multichannel.
-- [ ] 1 x Nest 12 well reservoir (Opentrons 360112) 
-- [ ] 2 x Opentrons filter 20ul tips (https://shop.opentrons.com/collections/opentrons-tips/products/opentrons-20ul-filter-tips)
-- [ ] 384 Plates for qPCR (Biorad #HSP3865)
-- [ ] [gDNA from Protocol 1](https://github.com/jbisanz/AmpliconSeq/blob/master/wetlab_protocols/1_DNAExtraction.md) in a 96 well plate (Biorad hsp9601)
+
+- [ ] 384 Plates for qPCR (Biorad #HSP3865 OR Armadillo PCR plate Fisher AB3384)
+- [ ] gDNA from in a standard 96 well plate or Qiagen Capture plate
+- [ ] Integra Mini-96 12.6 ul pipette
+- [ ] 1 box Integra 12.5 ul sterile nuclease grip tips (GRIPTIPS 6000)
+- [ ] Any multichannel 10 ul pipette with sterile nuclease free tips
+- [ ] QIAquant 384 or Biorad CFX384
+- [ ] Sterile nuclease free reagent reservoir (VistaLab 2138127G)
 - [ ] Optically clear Plate Seals (Biorad Microseal ‘B’ #MSB1001)
 - [ ] DMSO for PCR (Sigma D8418-50mL)
 - [ ] SYBR Green I (Sigma S9430 - 10,000x stock) - diluted 10x in DMSO to 1000x
-- [ ] KAPA HiFi Hot Start PCR kit (KAPA KK2502) - **order your own. may need to order 2 depending on number of samples to cover indexing reactions**
-- [ ] PCR primers of choice at 100µM (see Table 1)
+- [ ] KAPA HiFi Hot Start PCR kit (KAPA KK2502)
+- [ ] PCR primers of choice at 100µM (see **Table 1**)
 - [ ] Nuclease-free H2O (Life Tech 0977-023)
 
 
 ## Protocol
 ***Location:** PCR hood or separate room/area from other steps*
-- [ ] Treat PCR area with UV light for ~15 minutes.
-- [ ] Generate enough PCR master mix for 420 rxns according to **Table 2** in the first column of a 12 well reservoir. *Note: you can bypass this step and pipette the mastermix manually, set loadmastermix = False in python script
-- [ ] Thaw gDNA plate on ice and briefly centrifuge to prevent cross contamination.
-- [ ] Set up OT-2 according to **Figure 1** below.
-- [ ] Download ot2_scripts/2_PrimaryPCR.py
-- [ ] Upload 2_PrimaryPCR.py to OT-2 using Opentrons App.
-- [ ] Calibrate all deck positions
-- [ ] Run protocol. **Estimated time of completion: ~20min**
-- [ ] After qPCR run is done, transfer plates to -20˚C if processing is going to be paused.
+- [ ] Wipe pipettes and work areas with DNaseAway or similar, treat PCR area with UV light for ~15 minutes.
+- [ ] Generate enough PCR master mix for the number of samples you will be preparing in reagent reservoir (see **Table 2**). Mix well with a 1000ul pipette and/or rocking reservoir.
+- [ ] Using 10 ul multichannel, transfer 9 ul of master mix into each well of qPCR plate which will be loaded. Be sure to consider the [96-to-384 well layout](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx).
+- [ ] Thaw gDNA plate on ice and briefly centrifuge to prevent cross contamination. **This centrifugation is essential.**
+- [ ] Load gDNA on to Mini-96 and transfer 1 ul to qPCR plate
+- [ ] Cover 384 well plate with optically clear plate seals
+- [ ] Briefly centrifuge qPCR plate and transfer to qPCR instrument
+- [ ] Run qPCR as indicated in **Table 3**.
 
 ## QC
-A successful amplification curve should had formed for all samples, and no curves should be observed for negative controls (**Figure 2**). Optionally, a 1% agarose gel can be used to spot check some amplifications. Note: undiluted samples will be found in every other row starting in columns A1:A12.
+A successful amplification curve should had formed for all samples, and no curves should be observed for negative controls (**Figure 2**). Optionally, a 1% agarose gel can be used to spot check some amplifications. Sporadic failures can be diluted 10x and attempted again which will correct issues encountered with potential wash buffer carry over.
 
 ## Figures
 
-![fig1](https://github.com/jbisanz/AmpliconSeq/blob/master/images/primaryPCRlayout.png)
-**Figure 1**. OT-2 deck positions for primary PCR. **Position 1:** gDNA from Protocol 1 in skirted biorad 96 well plate. **Position 2:** 384 biorad qPCR plate. **Position 4 and 7:** 20ul filter tips. **Position 5:** Mastermix in the first column of 12-well reservoir. Left mount: Empty. Right mount: p20 multichannel.
+![fig1](https://github.com/jbisanz/AmpliconSeq/blob/master/images/ampcurves.png)
 
-![fig2](https://github.com/jbisanz/AmpliconSeq/blob/master/images/ampcurves.png)
-
-**Figure 2**. qPCR amplification curves for a single sample shows dilution series. The 10x or 100x dilutions are ideal for carrying forward. Note that the extraction blanks have not amplified. Amplification may be observed at 25 cycles of PCR due to primer dimers. See protocols for low biomass samples for more information and recommendations.
+**Figure 2**. qPCR amplification curves for a single sample shows dilution series. Note that the extraction blanks have not amplified. Amplification may be observed at 25 cycles of PCR due to primer dimers in negative controls. See protocols for low biomass samples for more information and recommendations.
 
 ## Tables
 
@@ -70,28 +73,30 @@ ITS2_Nextera | ITS | ITS1 | GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGCTGCGTTCTTCATCGA*
 ITS4_Nextera | ITS | ITS2 | GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGTCCTCCGCTTATTGATATGC
 
 **Table 2. Primary PCR Master Mix**
-Component	| 1 Rxn (µL) | 420 Rxns (µL) 
-----------|------------|--------------
-Nuclease-free H2O	| 5.2055 | 2186.31
-5x KAPA HiFi Buffer	| 1.8	| 756
-10 mM dNTPs	| 0.27 |	113.4
-DMSO	| 0.45	| 189
-1000x SYBR Green	| 0.0045	| 1.89
-100 µM Forward Primer	| 0.045	| 18.9
-100 µM Reverse Primer	| 0.045	| 18.9
-KAPA HiFi polymerase	| 0.18	| 75.6
-Template | 1.0 | 420
-**Total**	| **9.0**	| **3780.0**
+| Component | Reaction Concentration | 1 Rxn (µL) | 96 Rxns (ul) | 384 Rxns (µL) |
+|-|-|-|-|-|
+| Nuclease-free H2O | - | 5.895 | 648.45 | 2186.31 |
+| 5x KAPA HiFi Buffer | 1x | 2 | 220 | 756 |
+| 10 mM dNTPs | 0.3 mM | 0.3 | 33 | 113.4 |
+| DMSO | 0.50% | 0.5 | 55 | 189 |
+| 1000x SYBR Green | 0.005% | 0.005 | 0.55 | 1.89 |
+| 100 µM Forward Primer | 500 nM | 0.05 | 5.5 | 18.9 |
+| 100 µM Reverse Primer | 500 nM | 0.05 | 5.5 | 18.9 |
+| KAPA HiFi polymerase (1U/µL) | 0.2 U | 0.2 | 22 | 75.6 |
+| Template | Variable | 1 | 110 | 420 |
+| Total | - | 10 | 1100 | 3780 |
+
+\**Note: calculations pad ~10% for reagent loss in reservoirs.*
 
 **Table 3. Primary PCR Amplification Parameters**
 Cycle |	Temperature (˚C)  | Time
 ------|-------------------|------
 Initial Denaturation   |	95	| 5 min
-22 cycles\*:
+23 cycles\*:
 Denature | 98˚C | 20 sec
 Anneal | 55˚C	| 15 sec
 Extend | 72˚C | 60 sec
 Holding	| 4˚C	Hold | 0 sec
 
-\**22 cycles is a good starting point here. With V4 primers, primer dimers will occur by cycle 25 and will make judging the success of amplification difficult.*
+\**23 cycles is a good starting point here. With V4 primers, primer dimers will occur by cycle 25 and will make judging the success of amplification difficult without running gel or secondary QC.*
 
