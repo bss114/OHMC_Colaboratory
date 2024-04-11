@@ -1,7 +1,7 @@
 # Protocol 5: Pool cleanup
 
 ## Theory
-Before sequencing, it is crucial to remove any free adapter and/or primer dimers which will cause a loss of reads during sequencing and/or resulting in enhanced barcode hoping. For more on the idea of barcode hoping, see [here](https://www.illumina.com/techniques/sequencing/ngs-library-prep/multiplexing/index-hopping.html). This protocol can be accomplished in one of two ways: Ampure XP bead cleanup (**Protocol A**) or gel extraction (**Protocol B**). *Note: an automated size selection method such as a pippin prep can be used as well if available*.
+Before sequencing, it is crucial to remove any free adapter and/or primer dimers which will cause a loss of reads during sequencing and/or resulting in enhanced barcode hoping. For more on the idea of barcode hoping, see [here](https://www.illumina.com/techniques/sequencing/ngs-library-prep/multiplexing/index-hopping.html). This protocol can be accomplished in one of two ways: gel extraction (**Protocol A**) or Ampure XP bead cleanup (**Protocol B**). *Note: an automated size selection method such as a pippin prep can be used as well if available*.
 
 ## Materials
 **Protocol A**
