@@ -1,52 +1,51 @@
-# Protocol 3: Cherry Picking and Indexing PCR
+# Protocol 2: Indexing PCR
 
 ## Theory
 
-While the primary PCR has created the amplicons for sequencing, there is no identifying information on the DNA to tell the sample of origin. This is the purpose of the indexing PCR. In the emp protocol, a single index/barcode is incorporated onto the reverse (or forward depending on version) primer. Here there are two indices/barcodes on both sides of the amplicon. In this way, fewer barcodes can be used as samples are recognized as the combination of left and right barcodes. For example, in our current set up 24 forward, and 24 reverse give 576 combinations. The same amount of sequence capacity would require 576 distinct (and long, and expensive) reverse primers. There are currently 6 replicate sets of primer aliquots in the -20˚C. Please note your usage and date on the bag.
+While the primary PCR has created the amplicons for sequencing, there is no identifying information on the DNA to tell the sample of origin. This is the purpose of the indexing PCR. In the original Earth Microbiome Project Protocol, a single index/barcode is incorporated onto the reverse (or forward depending on version) primer. Later it became common to put indexes on both sides of the amplicon (dual indexing) where in every combination of forward and reverse barcodes could be used. Unfortunately, due to a phenomenon called barcode/index hopping, this creates a problem on the newest generations of patterned flow cells where in a >3 % of reads may be misassigned to sample of origin (NextSeq/NovaSeq). Alternatively, we are using unique dual indexes (UDIs), i.e. we currently have 574 10nt unique forward, and reverse indexes which are only used one time each per sequencing run in a known combination. These indexes were purchased by the OHMC and are available to use, or for stocks, for members of the center.  
 
-The first step of this protocol is to pick the appropriate dilution from the primary PCR. If using low biomass samples, this step should be skipped as dilutions were not performed. This can be performed automatically using a script included in resources called DilutionPick.R. It can be run as below to generate a table of the wells to be picked. Note to run you will require an installation of R and the packages: tidyverse, readxl, and optparse.
-
-```
-Rscript DilutionPick.R --folder Plate1_Results --tracking 16S_TrackingSheet.xlsx --plateid 1
-```
-
-The resulting outputs include WellsForIndexing_PlateX.csv and PrimaryCurves_PlateX.pdf. The amplification curves show which dilution was selected for indexing based on trying to be closest to 0.7x the maximum (i.e. plateaued) signal as seen in Figure 1. The goal is to prevent over amplification. Note also from these plots what has happened with your negative controls, for example as seen in Figure 2.
-
-The most important output is the WellsForIndexing.csv file which needs to be copy and pasted inside of 3_CherryPickandIndex_template.py.
+This step essentially involves diluting samples 100x before a single limited-cycle PCR which will tack on the remainder of the sequencing adapter. The construct is described in Figure 1. One special note: the nucleotide composition must be relatively balanced at each position of the index. If preparing a sequencing run of less than 96 samples, this should be carefully analysed.
 
 # Materials
-- [ ] 96 Well Plates (USA Sci #1402-9200)
+- [ ] Primary PCR amplicons in 384 Plate for qPCR (derived from protocol 1). You will need 1 plate for each original plate of gDNA.
+- [ ] 384 Plates for qPCR (Biorad #HSP3865 OR Armadillo PCR plate Fisher AB3384)
 - [ ] DMSO for PCR (Sigma D8418-50mL)
-- [ ] KAPA HiFi PCR kit (KAPA KK2502) - **order your own**
-- [ ] Indexing Primer plate at 5µM (Pick 1 of 6 for each plate to be sequenced without overlapping).
+- [ ] KAPA HiFi PCR kit (KAPA KK2502)
+- [ ] Indexing Primer plate at 5µM (Pick 1 of 6 for each plate to be sequenced without overlapping)
 - [ ] Nuclease-free H2O (Life Tech 0977-023)
-- [ ] Opentrons OT-2 with gen2 20ul multichannel and 20ul single channel.
-- [ ] 1 x USA Scientific 12 Well Reservoir 22 mL (USA Scientific 1061-8150) 
-- [ ] 4 x Opentrons filter 20ul tips (https://shop.opentrons.com/collections/opentrons-tips/products/opentrons-20ul-filter-tips)
-- [ ] Primary PCR amplicons in 384 Plate for qPCR (Biorad #HSP3865)
-- [ ] 2x Bio-Rad 96 Well Plate 200 µL skirted PCR plate  (Biorad hsp9601)
+- [ ] Integra Mini-96 12.6 ul pipette
+- [ ] 1 box Integra 12.5 ul sterile nuclease grip tips (GRIPTIPS 6000)
+- [ ] Any multichannel 20 ul pipette with sterile nuclease free tips
+- [ ] Any multichannel 100 ul pipette with sterile nuclease free tips
+- [ ] Sterile nuclease free reagent reservoir (VistaLab 2138127G)
 - [ ] Optically clear Plate Seals (Biorad Microseal ‘B’ #MSB1001)
+- [ ] QIAquant 384 or Biorad CFX384.
 
 # Protocol
+***Location: in post-PCR area of lab***
 - [ ] Obtain a plate of indexes from the freezer and thaw on ice. **Breifly centrifuge before opening!!!!!**
-- [ ] Download a copy of 3_CheryPickAndIndex.py and copy and paste your loadings from the WellsForIndexing.csv file into it.
-- [ ] Manually load 100µL water to the dilution plate.
-- [ ] Set up the OT2 as in Figure 1. *Note: you can also manually load the indexing mastermix to the dilution plate if a reservoir is not available. Adjust  loadmastermix = False in the python script*
-- [ ] Load python script on OT2
-- [ ] Calibrate all deck positions
-- [ ] Run script (Estimated run time = ~48 minutes).
-- [ ] Transfer to thermocycler and run the program described in Table 2.
+- [ ] In reagent reservoir, prepare master mix according to **Table 1**. Mix well.
+- [ ] Using a multichannel load 6 ul of master mix into each well of the indexing plate.
+- [ ] Using a multichannel load 100 ul water to each well of the dilution plate.
+- [ ] Using the Mini-96, transfer 1 ul of gDNA from the primary PCR plate to the dilution plate. Be sure to use the [template].(https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx) to remove the correct wells.
+- [ ] Mix the dilution plate with the Mini-96 and transfer 10 uL from the dilution plate to the indexing plate. Be sure to use the [template].
+- [ ] Using the Mini-96, transfer 4 ul of indexes to the indexing plate. Be sure to use the [template].
+- [ ] Seal plate with optically clear Plate Seals and briefly centrifuge
+- [ ] Transfer to thermocycler and run the program described in Table 2. *Note: we are not using the qPCR capacity of the instrument here.*
 - [ ] After completion, freeze plates until quantification and pooling.
 
 ## Table 1. Indexing PCR Master Mix (3.3x)
 
-Component	| 1 Rxn (20µL rxn) | 110 Rxns
+Component	| 1 Rxn (20µL rxn) | 96 Rxns
 ----------|------------------|----------
 5x KAPA HiFi Buffer	| 4 | 440
 10 mM dNTPs | 0.6 | 66
 DMSO | 1.0 | 110
 KAPA HiFi polymerase | 0.4 | 44
 **Total**	| **6.0** | **660**
+
+
+
 
 ## Table 2. Indexing Amplification Parameters
 Cycle | Temperature (˚C)	| Time
@@ -58,5 +57,11 @@ Anneal | 55˚C | 15 sec
 Extend | 72˚C | 60 sec
 Holding	| 4˚C	Hold | (0 sec)
 
-![fig1](https://github.com/jbisanz/AmpliconSeq/blob/master/images/indexinglayout.png)
-**Figure 1. OT2 set up for picking and indexing.** **Positions 1,4,7,10,11:** 20ul filter tips. **Position 2:** A biorad skirted 96 well plate to conduct indexing PCR in. **Position 3:** One of the premade plates of indexes. **Position 5:** A dilution plate to carry out a 100-fold dilution in. **Position 6:** the biorad 384 plate containing the products from the primary PCR. **Plate 7:** A 12-well reservoir with mastermix in the first column and water in the second (optional). **Pipettes:** left mount 20ul single channel, right mount 20ul multichannel.
+
+
+***
+
+<img src="https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Misc/images/Fig1.jpg" width="400" height="400">
+
+**Figure 1.** **(A)** Illumina sequencing construct design which allows for an index set to be used for multiple sequencing approaches. **(B)** Distribution of edit distance among newly designed index set (# of sequencing errors required to misidentify barcode). **(C)** Nucleotide composition is balanced at each position of index to maintain base calling accuracy.
+
