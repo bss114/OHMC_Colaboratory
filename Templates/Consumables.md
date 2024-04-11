@@ -3,6 +3,7 @@
 |-|-|-|-|-|
 |NEST 0.1 mL 96-well PCR Plate| 100 | Opentrons | - | 288.17 |
 |NEST 12 well reservoires | 50 | Opentrons | - | 220.00 |
+|Integra 12.5 ul GRIPTIPS sterile, filter, long| 5 racks of 384 tips | GRIPTIP 6000 | 295.20 |
 |OT2 20 ul filter tips | 9600 | Opentrons | - | 687.50 |
 |Plate Seals | 100 | VWR | 75805-268 | 66.95 |
 |Armadillo PCR Plate (384) | 50 | Fisher | AB3384 | 205.69 |
