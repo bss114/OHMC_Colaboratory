@@ -42,7 +42,7 @@ Note: the mini-96 and multichannels pipette every other well.  See [this templat
 - [ ] Run qPCR as indicated in **Table 3**.
 
 ## QC
-A successful amplification curve should had formed for all samples, and no curves should be observed for negative controls (**Figure 2**). Optionally, a 1% agarose gel can be used to spot check some amplifications. Note: undiluted samples will be found in every other row starting in columns A1:A12.
+A successful amplification curve should had formed for all samples, and no curves should be observed for negative controls (**Figure 2**). Optionally, a 1% agarose gel can be used to spot check some amplifications. Sporadic failures can be diluted 10x and attempted again which will correct issues encountered with potential wash buffer carry over.
 
 ## Figures
 
@@ -73,18 +73,20 @@ ITS2_Nextera | ITS | ITS1 | GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGCTGCGTTCTTCATCGA*
 ITS4_Nextera | ITS | ITS2 | GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGTCCTCCGCTTATTGATATGC
 
 **Table 2. Primary PCR Master Mix**
-Component	| 1 Rxn (µL) | 420 Rxns (µL) 
-----------|------------|--------------
-Nuclease-free H2O	| 5.2055 | 2186.31
-5x KAPA HiFi Buffer	| 1.8	| 756
-10 mM dNTPs	| 0.27 |	113.4
-DMSO	| 0.45	| 189
-1000x SYBR Green	| 0.0045	| 1.89
-100 µM Forward Primer	| 0.045	| 18.9
-100 µM Reverse Primer	| 0.045	| 18.9
-KAPA HiFi polymerase	| 0.18	| 75.6
-Template | 1.0 | 420
-**Total**	| **9.0**	| **3780.0**
+| Component | Reaction Concentration | 1 Rxn (µL) | 96 Rxns (ul) | 384 Rxns (µL) |
+|-|-|-|-|-|
+| Nuclease-free H2O | - | 5.895 | 648.45 | 2186.31 |
+| 5x KAPA HiFi Buffer | 1x | 2 | 220 | 756 |
+| 10 mM dNTPs | 0.3 mM | 0.3 | 33 | 113.4 |
+| DMSO | 0.50% | 0.5 | 55 | 189 |
+| 1000x SYBR Green | 0.005% | 0.005 | 0.55 | 1.89 |
+| 100 µM Forward Primer | 500 nM | 0.05 | 5.5 | 18.9 |
+| 100 µM Reverse Primer | 500 nM | 0.05 | 5.5 | 18.9 |
+| KAPA HiFi polymerase (1U/µL) | 0.2 U | 0.2 | 22 | 75.6 |
+| Template | Variable | 1 | 110 | 420 |
+| Total | - | 10 | 1100 | 3780 |
+
+\**Note: calculations pad ~10% for reagent loss in reservoirs.*
 
 **Table 3. Primary PCR Amplification Parameters**
 Cycle |	Temperature (˚C)  | Time
