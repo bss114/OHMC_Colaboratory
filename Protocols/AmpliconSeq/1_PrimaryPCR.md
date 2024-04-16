@@ -86,7 +86,7 @@ ITS4_Nextera | ITS | ITS2 | GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGTCCTCCGCTTATTGATAT
 | Template | Variable | 1 | 110 | 420 |
 | Total | - | 10 | 1100 | 3780 |
 
-\**Note: calculations pad ~10% for reagent loss in reservoirs.*
+\**Note: calculations pad ~10% for reagent loss in reservoirs. ADJUST UP to 15% WASTE*
 
 **Table 3. Primary PCR Amplification Parameters**
 Cycle |	Temperature (˚C)  | Time
