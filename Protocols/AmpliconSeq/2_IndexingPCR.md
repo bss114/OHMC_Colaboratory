@@ -25,27 +25,24 @@ This step essentially involves diluting samples 100x before a single limited-cyc
 ***Location: in post-PCR area of lab***
 - [ ] Obtain a plate of indexes from the freezer and thaw on ice. **Breifly centrifuge before opening!!!!!**
 - [ ] In reagent reservoir, prepare master mix according to **Table 1**. Mix well.
-- [ ] Using a multichannel load 6 ul of master mix into each well of the indexing plate.
+- [ ] Using a multichannel load 3 µl of master mix into each well of the indexing plate.
 - [ ] Using a multichannel load 100 ul water to each well of the dilution plate.
 - [ ] Using the Mini-96, transfer 1 ul of gDNA from the primary PCR plate to the dilution plate. Be sure to use the [template].(https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx) to remove the correct wells.
-- [ ] Mix the dilution plate with the Mini-96 and transfer 10 uL from the dilution plate to the indexing plate. Be sure to use the [template].
-- [ ] Using the Mini-96, transfer 4 ul of indexes to the indexing plate. Be sure to use the [template].
+- [ ] Mix the dilution plate with the Mini-96 and transfer 5 µL from the dilution plate to the indexing plate. Be sure to use the [template].
+- [ ] Using the Mini-96, transfer 2 µl of indexes to the indexing plate. Be sure to use the [template].
 - [ ] Seal plate with optically clear Plate Seals and briefly centrifuge
 - [ ] Transfer to thermocycler and run the program described in Table 2. *Note: we are not using the qPCR capacity of the instrument here.*
 - [ ] After completion, freeze plates until quantification and pooling.
 
 ## Table 1. Indexing PCR Master Mix (3.3x)
 
-Component	| 1 Rxn (20µL rxn) | 96 Rxns
-----------|------------------|----------
-5x KAPA HiFi Buffer	| 4 | 440
-10 mM dNTPs | 0.6 | 66
-DMSO | 1.0 | 110
-KAPA HiFi polymerase | 0.4 | 44
-**Total**	| **6.0** | **660**
-
-
-
+Component	            | [Stock] | [Final] | 1 Rxn (10µL rxn) | 96 Rxns
+----------------------|---------|---------|------------------|--------
+5x KAPA HiFi Buffer	  | 5x      |  1x     | 2                | 230
+10 mM dNTPs           | 10mM    |  0.3mM  | 0.3              | 34.5
+DMSO                  |  -      | 0.5%    | 0.5              | 57.5
+KAPA HiFi polymerase  | 1U/µl   | 0.2U/µl | 0.2              | 23
+**Total**	            | -       | -       | **3.0**          | **345**
 
 ## Table 2. Indexing Amplification Parameters
 Cycle | Temperature (˚C)	| Time
