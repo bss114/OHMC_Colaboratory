@@ -46,6 +46,6 @@ Any given sequencing run produces a set number of reads: for example ~15 million
 
 **Figure 1.** PicoGreen Normalization Tab.
 
-![](https://github.com/bisanzlab/OHMC_Colaboratory/raw/master/images/amplicon_pooling.png)
+![](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/images/amplicon_pooling.png?raw=true)
 
 **Figure 2.** OT-2 deck layout. **Position 1-6:** Indexed PCR products. *Note: you may use any combination of plates 1-6 however ensure that their deck positions matches the loading.csv file.* **Position 7:** Eppendorf tube in position A1 of tube rack. **Position 8:** 20ul filter tips. Left Pipette is loaded with p20 single channel.
