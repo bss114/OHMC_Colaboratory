@@ -1,5 +1,7 @@
 # Protocols and templates for OHMC colaboratory
 
+![](https://psu-gatsby-files-prod.s3.amazonaws.com/s3fs-public/styles/4_3_1500w/public/2023/05/slide1_0.jpeg?h=bd92fb76&itok=QWrXEY_u)
+
 ## Project and reagent requests
 
 Please visit this [link](https://forms.gle/QxAVkzP4HyF7zvfQA) to request a project/reagents. Reagents will be allocated on first come/first serve basis and alignment with one health theme.
