@@ -31,7 +31,7 @@ Any given sequencing run produces a set number of reads: for example ~15 million
 - [ ] Review the loading volumes and manually adjust volumes >20µL to be either 20µL or the average loading volume.
 - [ ] Move to Loading.csv tab, and click File > Save As > File Format: CSV UTF-8
 - [ ] Remove lines which do not have a loading volume from the resulting csv file
-- [ ] Download a copy of ot2_scripts/4_PoolEquimolar_template.py and copy and paste the pooling volumes from the CSV file into the python (.py) script.
+- [ ] Download a copy of OT2_scripts/PoolAmplicons_template.py and copy and paste the pooling volumes from the CSV file into the python (.py) script.
 - [ ] Set up OT-2 as described in **Figure 2**. *Note: Up to 6 plates can be pooled simnultaneously from plates in deck positions 1-6. Place your plate in the corresponding deck position matching its number from the spread sheet*
 - [ ] Add 20ul nuclease free water to the eppendorf tube in the A1 position of the tube rack to ensure consistent delivery of volumes.
 - [ ] Upload scripts to OT-2 using Opentrons App.
@@ -46,6 +46,6 @@ Any given sequencing run produces a set number of reads: for example ~15 million
 
 **Figure 1.** PicoGreen Normalization Tab.
 
-![](https://github.com/jbisanz/AmpliconSeq/raw/master/images/poolinglayout.png)
+![](https://github.com/bisanzlab/OHMC_Colaboratory/raw/master/images/amplicon_pooling.png)
 
 **Figure 2.** OT-2 deck layout. **Position 1-6:** Indexed PCR products. *Note: you may use any combination of plates 1-6 however ensure that their deck positions matches the loading.csv file.* **Position 7:** Eppendorf tube in position A1 of tube rack. **Position 8:** 20ul filter tips. Left Pipette is loaded with p20 single channel.
