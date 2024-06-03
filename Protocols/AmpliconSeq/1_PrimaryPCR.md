@@ -75,18 +75,18 @@ ITS4_Nextera | ITS | ITS2 | GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGTCCTCCGCTTATTGATAT
 **Table 2. Primary PCR Master Mix**
 | Component | Reaction Concentration | 1 Rxn (µL) | 96 Rxns (ul) | 384 Rxns (µL) |
 |-|-|-|-|-|
-| Nuclease-free H2O | - | 5.895 | 648.45 | 2186.31 |
-| 5x KAPA HiFi Buffer | 1x | 2 | 220 | 756 |
-| 10 mM dNTPs | 0.3 mM | 0.3 | 33 | 113.4 |
-| DMSO | 0.50% | 0.5 | 55 | 189 |
-| 1000x SYBR Green | 0.005% | 0.005 | 0.55 | 1.89 |
-| 100 µM Forward Primer | 500 nM | 0.05 | 5.5 | 18.9 |
-| 100 µM Reverse Primer | 500 nM | 0.05 | 5.5 | 18.9 |
-| KAPA HiFi polymerase (1U/µL) | 0.2 U | 0.2 | 22 | 75.6 |
+| Nuclease-free H2O | - | 5.895 | 648.45 | 2475.9 |
+| 5x KAPA HiFi Buffer | 1x | 2 | 220 | 840 |
+| 10 mM dNTPs | 0.3 mM | 0.3 | 33 | 126 |
+| DMSO | 0.50% | 0.5 | 55 | 210 |
+| 1000x SYBR Green | 0.005% | 0.005 | 0.55 | 2.1 |
+| 100 µM Forward Primer | 500 nM | 0.05 | 5.5 | 21 |
+| 100 µM Reverse Primer | 500 nM | 0.05 | 5.5 | 21 |
+| KAPA HiFi polymerase (1U/µL) | 0.2 U | 0.2 | 22 | 84 |
 | Template | Variable | 1 | 110 | 420 |
 | Total | - | 10 | 1100 | 3780 |
 
-\**Note: calculations pad ~10% for reagent loss in reservoirs. ADJUST UP to 15% WASTE*
+\**Note: calculations pad for reagent loss in reservoire
 
 **Table 3. Primary PCR Amplification Parameters**
 Cycle |	Temperature (˚C)  | Time
