@@ -50,7 +50,7 @@ the O-ring on the spigot into the drain.
 riser block EMTR in the right (elution) chamber of the vacuum chamber, with the pin of
 the riser block EMTR in top-right position. Load EMTR (without lid) into elution chamber.
 
-![fig1](https://github.com/jbisanz/AmpliconSeq/blob/master/images/ampcurves.png)
+![fig1](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/images/qiacube_vacuum_powersoil.jpg)
 **Figure 1:** Schematic of Qiacube vacuum chamber. Taken from Manual. 
 
 
@@ -95,9 +95,8 @@ the riser block EMTR in top-right position. Load EMTR (without lid) into elution
 - [ ] When vacuum check alert comes up, ensure that all supernatants have cleared their wells. If not, evasive maneuvers might be required and those samples may be lost.
 - [ ] When run is complete, label collection plate with computer printed label. Label must include the project name, user name, plate X of Y, and the date. See Figure 3 for example.
 
-![fig2])
+![fig2]()
 **Figure 2:** Image of deck set up for PowerSoil.
-
 
 ![fig2]()
 **Figure 3:** Example of properly labelled plate.
