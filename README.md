@@ -12,7 +12,7 @@ Do not send any samples to lab without first discussing project with Jordan. Ple
 
 ## Nucleic Acid Extraction
 
-<br>*Under construction*
+<br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Extraction/1_PowerSoil_QiaCubeHT.md) Extraction of gDNA using DNeasy PowerSoil QIAcube HT.
 
 
 ## Amplicon Sequencing
