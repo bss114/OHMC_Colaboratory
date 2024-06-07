@@ -11,7 +11,7 @@ As this is a high throughput approach, users must be careful to maximize plate l
 A template has been provided to track sample layouts in 96 well plates. Download [here](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/IndexTrackingSheet.xlsx). Please utilize it to ensure smooth integration into later workflows. Print a copy and keep in your lab book as well as a copy in the Sequencing Run log book.
 
 
-*Note: The current QIAGEN manual can be found [here](file:///Users/jbisanz/Downloads/HB-2592-003_HB_DNY_96_PwrSoilPro_QIAC_HT_0819_WW%20(2).pdf)*
+*Note: The current QIAGEN manual can be found [here](https://www.qiagen.com/us/Resources/ResourceDetail?id=4eaebc72-77e5-48fb-8e28-3f64bfb66130&lang=en)*
 
 ## Equipment
 - [ ] QIAcube HT
