@@ -36,13 +36,13 @@ This step essentially involves diluting samples 100x before a single limited-cyc
 
 ## Table 1. Indexing PCR Master Mix (3.3x)
 
-Component	            | [Stock] | [Final] | 1 Rxn (10µL rxn) | 96 Rxns
-----------------------|---------|---------|------------------|--------
-5x KAPA HiFi Buffer	  | 5x      |  1x     | 2                | 230
-10 mM dNTPs           | 10mM    |  0.3mM  | 0.3              | 34.5
-DMSO                  |  -      | 0.5%    | 0.5              | 57.5
-KAPA HiFi polymerase  | 1U/µl   | 0.2U/µl | 0.2              | 23
-**Total**	            | -       | -       | **3.0**          | **345**
+Component	            | [Stock] | [Final] | 1 Rxn (10µL rxn) | 96 Rxns|  384 Rxns |   576 rxns|
+----------------------|---------|---------|------------------|--------|-----------|-----------|
+5x KAPA HiFi Buffer	  | 5x      |  1x     | 2                | 230    |   920     |   1380    |
+10 mM dNTPs           | 10mM    |  0.3mM  | 0.3              | 34.5   |   138     |   207     |
+DMSO                  |  -      | 0.5%    | 0.5              | 57.5   |   230     |   345     |
+KAPA HiFi polymerase  | 1U/µl   | 0.2U/µl | 0.2              | 23     |   92      |   138     |
+**Total**	            | -       | -       | **3.0**          | **345**| **1380**  | **2070**  |
 
 ## Table 2. Indexing Amplification Parameters
 Cycle | Temperature (˚C)	| Time
