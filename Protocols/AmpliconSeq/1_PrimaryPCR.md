@@ -55,36 +55,35 @@ A successful amplification curve should had formed for all samples, and no curve
 **Table 1. Primers for primary PCR**
 **Primer name** | **Marker gene** | **Target region** | **Sequence**
 ----------------|-----------------|-------------------|---------------
-V4_515Fmod_Nextera | 16S rRNA | V4 |         TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG**GTGYCAGCMGCCGCGGTAA**
-V4_806Rmod_Nextera | 16S rRNA | V4 |         GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG**GGACTACNVGGGTWTCTAAT**
-V1_27F_Nextera | 16S rRNA | V1-V3 |          TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG**AGAGTTTGATCMTGGCTCAG**
-V3_534R_Nextera | 16S rRNA | V1-V3 |         GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG**ATTACCGCGGCTGCTGG**
-V3_357F_Nextera | 16S rRNA | V3-V4, V3-V5 |  TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG**CCTACGGGAGGCAGCAG**
-V4_515F_Nextera | 16S rRNA | V4, V4-V6 |     TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG**GTGCCAGCMGCCGCGGTAA**
-V4_806R_Nextera | 16S rRNA | V3-V4, V4 |     GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG**GGACTACHVGGGTWTCTAAT**
-V5F_Nextera  | 16S rRNA | V5-V6 |            TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG**RGGATTAGATACCC**
-V5_926R_Nextera | 16S rRNA | V3-V5 |         GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG**CCGTCAATTCMTTTRAGT**
-V6R_Nextera | 16S rRNA | V5-V6, V4-V6 |      GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG**CGACRRCCATGCANCACCT**
-18S_V9_1391_F_Nextera | 18S rRNA | V9 |      TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG**GTACACACCGCCCGTC**
-18S_V9_EukBr_R_Nextera | 18S rRNA | V9 |     GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG**TGATCCTTCTGCAGGTTCACCTAC**
-ITS1F_Nextera | ITS | ITS1 |                 TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG**CTTGGTCATTTAGAGGAAG*TAA**
-ITS2_Nextera | ITS | ITS1 |                  GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG**GCTGCGTTCTTCATCGA*TGC**
-5.8SR_Nextera | ITS | ITS2 |                 TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG**TCGATGAAGAACGCAGCG**
-ITS4_Nextera | ITS | ITS2 |                  GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG**TCCTCCGCTTATTGATATGC**
+V4_515Fmod_Nextera | 16S rRNA | V4 |         TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG*GTGYCAGCMGCCGCGGTAA*
+V4_806Rmod_Nextera | 16S rRNA | V4 |         GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*GGACTACNVGGGTWTCTAAT*
+V1_27F_Nextera | 16S rRNA | V1-V3 |          TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG*AGAGTTTGATCMTGGCTCAG*
+V3_534R_Nextera | 16S rRNA | V1-V3 |         GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*ATTACCGCGGCTGCTGG*
+V3_357F_Nextera | 16S rRNA | V3-V4, V3-V5 |  TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG*CCTACGGGAGGCAGCAG*
+V4_515F_Nextera | 16S rRNA | V4, V4-V6 |     TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG*GTGCCAGCMGCCGCGGTAA*
+V4_806R_Nextera | 16S rRNA | V3-V4, V4 |     GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*GGACTACHVGGGTWTCTAAT*
+V5F_Nextera  | 16S rRNA | V5-V6 |            TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG*RGGATTAGATACCC*
+V5_926R_Nextera | 16S rRNA | V3-V5 |         GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*CCGTCAATTCMTTTRAGT*
+V6R_Nextera | 16S rRNA | V5-V6, V4-V6 |      GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*CGACRRCCATGCANCACCT*
+18S_V9_1391_F_Nextera | 18S rRNA | V9 |      TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG*GTACACACCGCCCGTC*
+18S_V9_EukBr_R_Nextera | 18S rRNA | V9 |     GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*TGATCCTTCTGCAGGTTCACCTAC*
+ITS1F_Nextera | ITS | ITS1 |                 TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG*CTTGGTCATTTAGAGGAAG\*TAA*
+ITS2_Nextera | ITS | ITS1 |                  GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*GCTGCGTTCTTCATCGA\*TGC*
+5.8SR_Nextera | ITS | ITS2 |                 TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG*TCGATGAAGAACGCAGCG*
+ITS4_Nextera | ITS | ITS2 |                  GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*TCCTCCGCTTATTGATATGC*
 
 **Table 2. Primary PCR Master Mix**
-| Component | Reaction Concentration | 1 Rxn (µL) | 96 Rxns (ul) | 384 Rxns (µL) |
-|-|-|-|-|-|
-| Nuclease-free H2O | - | 5.895 | 648.45 | 2475.9 |
-| 5x KAPA HiFi Buffer | 1x | 2 | 220 | 840 |
-| 10 mM dNTPs | 0.3 mM | 0.3 | 33 | 126 |
-| DMSO | 0.50% | 0.5 | 55 | 210 |
-| 1000x SYBR Green | 0.005% | 0.005 | 0.55 | 2.1 |
-| 100 µM Forward Primer | 500 nM | 0.05 | 5.5 | 21 |
-| 100 µM Reverse Primer | 500 nM | 0.05 | 5.5 | 21 |
-| KAPA HiFi polymerase (1U/µL) | 0.2 U | 0.2 | 22 | 84 |
-| Template | Variable | 1 | 110 | 420 |
-| Total | - | 10 | 1100 | 3780 |
+| Component                    | Reaction Concentration | 1 Rxn (µL) | 96 Rxns (ul) | 384 Rxns (µL) | 574 Rxns (µL)
+|------------------------------|------------------------|------------|--------------|---------------|--------------
+| Nuclease-free H2O            | -                      |    5.895   | 648.45       |  2,475.9      |  3,713.9
+| 5x KAPA HiFi Buffer          | 1x                     |     2      |    220       |   840         |  1,260
+| 10 mM dNTPs                  | 0.3 mM                 |  0.3       | 33           |   126         |  189
+| DMSO                         | 0.50%                  | 0.5        | 55           | 210           | 315
+| 1000x SYBR Green             | 0.005%                 | 0.005      | 0.55         | 2.1           | 3.15
+| 100 µM Forward Primer        | 500 nM                 | 0.05       | 5.5          | 21            | 31.5
+| 100 µM Reverse Primer        | 500 nM                 | 0.05       | 5.5          | 21            | 31.5
+| KAPA HiFi polymerase (1U/µL) | 0.2 U                  | 0.2        | 22           | 84            | 126
+| Total                        | -                      | 9          | 990          | 3,780         | 5,760
 
 \**Note: calculations pad for reagent loss in reservoire
 
