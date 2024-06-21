@@ -10,6 +10,10 @@ Please visit this [link](https://forms.gle/QxAVkzP4HyF7zvfQA) to request a proje
 
 Do not send any samples to lab without first discussing project with Jordan. Please follow [these guidelines](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/0_SampleRequirements.md) when shipping samples. Note: all extracted samples must be sent in full-skirt 96 well plates. Samples to be extracted must be sent in screw top cryovials. A separate sheet with the sample layout is required to protect against damage to labels during shipping.
 
+## Protocol Selection
+
+![](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/images/flowchart.jpg)
+
 ## Nucleic Acid Extraction
 
 <br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Extraction/1_PowerSoil_QiaCubeHT.md) Extraction of gDNA using DNeasy PowerSoil QIAcube HT
