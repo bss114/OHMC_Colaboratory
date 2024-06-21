@@ -2,7 +2,7 @@
 
 ## Theory
 
-To effectively characterize a microbial community requires even lysis of all of its members. Some organisms like *E. coli* break open if you look at them the wrong way. Others like *E. lenta* require considerably more effort. Gram-positive organisms in stationary phase growth can be >90% peptidoglycan (cell wall) by weight. To ensure even lysis, mechanical lysis is preferred using shaking with beads at a high frequency.
+To effectively characterize a microbial community requires even lysis of all of its members. Some organisms like *E. coli* break open if you look at them the wrong way. Others like *E. lenta* require considerably more effort. Gram-positive organisms in stationary phase growth can be >90% peptidoglycan (cell wall) by weight. To ensure even lysis, mechanical lysis is preferred using shaking with beads at a high occurrence.
 
 This protocol uses the current iteration of the PowerSoil reagents (previously MoBio) with later steps of the extraction performed in an automated fashion using a QIACube HT. This will ensure even lysis of communities, and isolation of high purity DNA with little residual PCR inhibitors which will cause problems in down stream enzymatic reactions (like those needed for sequencing or qPCR).
 
