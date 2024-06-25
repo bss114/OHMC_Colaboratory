@@ -1,23 +1,26 @@
-# Amplicon Sequencing Protocol 1- Primary PCR
+# Library QC by D1000 ScreenTape Assay
 
 ## Theory
 This protocol and the subsequent indexing steps were originally derived from a “Systematic improvement of amplicon marker gene methods for increased accuracy in microbiome studies” [doi:10.1038/nbt.3601](https://www.nature.com/articles/nbt.3601). The methods have been heavily modified to optimize throughput and minimize cost while also adapting to our equipment and supplies.
 
 ## Materials
 
-- [ ] 384 Plates for qPCR (Biorad #HSP3865 OR Armadillo PCR plate Fisher AB3384)
+- [ ] D1000 ScreenTape (Agilent 50675582)
+- [ ] D1000 Ladder and Sample Buffer (Agilent 5067-5583)
+- [ ] TapeStation loading tips (Agilent 5067*5599)
+- [ ] Optical tube 8X strip (Agilent 401428) with cap (401425)
 
 
 ## Protocol
-***Location:** PCR hood or separate room/area from other steps*
-- [ ] Wipe pipettes and work areas with DNaseAway or similar, treat PCR area with UV light for ~15 minutes.
-- [ ] Generate enough PCR master mix for the number of samples you will be preparing in reagent reservoir (see **Table 2**). Mix well with a 1000ul pipette and/or rocking reservoir.
-- [ ] Using 10 ul multichannel, transfer 9 ul of master mix into each well of qPCR plate which will be loaded. Be sure to consider the [96-to-384 well layout](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx).
-- [ ] Thaw gDNA plate on ice and briefly centrifuge to prevent cross contamination. **This centrifugation is essential.**
-- [ ] Load gDNA on to Mini-96 and transfer 1 ul to qPCR plate
-- [ ] Cover 384 well plate with optically clear plate seals
-- [ ] Briefly centrifuge qPCR plate and transfer to qPCR instrument
-- [ ] Run qPCR as indicated in **Table 3**.
+- [ ] Allow D1000 Sample buffer and ladder to equilibrate at room temperature for 30 min.
+- [ ] During this time, set up the instrument. Launch the TapeStation Controller software.
+- [ ] Flick the ScreenTape device, note the channels that have been already used, and insert it into the slot with the barcode facing back. The software will tell you if it is inserted incorrectly because it won't be able to read the barcode. The barcode will also tell the instrument which channels have been used.
+- [ ]In the TapeStation software, select the sample positions for the number of tubes you are analyzing. The number of tips required will be displayed.
+- [ ] Vortex reagents and samples, spin down. 
+- [ ] Aliquot 3ul D1000 sample buffer in position A1 tube, add 1ul D1000 ladder. Alternatively if you don't have the ladder you can select the electronic ladder in the software.
+- [ ] Aliquot 3ul D1000 sample buffer per sample tube. Add 1ul sample to it's respective tube.
+- [ ] Apply caps (or seal if 96w plate). Vortex 2000rpm, 1 min.
+- [ ] Spin down samples and ladder.
 
 ## QC
 A successful amplification curve should had formed for all samples, and no curves should be observed for negative controls (**Figure 2**). Optionally, a 1% agarose gel can be used to spot check some amplifications. Sporadic failures can be diluted 10x and attempted again which will correct issues encountered with potential wash buffer carry over.
