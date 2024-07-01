@@ -1,22 +1,52 @@
-# Amplicon Sequencing Protocol 1- Primary PCR
+# NEB Next Quant Kit for Illumina
 
 ## Theory
-This protocol and the subsequent indexing steps were originally derived from a “Systematic improvement of amplicon marker gene methods for increased accuracy in microbiome studies” [doi:10.1038/nbt.3601](https://www.nature.com/articles/nbt.3601). The methods have been heavily modified to optimize throughput and minimize cost while also adapting to our equipment and supplies.
+The NEBNext Library Quant Kit is a qPCR-based quantitation method for libraries prepared for Illumina NGS platforms. Library quantitation is critical for proper cluster generation on the Illumina flow cell.  This kit contains primers which target the P5 and P7 Illumina adaptor sequences and a set of high-quality, pre-diluted DNA standards to enable reliable quantitation of diluted DNA libraries between 150–1000 bp.
 
 ## Materials
 
-- [ ] 384 Plates for qPCR (Biorad #HSP3865 OR Armadillo PCR plate Fisher AB3384)
+- [ ] New England Biolabs E7630S
+- [ ] Nuclease-free water
+- [ ] PCR plate + seal
 
 
 ## Protocol
 ***Location:** PCR hood or separate room/area from other steps*
 - [ ] Wipe pipettes and work areas with DNaseAway or similar, treat PCR area with UV light for ~15 minutes.
-- [ ] Generate enough PCR master mix for the number of samples you will be preparing in reagent reservoir (see **Table 2**). Mix well with a 1000ul pipette and/or rocking reservoir.
-- [ ] Using 10 ul multichannel, transfer 9 ul of master mix into each well of qPCR plate which will be loaded. Be sure to consider the [96-to-384 well layout](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx).
-- [ ] Thaw gDNA plate on ice and briefly centrifuge to prevent cross contamination. **This centrifugation is essential.**
-- [ ] Load gDNA on to Mini-96 and transfer 1 ul to qPCR plate
-- [ ] Cover 384 well plate with optically clear plate seals
-- [ ] Briefly centrifuge qPCR plate and transfer to qPCR instrument
+**Reagent preparation:**
+Thaw the following reagents on ice:
+[ ] Master Mix
+[ ] 20X Primer Mix
+[ ] DNA standards (tubes 1-6)
+[ ] 10X Dilution buffer
+Vortex briefly and do a quick spin, keep reagents on ice.
+
+- [ ] If first time using the kit, add 100ul 20X primer mix to the tube of Master Mix. Vortex 10 sec and indicate on the tube that the primers have been added, and the date. Keep on ice.
+- [ ]Dilute the 10X  Dilution Buffer 1:10 with nuclease-free water. Vortex 10 sec. Prepare sufficient buffer for the desired number of libraries to be quantitated, allowing 1.2 ml for each library.
+
+**Prepare library dilutions:**
+[ ] add 1ul library to 999ul of 1X dilution buffer to create a 1:1000 dilution, mix.
+[ ] add 10ul of the 1:1000 to 90ul of 1X dilution buffer to create a 1:10,000 dilution, mix.
+[ ] add 10ul of the 1:10,000 to 90ul of 1X dilution buffer to create a 1:100,000 dilution, mix.
+
+**Prepare qPCR:**
+[ ] Aliquot 16ul Master Mix containing primers into a PCR plate.
+It is recommended to run samples in triplicate. For quantitating one library, you will need 9 wells for your library dilutions, 3 wells for the no template controls (NTC), and 18 wells for DNA standards.
+[ ] Add 4ul into each respective well for each DNA standard, NTC (use 4ul 1X dilution buffer), and your library dilutions. Mix by pipetting 5x, minimizing bubbles.
+Suggested plate map:
+      DNA       Diluted
+    Standards   Library
+    **1  2  3  4  5  6  7  8  9  10  11  12**
+**A**  100 pM  1:1000
+**B**   10 pM  1:10,000
+**C**   1 pM   1:100,000
+**D**  0.1 pM
+**E** 0.01 pM
+**F** 0.001 pM
+**G**  NTC
+**H**
+
+- [ ] Briefly centrifuge plate and transfer to qPCR instrument
 - [ ] Run qPCR as indicated in **Table 3**.
 
 ## QC
@@ -31,14 +61,13 @@ A successful amplification curve should had formed for all samples, and no curve
 ## Tables
 
 
-**Table 3. Primary PCR Amplification Parameters**
+**Table 3. qPCR Cycling Parameters**
 Cycle                   |    	Temperature (˚C)     | Time
 ------------------------|----------------------------|------
-Initial Denaturation    |	95	                     | 5 min
-23 cycles\*:
-Denature                | 98˚C                       | 20 sec
-Anneal                  | 55˚C	                     | 15 sec
-Extend                  | 72˚C                       | 60 sec
+Initial Denaturation    |	95	                     | 1 min
+35 cycles\*:
+Denature                | 95˚C                       | 15 sec
+Extend                  | 63˚C                       | 45 sec
 Holding	                | 4˚C	Hold                 | 0 sec
 
 
