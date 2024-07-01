@@ -44,5 +44,5 @@ Do not send any samples to lab without first discussing project with Jordan. Ple
 ## Library QC and Sequencing
 
 <br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Sequencing/LibraryQC_Tapestation.md) Library QC By Tapestation D1000
-<br> [Protocol 2:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Sequencing/LibraryQC_NebNext.md) Library Quantification by NebNext qPCR
+<br> [Protocol 2:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Sequencing/LibraryQuant_NebNext.md) Library Quantification by NebNext qPCR
 <br> [Protocol 3:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Sequencing/NextSeq2000.md) Loading P1 600 cycle kits on NextSeq 2000
