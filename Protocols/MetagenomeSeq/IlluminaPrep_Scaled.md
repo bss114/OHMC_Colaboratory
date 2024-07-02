@@ -27,7 +27,7 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 
 ## Protocol
 
-To start, assess input size. For microbial DNA 0.2-100ng will work. If there's <20ng it will be necessary to quantify the amount to adjust the number of PCR cycles as necessary.
+To start, assess input concentration. For microbial DNA 0.2-100ng will work. If there's <20ng it will be necessary to quantify the amount to adjust the number of PCR cycles as necessary.
 
 Safe stop points are marked in this protocol. Unless at a safe stop point, move on to the next step immediately.
 
