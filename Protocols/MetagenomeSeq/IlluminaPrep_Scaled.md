@@ -157,7 +157,7 @@ Vortex IPB before each use. Pipette slowly.
 - [ ] Place the plate on the magnetic stand and wait until the liquid is clear (~5 minutes).
 - [ ] Transfer 9 µL supernatant from each well of the PCR plate to the corresponding well of a new Deepwell MIDI plate.
 - [ ] Vortex and invert IPB multiple times to resuspend.
-- [ ] For standard DNA input, do as follows.
+- [ ] For standard DNA input, do as follows. If using small amplicon, see Illumina manual.
  + Add 8 µL nuclease-free water to each well containing supernatant.
  + Add 9 µL IPB to each well containing supernatant.
  + Pipette each well 10 times to mix. Alternatively, seal the plate and use a plate shaker at 1600 rpm for 1minute.
@@ -167,13 +167,6 @@ Vortex IPB before each use. Pipette slowly.
  + Transfer 25 µL supernatant from each well of the first plate into the corresponding well of the new deepwell MIDI plate containing 3 µL undiluted IPB.
  + Pipette each well in the MIDI plate 10 times to mix. Alternatively, seal the plate and use a plate shaker at 1600 rpm for 1minute.
  + Discard the first plate.
-- [ ] For small PCR amplicon input, perform the following steps.
- + Add 16.2 µL IPB to each well of the MIDI plate containing supernatant.
- + Pipette each well 10 times to mix. Alternatively, seal the plate and use a plate shaker at 1600 rpm for 1 minute.
-- [ ] Incubate the sealed MIDI plate at room temperature for 5 minutes.
-- [ ] Place on the magnetic stand and wait until the liquid is clear (~5 minutes).
-- [ ] Without disturbing the beads, remove and discard supernatant.
-- [ ] Wash two times as follows.
  + With the plate on the magnetic stand, add 40 µL fresh 80% EtOH without mixing.
  + Incubate for 30 seconds.
  + Without disturbing the beads, remove and discard supernatant.
