@@ -214,17 +214,13 @@ IDT for Illumina DNA/RNA UD Indexes uses 10 base pair index codes that differ fr
 - [ ] Calculate the molarity value of the library or pooled libraries using the following formula. Use 600 bp as the average library size, or whatever it was found to be in QC.
 Molarity = (ng/µL) / (600g/mol * 600bp)
 - [ ] Using the molarity value, calculate the volumes of RSB and library needed to dilute libraries to the starting concentration for your system.
-| Sequencing System                             | Starting Concentration (nM) | Final Loading Concentration (pM)                        |   |   |
-|-----------------------------------------------|-----------------------------|---------------------------------------------------------|---|---|
-| HiSeq 2500 and HiSeq 2000 (high output modes) | 2                           | 12                                                      |   |   |
-| HiSeq 2500 (rapid run mode)                   | 2                           | 8.5                                                     |   |   |
-| HiSeq X, HiSeq 4000, and HiSeq 3000           | 2-3                         | 200-300                                                 |   |   |
-| iSeq 100                                      | 2                           | 200                                                     |   |   |
-| MiniSeq                                       | 2                           | 1.2-1.3                                                 |   |   |
-| MiSeq (v3 reagents)                           | 4                           | 12                                                      |   |   |
-| NextSeq 550 and NextSeq 500                   | 2                           | 1.2-1.3                                                 |   |   |
-| NextSeq 2000                                  | 2                           | 750                                                     |   |   |
-| NovaSeq 6000                                  | 2                           | See document #1000000019358 (NovaSeq 6000 System Guide) |   |   |
+
+
+| Sequencing System                             | Starting Concentration (nM) | Final Loading Concentration (pM)                        |
+|-----------------------------------------------|-----------------------------|---------------------------------------------------------|
+| iSeq 100                                      | 2                           | 200                                                     |
+| MiSeq (v3 reagents)                           | 4                           | 12                                                      |
+| NovaSeq 6000                                  | 2                           | See document #1000000019358 (NovaSeq 6000 System Guide) |
 
 - [ ] Dilute libraries using RSB:
  + Libraries quantified as a multiplexed library pool — Dilute the pool to the starting concentration for your system.
