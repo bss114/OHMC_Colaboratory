@@ -50,18 +50,17 @@ Suggested plate map:
 - [ ] Run qPCR as indicated in **Table 3**.
 
 ## QC
-A successful amplification curve should had formed for all samples, and no curves should be observed for negative controls (**Figure 2**). Optionally, a 1% agarose gel can be used to spot check some amplifications. Sporadic failures can be diluted 10x and attempted again which will correct issues encountered with potential wash buffer carry over.
 
 ## Figures
 
-![fig1](https://github.com/jbisanz/AmpliconSeq/blob/master/images/ampcurves.png)
+![fig1]()
 
-**Figure 2**. qPCR amplification curves for a single sample shows dilution series. Note that the extraction blanks have not amplified. Amplification may be observed at 25 cycles of PCR due to primer dimers in negative controls. See protocols for low biomass samples for more information and recommendations.
+**Figure 1**. qPCR amplification curves for a single sample shows dilution series. Note that the extraction blanks have not amplified. Amplification may be observed at 25 cycles of PCR due to primer dimers in negative controls. See protocols for low biomass samples for more information and recommendations.
 
 ## Tables
 
 
-**Table 3. qPCR Cycling Parameters**
+**Table 2. qPCR Cycling Parameters**
 Cycle                   |    	Temperature (˚C)     | Time
 ------------------------|----------------------------|------
 Initial Denaturation    |	95	                     | 1 min
