@@ -33,6 +33,8 @@ Vortex briefly and do a quick spin, keep reagents on ice.
 - [ ] Aliquot 16ul Master Mix containing primers into a PCR plate.
 It is recommended to run samples in triplicate. For quantitating one library, you will need 9 wells for your library dilutions, 3 wells for the no template controls (NTC), and 18 wells for DNA standards.
 - [ ] Add 4ul into each respective well for each DNA standard, NTC (use 4ul 1X dilution buffer), and your library dilutions. Mix by pipetting 5x, minimizing bubbles.
+
+
 Suggested plate map:
       DNA       Diluted
     Standards   Library
@@ -55,7 +57,7 @@ Suggested plate map:
 
 ![fig1]()
 
-**Figure 1**. qPCR amplification curves for a single sample shows dilution series. Note that the extraction blanks have not amplified. Amplification may be observed at 25 cycles of PCR due to primer dimers in negative controls. See protocols for low biomass samples for more information and recommendations.
+**Figure 1**. Expected Results. Note efficiency greater than 90%. At least 1 dilution of linrary should land between standards.
 
 ## Tables
 
