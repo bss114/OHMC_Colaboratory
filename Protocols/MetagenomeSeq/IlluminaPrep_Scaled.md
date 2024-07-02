@@ -32,7 +32,7 @@ To start, assess input concentration. For microbial DNA 0.2-100ng will work. If 
 Safe stop points are marked in this protocol. Unless at a safe stop point, move on to the next step immediately.
 
 ### Tagmentation
-BLT = bead-linked transposons; TB1 = tagment buffer 1.
+**Reagents needed:** BLT = bead-linked transposons; TB1 = tagment buffer 1. Both at room temperature and vortexed to mix. Do not centrifuge.
 
 Save the following TAG program on the thermal cycler:
 * Choose the preheat lid option and set to 100°C
@@ -40,13 +40,12 @@ Save the following TAG program on the thermal cycler:
 * 55°C for 15 minutes
 * Hold at 10°C
 
-- [ ] Bring BLT and TB1 to room temp and vortex. Do not centrifuge.
 - [ ] Add 0.4–6 µL DNA to each well of a 96-well PCR plate so that the total input amount is 20–100 ng.
 - [ ] If DNA volume < 6 µL, add nuclease-free water to the DNA samples to bring the total volume to 6 µL.
 - [ ] Vortex BLT vigorously for 10 seconds to resuspend. Repeat as necessary.
-- [ ] Combine 2.2µL of BLT and 2.2µL of TB1 to prepare the Tagmentation Master Mix. Multiply each volume by the number of samples being processed.
+- [ ] Combine 2.2µL of BLT and 2.2µL of TB1 to prepare the Tagmentation Master Mix. Multiply each volume by the number of samples being processed. \**Note: This volume includes 10% extra volume for reagent waste.*
 - [ ] Vortex the Tagmentation Master Mix thoroughly to resuspend.
-- [ ] Divide the Tagmentation Master Mix volume equally into an 8-tube strip.
+- [ ] Divide the Tagmentation Master Mix volume equally into an 8-tube strip. \**Note: This only applies if doing >8 samples.*
 - [ ] Transfer 4 μl Tagmentation Master Mix from the 8-tube strip to each well of the plate containing a sample. Use fresh tips for each sample column.
 - [ ] Discard the 8-tube strip after the Tagmentation Master Mix has been dispensed.
 - [ ] Pipette each sample 10 times to resuspend.
@@ -55,7 +54,7 @@ Save the following TAG program on the thermal cycler:
 In storing BLT, make sure beads are always stored upright and submerged in the buffer
 
 ### Post-Tagmentation Cleanup
-TSB = tagment stop buffer; TWB = tagment wash buffer
+**Reagents needed:**  TSB = tagment stop buffer; TWB = tagment wash buffer. Vortex to mix. If TSB has precipitated heat at 37C for 10 minutes.
 
 Save the following PTC program on the thermal cycler:
 * Choose the preheat lid option and set to 100°C
@@ -65,7 +64,6 @@ Save the following PTC program on the thermal cycler:
 
 If ever beads are aspirated into pipette tips, dispense back into the plate on the magnetic stand and wait until the liquid is clear (~2 minutes).
 
-- [ ] IF TSB has precipitated, heat at 37C for 10 minutes, then vortex until dissolved.
 - [ ] Add 2 µL TSB to the plate.
 - [ ] Slowly pipette each well 10 times to resuspend the beads, and then seal.
 - [ ] Seal and place on the preprogrammed thermal cycler and run the PTC program.
@@ -85,7 +83,7 @@ The TWB remains in the wells to prevent overdrying of the beads.
 ### Amplify Tagmented DNA
 This step amplifies the tagmented DNA using a limited-cycle PCR program. The PCR step adds Index 1 (i7) adapters, Index 2 (i5) adapters, and sequences required for sequencing cluster generation. To confirm the indexes selected for low plexity pooling have the appropriate color balance, see the [Index Adapters Pooling Guide](https://support-docs.illumina.com/SHARE/IndexAdaptersPooling/Content/SHARE/FrontPages/IndexAdapterPooling.htm)
 
-EPM = Enhanced PCR Mix
+**Reagents needed:** EPM = Enhanced PCR Mix. Indexes. Thaw on ice.
 
 About Reagents:
 * Index adapter plates
@@ -150,7 +148,7 @@ If you are stopping, store at 2°C to 8°C for up to 30 days.
 
 ### Clean Up Libraries
 
-IPB = Illumina Purification Beads; RSB = Resuspension Buffer
+**Reagents needed:** IPB = Illumina Purification Beads; RSB = Resuspension Buffer. Thaw at room temperature. Make fresh 80% Ethanol.
 
 Vortex IPB before each use. Pipette slowly.
 
