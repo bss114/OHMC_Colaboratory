@@ -148,7 +148,10 @@ If you are stopping, store at 2°C to 8°C for up to 30 days.
 
 ### Clean Up Libraries
 
+**Theory:** This is a relatively standard bead cleanup using a double sided size selection to remove small fragments such as adapter dimers, and also large fragments that will not cluster efficiently. Care must be taken because in the first bead cleanup, the supernatant is kept, and in the second cleanup, the bound fraction is kept!
+
 **Reagents needed:** IPB = Illumina Purification Beads; RSB = Resuspension Buffer. Thaw at room temperature. Make fresh 80% Ethanol.
+
 
 Vortex IPB before each use. Pipette slowly.
 
