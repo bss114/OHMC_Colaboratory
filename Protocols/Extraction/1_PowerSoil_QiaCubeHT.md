@@ -98,7 +98,7 @@ the riser block EMTR in top-right position. Load EMTR (without lid) into elution
 ![fig2](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/images/QiaCube%20deck.jpg)
 **Figure 2:** Image of deck set up for PowerSoil.
 
-![fig2]()
+![fig3](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/images/Correctly%20labeled%20samples.jpg)
 **Figure 3:** Example of properly labelled plate.
 
 ### Cleanup
