@@ -95,7 +95,7 @@ the riser block EMTR in top-right position. Load EMTR (without lid) into elution
 - [ ] When vacuum check alert comes up (it will show expected timing in the software), ensure that all supernatants have cleared their wells. If not, evasive maneuvers might be required and those samples may be lost.
 - [ ] When run is complete, label collection plate with computer printed label. Label must include the project name, user name, plate X of Y, and the date. See Figure 3 for example.
 
-![fig2]()
+![fig2](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/images/QiaCube%20deck.jpg)
 **Figure 2:** Image of deck set up for PowerSoil.
 
 ![fig2]()
