@@ -1,32 +1,29 @@
-# Amplicon Sequencing Protocol 1- Primary PCR
+# NextSeq2000 XLEAP-SBS Sequencing Protocol
 
 ## Theory
-This protocol and the subsequent indexing steps were originally derived from a “Systematic improvement of amplicon marker gene methods for increased accuracy in microbiome studies” [doi:10.1038/nbt.3601](https://www.nature.com/articles/nbt.3601). The methods have been heavily modified to optimize throughput and minimize cost while also adapting to our equipment and supplies.
+After pooling equimolar amounts of the amplicon libraries and performing necessary clean up steps, the library can be diluted to 650pM with %phiX and run on the Illumina sequencer.
 
 ## Materials
 
-- [ ] 384 Plates for qPCR (Biorad #HSP3865 OR Armadillo PCR plate Fisher AB3384)
+- [ ] 
 
 
 ## Protocol
-***Location:** PCR hood or separate room/area from other steps*
-- [ ] Wipe pipettes and work areas with DNaseAway or similar, treat PCR area with UV light for ~15 minutes.
-- [ ] Generate enough PCR master mix for the number of samples you will be preparing in reagent reservoir (see **Table 2**). Mix well with a 1000ul pipette and/or rocking reservoir.
-- [ ] Using 10 ul multichannel, transfer 9 ul of master mix into each well of qPCR plate which will be loaded. Be sure to consider the [96-to-384 well layout](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx).
-- [ ] Thaw gDNA plate on ice and briefly centrifuge to prevent cross contamination. **This centrifugation is essential.**
-- [ ] Load gDNA on to Mini-96 and transfer 1 ul to qPCR plate
-- [ ] Cover 384 well plate with optically clear plate seals
-- [ ] Briefly centrifuge qPCR plate and transfer to qPCR instrument
-- [ ] Run qPCR as indicated in **Table 3**.
+***Location:** clean benchtop*
+- [ ] Wearing gloves, remove foil package containing the cartridge from the -20C, place the box on the benchtop with the cartridge on top allowing air to circulate all around it.
+- [ ] Make sure the position of the cartridge is such that the label faces up. Thaw for 12 hours at room temperature, not exceeding 16 hours.
+- [ ] Remove a flow cell from 4C, allowing it to come to room temperature for 15 minutes.
+- [ ] Open the cartridge bag by tearing from the top notch on either side and remove the cartridge from the bag.
+- [ ] Slowly invert the cartridge 10 times to mix reagents.
 
 ## QC
-A successful amplification curve should had formed for all samples, and no curves should be observed for negative controls (**Figure 2**). Optionally, a 1% agarose gel can be used to spot check some amplifications. Sporadic failures can be diluted 10x and attempted again which will correct issues encountered with potential wash buffer carry over.
+
 
 ## Figures
 
-![fig1](https://github.com/jbisanz/AmpliconSeq/blob/master/images/ampcurves.png)
 
-**Figure 2**. qPCR amplification curves for a single sample shows dilution series. Note that the extraction blanks have not amplified. Amplification may be observed at 25 cycles of PCR due to primer dimers in negative controls. See protocols for low biomass samples for more information and recommendations.
+
+**Figure 2**. 
 
 ## Tables
 
