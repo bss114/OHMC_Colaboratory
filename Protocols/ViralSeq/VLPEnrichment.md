@@ -63,7 +63,7 @@ $`(\rho_{2} \times V_{f}) - (\rho_{1} \times V_{f}) = \text{CsCl (g) to add}`$
 	- 1.3 g/mL 
 	- 1.5 g/mL 
 	- 1.7 g/mL 
-- Fractions are best prepared in either 10 mL or 50 mL conical tubes, and it is important to add the CsCl fractionally for all of the CsCl to dissolve properly in the 1z PBS.
+- Fractions are best prepared in either 10 mL or 50 mL conical tubes, and it is important to add the CsCl fractionally for all of the CsCl to dissolve properly in the 1x PBS.
 - The density of your prepared fractions will need to be verified before proceeding. Take multiple 100 µL aliquots of your samples and weigh them on a scale to obtain the density. Adjust the amount of CsCl or filtrate to add to the prepared fractions to achieve the final density.
 
 ## 2. Preprocessing
