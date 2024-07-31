@@ -75,13 +75,13 @@ ITS4_Nextera | ITS | ITS2 |                  GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG*
 **Table 2. Primary PCR Master Mix**
 | Component                    | Reaction Concentration | 1 Rxn (µL) | 96 Rxns (ul) | 384 Rxns (µL) | 574 Rxns (µL)
 |------------------------------|------------------------|------------|--------------|---------------|--------------
-| Nuclease-free H2O            | -                      |    5.895   | 648.45       |  2,475.9      |  3,713.9
+| Nuclease-free H2O            | -                      |    5.955   | 655.05       |  2,501.1      |  3,751.7
 | 5x KAPA HiFi Buffer          | 1x                     |     2      |    220       |   840         |  1,260
 | 10 mM dNTPs                  | 0.3 mM                 |  0.3       | 33           |   126         |  189
 | DMSO                         | 0.50%                  | 0.5        | 55           | 210           | 315
 | 1000x SYBR Green             | 0.005%                 | 0.005      | 0.55         | 2.1           | 3.15
-| 100 µM Forward Primer        | 500 nM                 | 0.05       | 5.5          | 21            | 31.5
-| 100 µM Reverse Primer        | 500 nM                 | 0.05       | 5.5          | 21            | 31.5
+| 100 µM Forward Primer        | 200 nM                 | 0.02       | 2.2          | 8.4           | 12.6
+| 100 µM Reverse Primer        | 200 nM                 | 0.02       | 2.2          | 8.4            | 12.6
 | KAPA HiFi polymerase (1U/µL) | 0.2 U                  | 0.2        | 22           | 84            | 126
 | Total                        | -                      | 9          | 990          | 3,780         | 5,760
 
@@ -94,8 +94,8 @@ Initial Denaturation   |	95	| 5 min
 23 cycles\*:
 Denature | 98˚C | 20 sec
 Anneal | 55˚C	| 15 sec
-Extend | 72˚C | 60 sec
+Extend | 72˚C | 30 sec
 Holding	| 4˚C	Hold | 0 sec
 
-\**23 cycles is a good starting point here. With V4 primers, primer dimers will occur by cycle 25 and will make judging the success of amplification difficult without running gel or secondary QC.*
+\**25 cycles is a good starting point here. With V4 primers, primer dimers will occur after cycle 25 and will make judging the success of amplification difficult without running gel or secondary QC.*
 
