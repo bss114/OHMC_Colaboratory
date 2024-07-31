@@ -97,5 +97,5 @@ Anneal | 55˚C	| 15 sec
 Extend | 72˚C | 30 sec
 Holding	| 4˚C	Hold | 0 sec
 
-\**23 cycles is a good starting point here. With V4 primers, primer dimers will occur by cycle 25 and will make judging the success of amplification difficult without running gel or secondary QC.*
+\**25 cycles is a good starting point here. With V4 primers, primer dimers will occur after cycle 25 and will make judging the success of amplification difficult without running gel or secondary QC.*
 
