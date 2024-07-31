@@ -1,7 +1,7 @@
 ##########################
 message("#################################################################################################################")
-message("#PrimaryPCR Analyzer v0.1")
-message("#J Bisanz 12 June 2024")
+message("#PrimaryPCR Analyzer v0.11")
+message("#J Bisanz 30 July 2024")
 message("#Visualizes qPCR results from primary PCR for both cfx384 and qiaquant instruments")
 message("#################################################################################################################")
 message(" ")
@@ -34,8 +34,9 @@ opt = parse_args(opt_parser)
 .libPaths(opt$libpath)
 
 
-#opt$csv="libraryprep/primarypcr/Plate1to4/NetxSeq2-Plate1_primary_admin_2024-06-12 10-54-41_BisanzLabCFX -  Quantification Amplification Results_SYBR.csv"
-#opt$tracking="2024June12_IndexTrackingSheet.xlsx"
+#opt$csv="libraryprep/BSUPLATE1_July162024.csv"
+#opt$instrument="qiaquant384"
+#opt$tracking="libraryprep_v2/NextSeq3_Tracking_2023July30.xlsx"
 #opt$plateid="1"
 
 ###########
@@ -57,21 +58,25 @@ if(length(tracking$Sample_ID)!=length(unique(tracking$Sample_ID))){
   stop("There are duplicated sample names, please make sure every sample has a unique name!")
   }
 
-layout384<-
-bind_rows(
-read_excel(opt$tracking, "384_layout", n_max=16) %>% dplyr::rename(Col384=1) %>% pivot_longer(!Col384, names_to = "Row384", values_to = "Sample_ID") %>% mutate(Plate384="Plate384_1"),
-read_excel(opt$tracking, "384_layout", n_max=16, skip=18) %>% dplyr::rename(Col384=1) %>% pivot_longer(!Col384, names_to = "Row384", values_to = "Sample_ID") %>% mutate(Plate384="Plate384_2")
-) %>%
-  filter(!is.na(Sample_ID))
+suppressMessages(
+  layout384<-
+  bind_rows(
+  read_excel(opt$tracking, "384_layout", n_max=16) %>% dplyr::rename(Col384=1) %>% pivot_longer(!Col384, names_to = "Row384", values_to = "Sample_ID") %>% mutate(Plate384="Plate384_1"),
+  read_excel(opt$tracking, "384_layout", n_max=16, skip=18) %>% dplyr::rename(Col384=1) %>% pivot_longer(!Col384, names_to = "Row384", values_to = "Sample_ID") %>% mutate(Plate384="Plate384_2")
+  ) %>%
+    filter(!is.na(Sample_ID))
+)
 
-tracking<-
-tracking %>%
-  left_join(layout384) %>%
-  filter(Plate384==paste0("Plate384_", opt$plate)) %>%
-  mutate(Well384=paste0(Col384,Row384))
+suppressMessages(
+  tracking<-
+  tracking %>%
+    left_join(layout384) %>%
+    filter(Plate384==paste0("Plate384_", opt$plate)) %>%
+    mutate(Well384=paste0(Col384,Row384))
+)
 rm(layout384)
 
-write_tsv(tracking, paste0("Tracking_96_to_384_Plate",opt$plateid,".tsv"))
+#write_tsv(tracking, paste0("Tracking_96_to_384_Plate",opt$plateid,".tsv"))
 ###########
 message(date(), paste("---> Reading ", opt$csv, "for instrument", opt$instrument ))
 
@@ -92,13 +97,18 @@ if(opt$instrument=="cfx384"){
   stop("Instrument must be either cfx384 or qiaquant384")
 }
 
-
+suppressMessages(
 amps<-
 amps %>% left_join(tracking %>% dplyr::select(Well384, Sample_Plate, Sample_Well, Sample_ID)) %>%
   mutate(Col96=gsub("[A-z]","", Sample_Well) %>% as.numeric()) %>%
   mutate(Row96=gsub("[0-9]","", Sample_Well)) %>%
-  filter(!is.na(Sample_ID))
-
+  filter(!is.na(Sample_ID)) %>%
+  mutate(SampleType=case_when(
+    grepl("ZymoCom_|ZymoDNA", Sample_ID) ~ "Positive Control",
+    grepl("NTC_|ExtCon_", Sample_ID) ~ "Negative Control",
+    TRUE ~ "Unknown"
+  ))
+)
 
 ###########
 message(date(), paste("---> Plotting ", opt$csv, "for instrument", opt$instrument ))
@@ -107,14 +117,13 @@ for(i in unique(amps$Sample_Plate)){
   if(grepl("PrimaryCurves_96Plate", opt$pdf)){pdfname<-paste0("PrimaryCurves_96",i,".pdf")} else {pdfname<-paste0(opt$pdf,i,".pdf")}
   amps %>%
     filter(Sample_Plate==i) %>%
-    mutate(Class=if_else(grepl("ExtCon|NTC", Sample_ID), "Control","Sample")) %>%
-    ggplot(aes(x=Cycle, y=RFU, color=Class)) +
+    ggplot(aes(x=Cycle, y=RFU, color=SampleType)) +
     geom_line() +
     facet_grid(Row96~Col96) +
     theme_plt() +
     geom_text(aes(label=Sample_ID, x=1, y=5000), color="black", size=2, hjust=0) +
-    scale_color_manual(values=c("grey50","indianred")) +
-    ggtitle(paste("Primary PCR Curves 96", i))
+    scale_color_manual(values=c("indianred","green", "grey50")) +
+    ggtitle(paste("Primary PCR Curves 96:", i))
     
   ggsave(pdfname, height=7.5, width=10, useDingbats=F)
 }
