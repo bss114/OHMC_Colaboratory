@@ -32,7 +32,7 @@ Before sequencing, it is crucial to remove any free adapter and/or primer dimers
 - [ ] Capture beads
 - [ ] Transfer supernatant to fresh tube and quantify using Nanodrop and/or Qubit
 
-## Protocol A: Gel purification
+## Protocol B: Gel purification
 - [ ] Prepare 50mL of 1% agarose (0.5g) in the microwave using running buffer.
 - [ ] Add 5 µL of SYBR Safe stain to the gel and mix before pouring into freshly cleaned (with RNase Away or similar) gel mold. Use the smallest lane width possible.
 - [ ] Mix 24ul library with loading buffer (according to concentration of buffer).
