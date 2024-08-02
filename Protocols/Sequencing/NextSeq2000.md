@@ -14,6 +14,7 @@ After pooling equimolar amounts of the amplicon libraries and performing necessa
 **Prepare the cartridge:**
 - [ ] Wearing gloves, remove foil package containing the cartridge from the -20C, place the box on the benchtop with the cartridge on top allowing air to circulate all around it.
 - [ ] Make sure the position of the cartridge is such that the label faces up. Thaw for 12 hours at room temperature, not exceeding 16 hours. **OR** Thaw 8 hours (not exceeding 10 h) at 25˚C in water bath. See [here](https://knowledge.illumina.com/instrumentation/nextseq-1000-2000/instrumentation-nextseq-1000-2000-reference_material-list/000002430).
+
 **Load the flow cell:**      
 - [ ] Remove the flow cell from 4C, allowing it to come to room temperature for 15 minutes.
 - [ ] Wearing gloves, open the cartridge bag by tearing from the top notch on either side and remove the cartridge from the bag.
