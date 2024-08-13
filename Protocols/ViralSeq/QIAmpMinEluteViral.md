@@ -26,16 +26,16 @@ If it is the first time utilizing this kit and the reagents have not been previo
 - Add 310 µL of Buffer AVE to the tube containing the 310 μg lyophilized carrier RNA. Divide into aliquots for storage at -20°c. 
 
 > [!NOTE]
-> Do not go through more than three freeze-thaw cycles with a single aliquot of the carrier RNA/Buffer AVE suspension.
+> Do not undergo more than three freeze-thaw cycles with a single aliquot of the carrier RNA/Buffer AVE suspension.
 
 - Add 25 ml of ethanol (96–100%) to a bottle containing 19 ml of Buffer AW1.
 - Add 30 ml of ethanol (96–100%) to a bottle containing 13 ml of Buffer AW2 concentrate, as described on the bottle.
 
-## 2. Important Points Before Procedure Initiation of Protocol
+## 2. Important Points Before Initiation of Protocol
 - Centrifugation is done at room temperature (15 - 26°C).
 - Equilibrate samples to room temperature.
 - Equilibrate elution buffer to room temperature.
-- Prepare a 56°C heating block for use in the lysis and drying procedures.
+- Prepare a 56°C heating block for lysis and drying procedures.
 - Add carrier RNA/Buffer AVE suspension to Buffer AL according to these instructions:
 	- Calculate the volume of Buffer AL-carrier RNA mixture needed for the number of samples to be processed in batch:
 	- **n** x 0.22 ml = y ml
@@ -55,7 +55,7 @@ If it is the first time utilizing this kit and the reagents have not been previo
 - Briefly, centrifuge to collect the liquid that might've evaporated and cooled higher up in the microcentrifuge tube.
 - Add 250 µL of ethanol (96-100%) to the sample, pulse-vortex for 15 seconds. Incubate at room temperature for 5 minutes.
 - Briefly centrifuge the 1.5 mL microcentrifuge tube. 
-- Apply the lysate onto the QIAmp MinElute column, taking care to not wet the rim. Centrifuge at 6000 x g for 1 minute. Place columns into a new 2 mL collection tube and discard the old one. 
+- Apply the lysate onto the QIAmp MinElute column, taking care not to wet the rim. Centrifuge at 6000 x g for 1 minute. Place columns into a new 2 mL collection tube and discard the old one. 
 - Add 500 µL of Buffer AW1 to the column. Centrifuge at 6000 x g for 1 minute. Place the column into a new 2 mL collection tube and discard the old one. 
 - Add 500 µL of Buffer AW2 to the column. Centrifuge at 6000 x g for 1 minute. Place the column into a new 2 mL collection tube and discard the old one. 
 - Add 500 µL of ethanol (96-100%) to the column. Centrifuge at 6000 x g for 1 minute. Place into a new 2 mL collection tube. 
