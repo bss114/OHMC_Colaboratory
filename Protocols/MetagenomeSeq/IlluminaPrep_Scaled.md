@@ -109,9 +109,9 @@ Save the following BLT PCR program on a thermal cycler using the appropriate num
 * 68°C for 3 minutes
 * 98°C for 3 minutes
 * (X) cycles of:
- + 98°C for 45 seconds
- + 62°C for 30 seconds
- + 68°C for 2 minutes
+ + ---98°C for 45 seconds
+ + ---62°C for 30 seconds
+ + ---68°C for 2 minutes
 * 68°C for 1 minute
 * Hold at 10°C
 
@@ -197,38 +197,11 @@ To achieve optimal cluster density, pool equal library volumes and quantify the 
 - [ ] Quantify the library pool using a dsDNA fluorescent dye method, such as Qubit or PicoGreen.
 
 #### For DNA Inputs of < 100 ng:
-- [ ] Quantify each library individually using Qubit or PicoGreen.
+- [ ] Quantify each library individually using Qubit or qPCR to pool at equal molarity OR normalize using iSeq
 
 ### Check Library Quality (Optional)
 
 Use the tapestation to ensure insert sizes are of desired size and distribution. (600bp with a range of ~ 150-1500bp)
 
-
-### Dilute Libraries to the Starting Concentration
-** NUMBERS BELOW REMAIN UNSCALED**
-
-This step dilutes libraries to the starting concentration for your sequencing system and is the first step in a serial dilution. After diluting to the starting concentration, libraries are ready to be denatured and diluted to the final loading concentration.
-For sequencing, Illumina recommends the read lengths indicated on the Illumina DNA Prep Product Compatibility support site page.
-IDT for Illumina DNA/RNA UD Indexes uses 10 base pair index codes that differ from the Nextera DNA CD Indexes , which use eight base pair index codes. This change in base pair index codes can require adjustments to your sequencing run set up.
-
-- [ ] Calculate the molarity value of the library or pooled libraries using the following formula. Use 600 bp as the average library size, or whatever it was found to be in QC.
-Molarity = (ng/µL) / (600g/mol * 600bp)
-- [ ] Using the molarity value, calculate the volumes of RSB and library needed to dilute libraries to the starting concentration for your system.
-
-
-| Sequencing System                             | Starting Concentration (nM) | Final Loading Concentration (pM)                        |
-|-----------------------------------------------|-----------------------------|---------------------------------------------------------|
-| iSeq 100                                      | 2                           | 200                                                     |
-| MiSeq (v3 reagents)                           | 4                           | 12                                                      |
-| NovaSeq 6000                                  | 2                           | See document #1000000019358 (NovaSeq 6000 System Guide) |
-
-- [ ] Dilute libraries using RSB:
- + Libraries quantified as a multiplexed library pool — Dilute the pool to the starting concentration for your system.
- + Libraries quantified individually—Dilute each library to the starting concentration for your system. Add 10 µL of each diluted library to a tube to create a multiplexed library pool.
-- [ ] Follow the denature and dilute instructions for your system to dilute to the final loading concentration.
- + For the iSeq 100 System, see the system guide for dilution instructions (libraries are automatically denatured).
- + For the NovaSeq 6000 System, see the system guide for pool and denature instructions.
- + For the HiSeq 4000 and HiSeq 3000 Systems, see the cBot 2 or cBot system guide for reagent preparation instructions.
- + For all other systems, see the denature and dilute libraries guide.
 
 The final loading concentrations are a starting point and general guideline. Optimize concentrations for your workflow and quantification method over subsequent sequencing runs or by flow cell titration.
