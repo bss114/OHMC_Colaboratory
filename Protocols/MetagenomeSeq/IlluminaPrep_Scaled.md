@@ -170,17 +170,19 @@ Vortex IPB before each use. Pipette slowly.
  + Transfer 25 µL supernatant from each well of the first plate into the corresponding well of the new deepwell MIDI plate containing 3 µL undiluted IPB.
  + Pipette each well in the MIDI plate 10 times to mix. Alternatively, seal the plate and use a plate shaker at 1600 rpm for 1minute.
  + Discard the first plate.
+ + Discard the supernatant
  + With the plate on the magnetic stand, add 40 µL fresh 80% EtOH without mixing.
- + Incubate for 30 seconds.
+ + Without disturbing the beads, remove and discard supernatant.
+ + With the plate on the magnetic stand, add 40 µL fresh 80% EtOH without mixing.
  + Without disturbing the beads, remove and discard supernatant.
 - [ ] Remove and discard residual EtOH.
 - [ ] Air-dry on the magnetic stand for 5 minutes.
 - [ ] Remove from the magnetic stand.
-- [ ] Add 6.4 µL RSB to the beads.
+- [ ] Add 15 µL RSB to the beads.
 - [ ] Pipette to resuspend.
 - [ ] Incubate at room temperature for 2 minutes.
 - [ ] Place the plate on the magnetic stand and wait until the liquid is clear (~2 minutes).
-- [ ] Transfer 6 µL supernatant to a new 96-well PCR plate.
+- [ ] Transfer 12 µL supernatant to a new 96-well PCR plate.
 
 SAFE STOPPING POINT
 If you are stopping, seal the plate and store at -25°C to -15°C for up to 30 days.
