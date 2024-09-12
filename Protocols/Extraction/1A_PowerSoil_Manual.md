@@ -14,7 +14,7 @@ Describe here
 - [ ] Bring buffer CD2 out of fridge.
 - [ ] Make sure that there is no precipitate in CD3 (SDS). If there is, heat in water bath until dissolved.
 - [ ] All tubes can be set up and labeled ahead of time as shown:
-(https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Misc/images/Tube_rack_PS.jpeg)
+!(https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Misc/images/Tube_rack_PS.jpeg)
 
   ## Sample Disruption
 
