@@ -76,6 +76,7 @@ the riser block EMTR in top-right position. Load EMTR (without lid) into elution
 - [ ] Remove plate from centrifuge, careful to not disrupt pellet. Avoiding beads, transfer 450ul supernatant to the CD2 plate and mix. Mixing can be accomplished with pipetting or a plate vortex (be careful not to overflow wells, bring speed up slowly to ensure mixing)
 - [ ] Centrifuge for 6 minutes at 4,500g
 - [ ] Transfer 400-450 ul of supernatant into a fresh S block, careful to avoid any bead carryover (this can be done on QIAcube but is not faster than doing by hand)
+***NOTE if using Integra MINI96:** These steps can be simplified by using the Integra MINI96 to pipet volumes. Two boxes of tips are required as well as two nest single well reservoirs. You can use the same tips to pipet CD1 into the sample plate, and then eject them back into the box; use again to transfer the 400ul supernatant to a new S block. Likewise, you can use the same tips to pipet the CD2 into the deep well plate, transfer the 450ul supernatant and mix. Eject tips into the box for disposal.
 
 ### Sample Purification
 ***Location:** The lysis/disruption process has rendered any infectious agents inactive. Care must now focus on preventing contamination. Perform all work in laminar flow PCR hoods. Prepare all reagents within hoods and transfer to QIAcube when ready.
