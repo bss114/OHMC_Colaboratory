@@ -29,7 +29,7 @@ This step essentially involves diluting samples 100x in water before a single li
 - [ ] Using the Mini-96, transfer 2 µl of indexes to the indexing plate. Be sure to use the [template].
 - [ ] Store indexing plate while doing water dilutions
 - [ ] Using a multichannel load 100 ul water to each well of the dilution plate.
-- [ ] Using the Mini-96, transfer 1 ul of gDNA from the primary PCR plate to the dilution plate. Be sure to use the [template].(https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx) to remove the correct wells.
+- [ ] Using the Mini-96, transfer 1 ul of gDNA from the primary PCR plate to the dilution plate. Be sure to use this [template](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx) to remove the correct wells.
 - [ ] Mix gDNA in dilution plate. Note: This can be accomplished with a custom amp dilution program on the Integra.
 - [ ] Mix the dilution plate with the Mini-96 and transfer 5 µL from the dilution plate to the indexing plate. Be sure to use the [template].
 - [ ] Seal plate with optically clear Plate Seals and briefly centrifuge
