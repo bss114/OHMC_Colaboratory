@@ -170,7 +170,7 @@ Vortex IPB before each use. Pipette slowly.
  + Transfer 25 µL supernatant from each well of the first plate into the corresponding well of the new deepwell MIDI plate containing 3 µL undiluted IPB.
  + Pipette each well in the MIDI plate 10 times to mix. Alternatively, seal the plate and use a plate shaker at 1600 rpm for 1minute.
  + Discard the first plate.
- + Discard the supernatant
+ + Capture the beads and discard the supernatant
  + With the plate on the magnetic stand, add 40 µL fresh 80% EtOH without mixing.
  + Without disturbing the beads, remove and discard supernatant.
  + With the plate on the magnetic stand, add 40 µL fresh 80% EtOH without mixing.
