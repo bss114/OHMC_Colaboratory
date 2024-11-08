@@ -203,7 +203,7 @@ To achieve optimal cluster density, pool equal library volumes and quantify the 
 
 ### Check Library Quality (Optional)
 
-Use the tapestation to ensure insert sizes are of desired size and distribution. (600bp with a range of ~ 150-1500bp)
+Use the tapestation HS screentape assay to ensure insert sizes are of desired size and distribution. (600bp with a range of ~ 150-1500bp)
 
 
 The final loading concentrations are a starting point and general guideline. Optimize concentrations for your workflow and quantification method over subsequent sequencing runs or by flow cell titration.
