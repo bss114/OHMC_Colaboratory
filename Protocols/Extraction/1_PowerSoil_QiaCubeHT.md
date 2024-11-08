@@ -71,12 +71,12 @@ the riser block EMTR in top-right position. Load EMTR (without lid) into elution
 - [ ] Run for 5 minutes at 25 Hz.
 - [ ] Flip plate to opposite orientation.
 - [ ] Run again for 5 minutes at 25 Hz.
-- [ ] Centrifuge the plate for 6 minuets at 4,500g in floor centrifuge.
+- [ ] Centrifuge the plate for 6 minutes at 4,500g in floor centrifuge.
 - [ ] While the samples are spinning, add 250 ul CD2 to each well of a new S-Block (deep well plate)
 - [ ] Remove plate from centrifuge, careful to not disrupt pellet. Avoiding beads, transfer 450ul supernatant to the CD2 plate and mix. Mixing can be accomplished with pipetting or a plate vortex (be careful not to overflow wells, bring speed up slowly to ensure mixing)
-- [ ] Centrifuge for 6 minutes at 4,500g
+- [ ] Seal plate with provided sealing film; centrifuge for 6 minutes at 4,500g
 - [ ] Transfer 400-450 ul of supernatant into a fresh S block, careful to avoid any bead carryover (this can be done on QIAcube but is not faster than doing by hand)
-***NOTE if using Integra MINI96:** These steps can be simplified by using the Integra MINI96 to pipet volumes. Two boxes of tips are required as well as two nest single well reservoirs. You can use the same tips to pipet CD1 into the sample plate, and then eject them back into the box; use again to transfer the 400ul supernatant to a new S block. Likewise, you can use the same tips to pipet the CD2 into the deep well plate, transfer the 450ul supernatant and mix. Eject tips into the box for disposal.
+***NOTE if using Integra MINI96:** These steps can be simplified by using the Integra MINI96 to pipet volumes. Two boxes of tips are required as well as two nest single well reservoirs. You can use the same tips to pipet CD1 into the sample plate, and then eject them back into the box; use again to transfer the 400ul supernatant to a new S block. Likewise, you can use the same tips to pipet the CD2 into the deep well plate, transfer the 450ul supernatant and mix. When aspirating liquid, edit the speed to 1 to avoid aspirating the pellet. Eject tips into the box for disposal to minimize aerosol.
 
 ### Sample Purification
 ***Location:** The lysis/disruption process has rendered any infectious agents inactive. Care must now focus on preventing contamination. Perform all work in laminar flow PCR hoods. Prepare all reagents within hoods and transfer to QIAcube when ready.
@@ -85,14 +85,14 @@ the riser block EMTR in top-right position. Load EMTR (without lid) into elution
 - [ ] Select pre-treatment = "manual"
 - [ ] Select Protocol: *DNeasy 96 PowerSoil Pro Protocol*
 - [ ] Select the option for a vacuum check. This may be required if there are ANY concerns about clogging columns. This is a nightmare if it occurs. The best way to avoid it is to ensure that no beads/solid material have been transfered during Disruption steps.
-- [ ] Deselect option for using TopElute Fluid (unless this is desired by user)
-- [ ] Check auto-generate sample IDs (we will not retain this information, but you could important your sample names if desired)
-- [ ] In the "Plate Assignment" screen, select the columns you want to run.
-- [ ] In the worktable setup screen, load all supplies in the correct volumes and specified locations; note any directional items especially the elution tubes; pour reagent reservoirs in the PCR hood and label each-if doing multiple runs in a day, these can be reused. Unseal your samples last in the PCR hood and place the block. Uncover tips and tubes.
-- [ ] Double check the waste bottle volume; however, this should be emptied after every use
+- [ ] In advanced: Deselect option for using TopElute Fluid (unless this is desired by user), click Next.
+- [ ] Check auto-generate sample IDs (we will not retain this information, but you could important your sample names if desired), click Next.
+- [ ] In the "Plate Assignment" screen, select the columns you want to run. Samples must be in columns of 8.
+- [ ] In the worktable setup screen, load all supplies in the correct volumes and specified locations; note any directional items especially the labeled elution tubes; pour reagent reservoirs in the PCR hood and label each-if doing multiple runs in a day, these can be reused. Unseal your samples last in the PCR hood and place the block. Uncover tips and tubes.
+- [ ] Double check the waste bottle volume; however, this should be emptied after every use in the satellite accumulation area next to the fume hood.
 - [ ] Put S block plate with supernatants from *Sample Disruption* in the designated position.
 - [ ] Double check that deck layout matches image in Figure 2
-- [ ] Select start run
+- [ ] Select start run and save the run file.
 - [ ] When vacuum check alert comes up (it will show expected timing in the software), ensure that all supernatants have cleared their wells. If not, evasive maneuvers might be required and those samples may be lost.
 - [ ] When run is complete, label collection plate with computer printed label. Label must include the project name, user name, plate X of Y, and the date. See Figure 3 for example.
 
