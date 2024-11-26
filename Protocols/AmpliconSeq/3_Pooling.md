@@ -24,21 +24,24 @@ Any given sequencing run produces a set number of reads: for example ~15 million
 - [ ] To full 96 well black plate (sample plate), transfer 1 µL of eached indexed PCR product and mix by pipetting
 - [ ] Prepare a 2-fold dilution series using the 100 ng/µL lambda DNA standard provided with the quantit kit. Your standard curve should be 100, 50, 25, 12.5, 6.25, 3.125, 1.56 and 0 ng/µL.
 - [ ] Transfer 1 µL of each standard to its designated column.
+- [ ] Read on plate reader in Perdew lab, program Picogreen.
 - [ ] Start by measuring flourescence on standard plate by setting the gain to automatic (Ex=480nm, Em=530nm).
 - [ ] Copy the gain setting and flourescence values to the Picogreen tab of TrackingSheet.xlsx. **Note: You may consider just using 80 for the gain setting on the Perdew lab magellan**.
 - [ ] Repeat measurement on full sample plate being sure to set gain to match the standard plate.
 - [ ] Copy and paste results into Picogreen template as per **Figure 1**.
 - [ ] Review the loading volumes and manually adjust volumes >20µL to be either 20µL or the average loading volume.
-- [ ] Move to Loading.csv tab, and click File > Save As > File Format: CSV UTF-8
+- [ ] Move to Loading.csv tab of index sheet, and click File > Save As > File Format: CSV UTF-8
 - [ ] Remove lines which do not have a loading volume from the resulting csv file
 - [ ] Download a copy of OT2_scripts/PoolAmplicons_template.py and copy and paste the pooling volumes from the CSV file into the python (.py) script.
 - [ ] Set up OT-2 as described in **Figure 2**. *Note: Up to 6 plates can be pooled simnultaneously from plates in deck positions 1-6. Place your plate in the corresponding deck position matching its number from the spread sheet*
-- [ ] Add 20ul nuclease free water to the eppendorf tube in the A1 position of the tube rack to ensure consistent delivery of volumes.
+- [ ] Prepare two lobind eppendorf tubes with labels and 20ul nuclease free water to ensure consistent delivery of volumes.
+- [ ] Add one eppendorf tube in the A1 position of the tube rack, tucking the cap into the slot. Add a full box of 20ul tips to the deck.
 - [ ] Upload scripts to OT-2 using Opentrons App.
-- [ ] Calibrate all deck positions
+- [ ] Calibrate all deck positions.
 - [ ] Run protocol. **Estimated time of completion: 13 minutes/plate**
 - [ ] Note, if the total volume to be pooled is over 1200ul, the protocol will pause and ask you to insert a fresh 1.5mL eppendorf tube.
 - [ ] At completion of pooling, mix all pooled 1.5mL eppendorf tubes together (if pooling >1200ul)
+- [ ] Prepare 1.2% agarose gel while OT2 is pooling.
 
 
 ## Figures
