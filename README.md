@@ -18,7 +18,7 @@ Do not send any samples to lab without first discussing project with Jordan. Ple
 
 <br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Extraction/1_PowerSoil_QiaCubeHT.md) Extraction of gDNA using DNeasy PowerSoil QIAcube HT
 <br> [Protocol 1A:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Extraction/1A_PowerSoil_Manual.md) Alternate protocol: Extraction of gDNA using DNeasy PowerSoil Individual Columns
-
+<br> [Protocol 2:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Extraction/2_RNeasy_QiaCubeHT.md) Extraction of total RNA using RNeasy QIAcube HT
 
 
 ## Amplicon Sequencing
