@@ -121,7 +121,7 @@ fastqs<-
   )) %>%
     spread(key=Direction, value=File)
 
-SampleSheet<-SampleSheet %>% left_join(fastqs) %>% filter(grepl(Project, Sample_Project))
+SampleSheet<-SampleSheet %>% mutate(Sample_Project=gsub("_..+","", Sample_ID)) %>% left_join(fastqs) %>% filter(grepl(Project, Sample_Project))
 
 interactive_table(SampleSheet)
 ```
