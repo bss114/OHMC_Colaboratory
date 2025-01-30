@@ -109,62 +109,37 @@ Save the following BLT PCR program on a thermal cycler using the appropriate num
 SAFE STOPPING POINT
 If you are stopping, store at 2°C to 8°C for up to 30 days.
 
-
-# In Progress:
-
 ### 4. Clean Up Libraries
 
 **Theory:** This is a relatively standard bead cleanup using a double sided size selection to remove small fragments such as adapter dimers, and also large fragments that will not cluster efficiently. Care must be taken because in the first bead cleanup, the supernatant is kept, and in the second cleanup, the bound fraction is kept!
 
 **Reagents needed:** IPB = Illumina Purification Beads; RSB = Resuspension Buffer. Thaw at room temperature. Make fresh 80% Ethanol.
 
-
 Vortex IPB before each use. Pipette slowly.
 
 - [ ] Bring IPB and RSB to room temp
-- [ ] Centrifuge at 280 × g for 1minute to collect contents at the bottom of the well.
-- [ ] Place the plate on the magnetic stand and wait until the liquid is clear (~5 minutes).
-- [ ] Transfer 9 µL supernatant from each well of the PCR plate to the corresponding well of a new Deepwell MIDI plate.
-- [ ] Vortex and invert IPB multiple times to resuspend.
-- [ ] For standard DNA input, do as follows. If using small amplicon, see Illumina manual.
- + Add 8 µL nuclease-free water to each well containing supernatant.
- + Add 9 µL IPB to each well containing supernatant.
- + Pipette each well 10 times to mix. Alternatively, seal the plate and use a plate shaker at 1600 rpm for 1minute.
- + Seal the plate and incubate at room temperature for 5 minutes.
- + Place on the magnetic stand and wait until the liquid is clear (~5 minutes).
- + During incubation, thoroughly vortex the IPB (undiluted stock tube), and then add 3 µL to each well of a new deepwell MIDI plate.
- + Transfer 25 µL supernatant from each well of the first plate into the corresponding well of the new deepwell MIDI plate containing 3 µL undiluted IPB.
- + Pipette each well in the MIDI plate 10 times to mix. Alternatively, seal the plate and use a plate shaker at 1600 rpm for 1minute.
- + Discard the first plate.
- + Capture the beads and discard the supernatant
- + With the plate on the magnetic stand, add 40 µL fresh 80% EtOH without mixing.
- + Without disturbing the beads, remove and discard supernatant.
- + With the plate on the magnetic stand, add 40 µL fresh 80% EtOH without mixing.
- + Without disturbing the beads, remove and discard supernatant.
-- [ ] Remove and discard residual EtOH.
-- [ ] Air-dry on the magnetic stand for 5 minutes.
-- [ ] Remove from the magnetic stand.
-- [ ] Add 15 µL RSB to the beads.
-- [ ] Pipette to resuspend.
-- [ ] Incubate at room temperature for 2 minutes.
-- [ ] Place the plate on the magnetic stand and wait until the liquid is clear (~2 minutes).
-- [ ] Transfer 12 µL supernatant to a new 96-well PCR plate.
+- [ ] Centrifuge the PCR products from the previous step at 280 × g for 1minute to collect contents at the bottom of the well
+- [ ] Place the plate on the magnetic stand and wait until the liquid is clear (~5 minutes)
+- [ ] Transfer 9 µL supernatant from each well of the PCR plate to the corresponding well of a 96 well plate
+- [ ] Add 42 µL nuclease water to each well
+- [ ] Add 27 µL IPB to each well (0.53x). Ensure that beads are well mixed
+- [ ] Pipette 10x to mix
+- [ ] Capture beads
+- [ ] While beads are being captured, transfer 9 µL of IPB to each well of a new plate
+- [ ] Transfer 75 µL supernatant from the captured beads, to the new plate containing 9 µL beads
+- [ ] Pipette 10x to mix
+- [ ] Capture beads and discard supernants
+- [ ] Wash with 120 µL 80% EtOH, capture beads, and discard supernatant
+- [ ] Wash with 120 µL 80% EtOH, capture beads, and discard supernatant
+- [ ] Ensure all trace EtOH has been removed from the wells using fine pipette tips if necessary
+- [ ] Add 35 µL nuclease-free water to each well and pipette to mix
+- [ ] Capture beads
+- [ ] Transfer 30 µL nuclease free water to a new 96 well plate
+- [ ] Vacufuge with the settings V-AQ at 30˚C until dry (approximately X min)
+- [ ] Add 12 ul to each well, and use plate vortex for 1 minute to ensure that DNA has been resuspended
+- [ ] Freeze at -20˚C.
 
-SAFE STOPPING POINT
-If you are stopping, seal the plate and store at -25°C to -15°C for up to 30 days.
+## QC
 
+Use Tapestation dsDNA HS to evaluate size distribution of libraries. Aming for ~600bp peak size with range of 150-1500bp. Ideally there are no visible adapter dimers <150nt. If these are present, additional cleanup will be required.
 
-### 5. Pool Libraries
-
-When the DNA input is 20-100 ng, quantifying and normalizing individual libraries generated in the same experiment is not necessary. However, the final yield of libraries generated in separate experiments can vary slightly.
-To achieve optimal cluster density, pool equal library volumes and quantify the pool before sequencing.
-
-#### For DNA Inputs of 100–500 ng:
-- [ ] Combine 1 µL of each library (up to 384 libraries) in a 1.7 ml microcentrifuge tube.
-- [ ] Vortex to mix, and then centrifuge.
-- [ ] Quantify the library pool using a dsDNA fluorescent dye method, such as Qubit or PicoGreen.
-
-
-## Check Library Quality (Optional)
-
-Use the tapestation HS screentape assay to ensure insert sizes are of desired size and distribution. (600bp with a range of ~ 150-1500bp)
