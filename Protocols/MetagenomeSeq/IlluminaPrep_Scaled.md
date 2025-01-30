@@ -135,8 +135,8 @@ Vortex IPB before each use. Pipette slowly.
 - [ ] Add 35 µL nuclease-free water to each well and pipette to mix
 - [ ] Capture beads
 - [ ] Transfer 30 µL nuclease free water to a new 96 well plate
-- [ ] Vacufuge with the settings V-AQ at 30˚C until dry (approximately X min)
-- [ ] Add 12 ul to each well, and use plate vortex for 1 minute to ensure that DNA has been resuspended
+- [ ] Vacufuge with the settings V-AQ at 30˚C until dry (approximately 60 min)
+- [ ] Add 12 ul nuclease-free water to each well, and use plate vortex for 1 minute to ensure that DNA has been resuspended
 - [ ] Freeze at -20˚C.
 
 ## QC
