@@ -125,7 +125,7 @@ Vortex IPB before each use. Pipette slowly.
 - [ ] Add 27 µL IPB to each well (0.53x). Ensure that beads are well mixed
 - [ ] Pipette 10x to mix
 - [ ] Capture beads
-- [ ] While beads are being captured, transfer 9 µL of IPB to each well of a new plate
+- [ ] While beads are being captured, transfer 9 µL of IPB to each well of a new plate (0.12x)
 - [ ] Transfer 75 µL supernatant from the captured beads, to the new plate containing 9 µL beads
 - [ ] Pipette 10x to mix
 - [ ] Capture beads and discard supernants
