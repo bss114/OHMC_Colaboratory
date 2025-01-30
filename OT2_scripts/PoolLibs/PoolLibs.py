@@ -58,6 +58,24 @@ def add_parameters(parameters):
 		],
 		description=("Are samples in 96 or 384 well plates?")
 	)	
+	parameters.add_int(
+		variable_name="PoolLocation",
+		display_name="Pool Location",
+		default=3,
+		minimum=3,
+		maximum=10,
+		description=("Where is the eppi tube collecting libraries on the deck? Assuming in A1 of tube rack.")
+	)
+	parameters.add_int(
+		variable_name="TipLocation",
+		display_name="Tip Location",
+		default=7,
+		minimum=3,
+		maximum=10,
+		description=("Where are the tips located? Assuming a max of 96 samples to be transf.")
+	)
+
+
 
 #Don't edit below this line unless you want to change the functionality of the script
 
@@ -70,12 +88,12 @@ def run(protocol: protocol_api.ProtocolContext):
 	unique_source_slots = list(set(source_slots))
 	for slot in unique_source_slots:
 		protocol.load_labware(
-		load_name=protocol.prams.PlateType,
+		load_name=protocol.params.PlateType,
 		location=slot
 		)
 
-	epitube = protocol.load_labware('opentrons_24_tuberack_eppendorf_1.5ml_safelock_snapcap', '7') # eppendorf microcentrifuge tube in rack on position 3
-	tips = protocol.load_labware('opentrons_96_filtertiprack_20ul', '10') # 20ul filter tips on deck position 10
+	epitube = protocol.load_labware('opentrons_24_tuberack_eppendorf_1.5ml_safelock_snapcap', protocol.params.PoolLocation) # eppendorf microcentrifuge tube in rack on position 3
+	tips = protocol.load_labware('opentrons_96_filtertiprack_20ul', protocol.params.TipLocation) # 20ul filter tips on deck position 10
 
 	# define pipettes
 	p20 = protocol.load_instrument('p20_single_gen2', 'left', tip_racks=[tips])
@@ -83,7 +101,7 @@ def run(protocol: protocol_api.ProtocolContext):
 	i=0 # a counter to know when to change tips
 	total_volume = 0 # tracking the total volume in the tube
 	p20.pick_up_tip()
-	for index, row in enumerate(loading_data[1::]):
+	for index, row in enumerate(loadings_parsed[1::]):
 		source_position=row[1]
 		source_well=row[2]
 		sample_volume=float(row[4])
@@ -104,8 +122,4 @@ def run(protocol: protocol_api.ProtocolContext):
 			protocol.comment("Total volume is currently" + str(total_volume) + " ul")
 			protocol.pause("Please insert new 1.5mL eppendorf tube")
 			total_volume = 0
-		
-		if diluent_volume>0:
-			p20.aspirate(diluent_volume, Diluent['A1'])
-			p20.dispense(diluent_volume,dest_location)
 	p20.drop_tip()

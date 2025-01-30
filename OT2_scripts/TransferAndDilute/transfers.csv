@@ -1,4 +1,4 @@
 ﻿SampleID,SourcePosition,SourceWell,DestPosition,DestWell,SampleConc,SampleVolume,DiluentVolume
 Sample1,1,A1,2,A1,11.764,3.40,2.60
-Sample2,1,B1,2,B1,19.015,2.10,3.90
+Sample2,1,B1,2,B1,19.015,6,0
 Sample3,1,C1,2,C1,19.968,2.00,4.00

@@ -4,9 +4,9 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Sample Transfer and Dilution in 96 Well Plates from CSV', 
+	'protocolName': 'Transfer and Dilute Samples', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
-	'description': 'Cherry picks samples well by well of 96 well plate and transfer to a new plate with a specified concentration of diluent. A CSV of transfers must be provided at the time of transfer. See source for example.',
+	'description': 'Transfers/rearrays samples to/from 96 or 384 well plates. Controlled with input csv. See source for layout.',
 }
 
 #Input csv format Example:
@@ -25,8 +25,46 @@ def add_parameters(parameters):
 	parameters.add_csv_file(
 		variable_name="loadings",
 		display_name="Loading volumes for diluton",
-		description=("Table with 8 columns: SampleID, SourcePosition, SourceWell, DestPosition, DestWell, SampleConc, SampleVolume, DiluentVolume")
+		description=("Table with 8 columns, see source or example in this folder")
 	)
+	parameters.add_str(
+		variable_name="SourcePlateType",
+		display_name="Source Plate Type",
+		default="biorad_96_wellplate_200ul_pcr",
+		choices=[
+			{"display_name": "VWR/Biorad 96", "value": "biorad_96_wellplate_200ul_pcr"},
+			{"display_name": "Biorad 384", "value": "biorad_384_wellplate_50ul"}
+		],
+		description=("Are samples in 96 or 384 well plates?")
+	)
+	parameters.add_str(
+		variable_name="DestPlateType",
+		display_name="Destination Plate Type",
+		default="biorad_96_wellplate_200ul_pcr",
+		choices=[
+			{"display_name": "VWR/Biorad 96", "value": "biorad_96_wellplate_200ul_pcr"},
+			{"display_name": "Biorad 384", "value": "biorad_384_wellplate_50ul"}
+		],
+		description=("Are samples in 96 or 384 well plates?")
+	)	
+	parameters.add_int(
+		variable_name="DiluentLocation",
+		display_name="Diluent Location",
+		default=3,
+		minimum=3,
+		maximum=10,
+		description=("Where is the eppi tube of diluent located? Assuming in A1 of tube rack.")
+	)
+	parameters.add_int(
+		variable_name="TipLocation",
+		display_name="Tip Location",
+		default=4,
+		minimum=3,
+		maximum=10,
+		description=("Where are the tips located? Assuming a max of 96 samples to be transf.")
+	)
+
+	
 
 def run(protocol: protocol_api.ProtocolContext):
 
@@ -35,20 +73,27 @@ def run(protocol: protocol_api.ProtocolContext):
 
 	# load the plates for transfer
 	source_slots = [row[1] for row in loading_data][1:]
-	dest_slots = [row[3] for row in loading_data][1:]
-	slots = source_slots + dest_slots
-	unique_source_slots = list(set(slots))
-	for slot in unique_source_slots: #example appears to have an extra :
+	unique_source_slots = list(set(source_slots))
+	for slot in unique_source_slots:
 		protocol.load_labware(
-		load_name="biorad_96_wellplate_200ul_pcr",
+		load_name=protocol.params.SourcePlateType,
 		location=slot
 	)
+
+	dest_slots = [row[3] for row in loading_data][1:]
+	unique_source_slots = list(set(dest_slots))
+	for slot in unique_source_slots:
+		protocol.load_labware(
+		load_name=protocol.params.DestPlateType,
+		location=slot
+	)
+
 
 	# define labware, only load the plates that are specified in the csv file
 	#SourcePlate = protocol.load_labware('biorad_96_wellplate_200ul_pcr', '1')
 	#DestPlate = protocol.load_labware('biorad_96_wellplate_200ul_pcr', '2')
-	Diluent = protocol.load_labware('opentrons_24_tuberack_eppendorf_1.5ml_safelock_snapcap', '3') # eppendorf microcentrifuge tube in rack on position 3
-	Tips = protocol.load_labware('opentrons_96_filtertiprack_20ul', '6') # 20ul filter tips on deck position 5
+	Diluent = protocol.load_labware('opentrons_24_tuberack_eppendorf_1.5ml_safelock_snapcap', protocol.params.DiluentLocation) # eppendorf microcentrifuge tube in rack on position 3
+	Tips = protocol.load_labware('opentrons_96_filtertiprack_20ul', protocol.params.TipLocation) # 20ul filter tips on deck position 5
 
 	# define pipettes
 	p20 = protocol.load_instrument('p20_single_gen2', 'left', tip_racks=[Tips])
