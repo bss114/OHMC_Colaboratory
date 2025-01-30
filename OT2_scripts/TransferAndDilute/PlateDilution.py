@@ -66,8 +66,9 @@ def run(protocol: protocol_api.ProtocolContext):
 		source_location = protocol.deck[source_position][source_well]
 		dest_location = protocol.deck[dest_position][dest_well]
 	
-		p20.aspirate(diluent_volume, Diluent['A1'])
-		p20.dispense(diluent_volume,dest_location)
+		if diluent_volume>0:
+			p20.aspirate(diluent_volume, Diluent['A1'])
+			p20.dispense(diluent_volume,dest_location)
 	p20.drop_tip()
 
 	#loop through every line in the csv to be transferred to get the sample
