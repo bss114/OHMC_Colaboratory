@@ -1,9 +1,0 @@
-pipette from 12 well reservoire
-variable volume (3 or 9)
-into 384 well plates, either 1 and 2, 1 or 2
-
-
-load qPCR script
-load master mix from 12 well reserv
-load variable about of mastermix
-load template from 96 well plate
