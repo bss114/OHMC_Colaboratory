@@ -45,12 +45,6 @@ LSDM_SLS106,1,C6,unknown,1
 LSDM_ExtCon1,1,D6,unknown,1
 LSDM_ExtCon2,1,E6,unknown,1
 Bordenstein1_4M_outbred_CV,1,F6,unknown,1
-Bordenstein1_30M_outbred_CV,1,G6,unknown,1
-4M_inbred_GF,1,H6,unknown,1
-30M_inbred_GF,1,A7,unknown,1
-4F_inbred_GF,1,B7,unknown,1
-30F_inbred_GF,1,C7,unknown,1
+Bordenstein1_Bordenstein1_30M_outbred_CV,1,G6,unknown,1
 4M_outbred_GF,1,D7,unknown,1
 30M_outbred_GF,1,E7,unknown,1
-4F_outbred_GF,1,F7,unknown,1
-30F_outbred_GF,1,G7,unknown,1
