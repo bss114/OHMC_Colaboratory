@@ -115,7 +115,7 @@ def add_parameters(parameters):
 	parameters.add_str(
 		variable_name="layout",
 		display_name="qPCR Layout",
-		default="Legacy",
+		default="SideBySide",
 		choices=[
 			{"display_name": "SideBySide", "value": "SideBySide"},
 			{"display_name": "Integra", "value": "Integra"},

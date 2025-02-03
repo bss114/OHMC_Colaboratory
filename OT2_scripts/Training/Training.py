@@ -94,5 +94,5 @@ def run(protocol: protocol_api.ProtocolContext):
 	p20.pick_up_tip()
 	for well in wells:
 		p20.aspirate(float(protocol.params.Volume), dye['A1'])
-		p20.dispense(float(protocol.params.Volume), plate[protocol.params.DyeWell])
+		p20.dispense(float(protocol.params.Volume), plate[well])
 	p20.drop_tip()
