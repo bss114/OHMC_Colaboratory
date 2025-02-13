@@ -158,7 +158,7 @@ def run(protocol: protocol_api.ProtocolContext):
 		mp20.transfer(volume=mm_volume, source=mastermix, dest=dest_wells, new_tip='never')
 		dest_wells = [qPCRplate.wells()[i] for i in range(1, 192, 16)] 
 		mp20.transfer(volume=mm_volume, source=mastermix, dest=dest_wells, new_tip='never')
-		dest_wells = [qPCRplate.wells()[i] for i in range(336, 384, 16)] 
+		dest_wells = [qPCRplate.wells()[i] for i in range(337, 384, 16)] 
 		mp20.transfer(volume=mm_volume, source=mastermix, dest=dest_wells, new_tip='never')
 		mp20.drop_tip()
 
@@ -179,7 +179,7 @@ def run(protocol: protocol_api.ProtocolContext):
 	if protocol.params.layout == 'SideBySide':
 		transfers = {
 		'A1' : ['A1', 'A2', 'A3'],
-		'A2' : ['A5', 'A5', 'A6'],
+		'A2' : ['A4', 'A5', 'A6'],
 		'A3' : ['A7', 'A8', 'A9'],
 		'A4' : ['A10', 'A11', 'A12'],
 		'A5' : ['A13', 'A14', 'A15'],
