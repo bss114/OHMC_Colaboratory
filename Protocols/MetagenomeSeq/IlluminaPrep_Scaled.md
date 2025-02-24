@@ -43,7 +43,7 @@ Save the following TAG program on the thermal cycler:
 - [ ] 6 µL DNA (5ng/µL) to each well of a 96-well PCR plate.
 - [ ] Vortex BLT vigorously for 10 seconds to resuspend.
 - [ ] For each sample: combine 2.2µL of BLT and 2.2µL of TB1 to prepare the Tagmentation Master Mix in a single tube. \**Note: This volume includes 10% extra volume for reagent waste.*
-- [ ] Vortex the Tagmentation Master Mix thoroughly to resuspend.
+- [ ] Vortex the Tagmentation Master Mix thoroughly to resuspend. If larger insert sizes are desired, BLT can be diluted up 1:5 with water before mixing with TB1.
 - [ ] Divide the Tagmentation Master Mix volume equally into an 8-tube strip. \**Note: This only applies if doing >8 samples.*
 - [ ] Transfer 4 μl Tagmentation Master Mix from the 8-tube strip to each well of the plate containing a sample using a multichannel. Use fresh tips for each sample column.
 - [ ] Discard the 8-tube strip after the Tagmentation Master Mix has been dispensed.
