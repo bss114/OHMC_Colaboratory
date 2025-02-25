@@ -116,20 +116,20 @@ Vortex IPB before each use. Pipette slowly. Residual beads on the side of tips c
 - [ ] To each well, add 6.3 µL of of IPB (0.7x), pipette to mix.
 - [ ] Capture beads
 - [ ] Using slowest pipette speed, remove 15 µL supernatant and place in discard plate
-- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 20µL if using 384-well plate). It is not necessary to mix at this stage
-- [ ] Capture beads, remove 20 µL supernatant and place in discard plate.
-- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 20µL if using 384-well plate). It is not necessary to mix at this stage
-- [ ] Capture beads, remove 20 µL supernatant and place in discard plate.
-- [ ] Add 15 µL water to elute beads, mix by pipetting, or with plate vortex. If using a 96-well plate it is essential that water resuspends beads
-- [ ] Transfer 13 µL eluted DNA to a new 96-well (or 384-well) plate containing 9.1 µL IPB (0.7x)
+- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 12.5 µL if using 384-well plate). It is not necessary to mix at this stage
+- [ ] Capture beads, remove 12.5 µL supernatant and place in discard plate.
+- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 12.5 µL if using 384-well plate). It is not necessary to mix at this stage
+- [ ] Capture beads, remove 12.5 µL supernatant and place in discard plate.
+- [ ] Add 12.5 µL µL water to elute beads, mix by pipetting, or with plate vortex. If using a 96-well plate it is essential that water resuspends beads
+- [ ] Transfer 12 µL µL eluted DNA to a new 96-well (or 384-well) plate containing 8.4 µL IPB (0.7x)
 - [ ] Capture beads
-- [ ] Using slowest pipette speed, remove 22 µL supernatant and place in discard plate
-- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 20µL if using 384-well plate). It is not necessary to mix at this stage
-- [ ] Capture beads, remove 20 µL supernatant and place in discard plate.
-- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 20µL if using 384-well plate). It is not necessary to mix at this stage
-- [ ] Capture beads, remove 20 µL supernatant and place in discard plate.
-- [ ] Add 15 µL RSB to elute beads, mix by pipetting, or with plate vortex. If using a 96-well plate it is essential that water resuspends beads
-- [ ] Transfer 13 µL eluate to a new 96 well plate. *Note: it is possible to elute in higher volumes if doing by hand. Higher volume eluates may be dried using speed vac, and resuspended in appropriate volume for downstream analysis*.
+- [ ] Using slowest pipette speed, remove 20.4 µL supernatant and place in discard plate
+- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 12.5 µL if using 384-well plate). It is not necessary to mix at this stage
+- [ ] Capture beads, remove 12.5 µL supernatant and place in discard plate.
+- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 12.5 µL if using 384-well plate). It is not necessary to mix at this stage
+- [ ] Capture beads, remove 12.5 µL supernatant and place in discard plate.
+- [ ] Add 12.5 µL RSB to elute beads, mix by pipetting, or with plate vortex. If using a 96-well plate it is essential that water resuspends beads
+- [ ] Transfer 11 µL eluate to a new 96 well plate. *Note: it is possible to elute in higher volumes if doing by hand. Higher volume eluates may be dried using speed vac, and resuspended in appropriate volume for downstream analysis*.
 - [ ] Store at -20 ˚C until pooling/sequencing.
 
 ## QC
