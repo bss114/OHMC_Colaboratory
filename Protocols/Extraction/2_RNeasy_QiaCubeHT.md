@@ -54,7 +54,7 @@ The lysis/disruption process has rendered any infectious agents inactive. Care m
 - [ ] For 96 samples, prepare 1090ul DNase plus 7.63mL Buffer RDD.
 - [ ] Add this solution to a reagent trough and place on the indicated worktable position.
 
-## QIAcube HT setup ![Figure 1](images/QIAcubeHT_RNeasy_assembly.png)
+## QIAcube HT setup ![Figure 1](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/images/QIAcubeHT_RNeasy_assembly.png)
 - [ ] Insert the channeling block holder into the left chamber of the vacuum chamber. Press firmly to seat it correctly and sealing the O-ring on the spigot into the drain.
 - [ ] Place the channeling block into the holder.
 - [ ] Place the RNeasy 96 column plate into the transfer carriage; load into the left chamber of the vacuum chamber.
@@ -76,7 +76,7 @@ The lysis/disruption process has rendered any infectious agents inactive. Care m
 - [ ]  When vacuum check alert comes up (it will show expected timing in the software), ensure that all supernatants have cleared their wells. If not, evasive maneuvers might be required and those samples may be lost.
 - [ ]  Store extracted RNA at -80C.
 
-##Cleanup
+## Cleanup
 - [ ] Follow instructions in software for cleaning instrument.
 - [ ] Remove components and rinse with dH2O, removing any residual salts. 
 - [ ] Clean any metal surfaces with ethanol, allow to air dry.
