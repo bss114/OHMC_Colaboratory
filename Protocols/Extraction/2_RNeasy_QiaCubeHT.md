@@ -28,7 +28,7 @@ Maximim binding capacity for each column is 100ug RNA.
 - [ ] DO NOT use bleach at any step as it is not compatible with guanidine.
 
 ## Sample Disruption
-*Location: If samples are BSL2, conduct all work in Biosafety Cabinet, if BSL1, conduct all work in PCR cabinet.
+*Location: If samples are BSL2, conduct all work in Biosafety Cabinet, if BSL1, conduct all work in PCR cabinet. Collect all Qiazol and chloroform waste as mixed waste for incineration (biohazard bag with green tag in fume hood).
 - [ ] weigh tissues and put in PowerBead tubes on dry ice as quickly as possible. Do not allow tissues to thaw.
 - [ ] remove tubes from dry ice and immediately add 750ul QIAzol per sample.
 - [ ] secure tubes in TissueLyserII and run for 5 min at 25Hz. 
@@ -40,7 +40,8 @@ The lysis/disruption process has rendered any infectious agents inactive. Care m
 ## RNA Extraction
 *Location: If samples are BSL2, conduct all work in Biosafety Cabinet, if BSL1, conduct all work in PCR cabinet.
 - [ ] allow samples to sit at room temperature 5 min.
-- [ ] centrifuge at 6000xg for 1 min.
+- [ ] centrifuge at 6000xg for 1 min. to pellet the beads.
+- [ ] Recover supernatant containing Qiazol and sample to a new tube.
 - [ ] add 150ul chloroform to each sample. 
 - [ ] cap securely and shake vigorously with inversion for 15 sec.
 - [ ] allow samples to sit at room temperature for 3 min.
