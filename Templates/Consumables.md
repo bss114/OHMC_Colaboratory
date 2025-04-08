@@ -10,7 +10,6 @@
 |KAPA HiFi Hot Start PCR Kit | 250U | Kapa/Roche | KK2502 | 283.00 |
 |Zymobiomics DNA Standard | 200ng | Zymo | D6305 | 121.30 |
 |-|-|-|-|-|
-
 |Quant-it Picogreen dsDNA Kit | 1mL | Life Tech | P7589 | 596.65 |
 |Black flat bottom plates | 100 | Corning | 3650 | 1185.20 |
 |Ampure XP | 60 mL | Agilent | A63881 | 1660.98 |
