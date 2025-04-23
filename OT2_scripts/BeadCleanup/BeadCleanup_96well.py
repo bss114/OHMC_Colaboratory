@@ -55,7 +55,7 @@ def add_parameters(parameters):
 	parameters.add_int(
 		variable_name="ElutionVolume",
 		display_name="Elution Volume",
-		default=20,
+		default=25,
 		minimum=15,
 		maximum=50,
 		description=("Required volume will be 5ul less than requested volume.")
@@ -84,9 +84,9 @@ def run(protocol: protocol_api.ProtocolContext):
 	Magmodule = protocol.load_module('magnetic module gen2', 1)
 	PCRplate = Magmodule.load_labware('biorad_96_wellplate_200ul_pcr')
 	Elutionplate = protocol.load_labware('biorad_96_wellplate_200ul_pcr', 2)
-	EtOH=protocol.load_labware('agilent_1_reservoir_290ml', 4) # 400ul per reaction
+	EtOH=protocol.load_labware('nest_1_reservoir_195ml', 4) # 400ul per reaction
 	BeadsAndWater=protocol.load_labware('nest_12_reservoir_15ml', 5) # Beads in A1, Water in A2
-	Waste = protocol.load_labware('agilent_1_reservoir_290ml', 3)
+	Waste = protocol.load_labware('nest_1_reservoir_195ml', 3)
 	
 	# set up tips
 	Ntips = ((protocol.params.EndingColumn - protocol.params.StartingColumn) + 1) * 8 * 4 / 96
@@ -99,6 +99,8 @@ def run(protocol: protocol_api.ProtocolContext):
 	
 	# add beads to all 
 	protocol.comment("Adding " + str(protocol.params.BeadRatio * protocol.params.ReactionVolume) + " beads to columns " + str(protocol.params.StartingColumn) + " to " + str(protocol.params.EndingColumn))
+	Magmodule.engage()
+	Magmodule.disengage()
 	for col in range(protocol.params.StartingColumn, protocol.params.EndingColumn+1):
 		if col == 1:
 			mp200.pick_up_tip(Tips[0]['A1'])
@@ -108,6 +110,7 @@ def run(protocol: protocol_api.ProtocolContext):
 		mp200.aspirate(protocol.params.BeadRatio * protocol.params.ReactionVolume, BeadsAndWater['A1'])
 		mp200.dispense(protocol.params.BeadRatio * protocol.params.ReactionVolume, PCRplate['A'+str(col)])
 		mp200.mix(repetitions=10, volume=(protocol.params.BeadRatio * protocol.params.ReactionVolume * 0.5), location=PCRplate['A'+str(col)])
+		mp200.blow_out()
 		mp200.return_tip()
 		
 	Magmodule.engage()
