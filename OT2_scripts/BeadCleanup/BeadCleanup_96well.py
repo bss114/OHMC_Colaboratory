@@ -28,6 +28,17 @@ def add_parameters(parameters):
 		maximum=12,
 		description=("Which column should bead cleanup end on?")
 	)
+	parameters.add_str(
+		variable_name="PlateType",
+		display_name="Plate Type",
+		default="biorad_96_wellplate_200ul_pcr",
+		choices=[
+			{"display_name": "Biorad 96 (NOTE NO VWR)", "value": "biorad_96_wellplate_200ul_pcr"},
+			{"display_name": "Nest 0.1mL 96 well plate", "value": "nest_96_wellplate_100ul_pcr_full_skirt"}
+		],
+		description=("What type of plate is the DNA in?")
+	)
+
 	parameters.add_int(
 		variable_name="ReactionVolume",
 		display_name="Reaction Volume",
@@ -47,7 +58,7 @@ def add_parameters(parameters):
 	parameters.add_int(
 		variable_name="EtOHVolume",
 		display_name="Wash Volume",
-		default=125,
+		default=100,
 		minimum=50,
 		maximum=150,
 		description=("Ethanol wash volume (80% EtOH).")
@@ -82,7 +93,7 @@ def add_parameters(parameters):
 def run(protocol: protocol_api.ProtocolContext):
 	
 	Magmodule = protocol.load_module('magnetic module gen2', 1)
-	PCRplate = Magmodule.load_labware('biorad_96_wellplate_200ul_pcr')
+	PCRplate = Magmodule.load_labware(protocol.params.PlateType)
 	Elutionplate = protocol.load_labware('biorad_96_wellplate_200ul_pcr', 2)
 	EtOH=protocol.load_labware('nest_1_reservoir_195ml', 4) # 400ul per reaction
 	BeadsAndWater=protocol.load_labware('nest_12_reservoir_15ml', 5) # Beads in A1, Water in A2
