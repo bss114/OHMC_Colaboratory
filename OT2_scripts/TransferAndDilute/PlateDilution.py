@@ -114,7 +114,7 @@ def run(protocol: protocol_api.ProtocolContext):
 		if diluent_volume>0:
 			p20.aspirate(diluent_volume, Diluent['A1'])
 			p20.dispense(diluent_volume,dest_location)
-	p20.drop_tip()
+	p20.return_tip()
 
 	#loop through every line in the csv to be transferred to get the sample
 	for index, row in enumerate(loading_data[1::]):
@@ -126,9 +126,16 @@ def run(protocol: protocol_api.ProtocolContext):
 		diluent_volume=float(row[7])
 		source_location = protocol.deck[source_position][source_well]
 		dest_location = protocol.deck[dest_position][dest_well]
-	
-		p20.transfer(
-			volume=sample_volume,
-			source=source_location,
-			dest=dest_location
-		)
+		tip_location = Tips[source_well]
+		
+		p20.pick_up_tip(tip_location)	
+		p20.aspirate(sample_volume, source_location)
+		p20.dispense(sample_volume, dest_location)
+		p20.drop_tip()
+		
+		
+		#p20.transfer(
+		#	volume=sample_volume,
+		#	source=source_location,
+		#	dest=dest_location
+		#)
