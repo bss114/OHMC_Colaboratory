@@ -33,7 +33,7 @@ def add_parameters(parameters):
 		display_name="Plate Type",
 		default="nest_96_wellplate_100ul_pcr_full_skirt",
 		choices=[
-			{"display_name": "Biorad 96/VWR 96", "value": "biorad_96_wellplate_200ul_pcr"},
+			{"display_name": "VWR 96 (Not validated)", "value": "biorad_96_wellplate_200ul_pcr"},
 			{"display_name": "Nest 0.1mL 96 well plate", "value": "nest_96_wellplate_100ul_pcr_full_skirt"}
 		],
 		description=("What type of plate is the DNA in?")
@@ -92,7 +92,15 @@ def add_parameters(parameters):
 		default=2,
 		minimum=0,
 		maximum=5,
-		description=("How far from bottom of well should the tip be in mm?")
+		description=("How far from bottom of well should the tip be in mm? 2mm is optimal for nest.")
+	)
+	parameters.add_float(
+		variable_name="DryTime",
+		display_name="Drying Time",
+		default=0.5,
+		minimum=0,
+		maximum=5,
+		description=("How many minutes should beads be allowed to dry before elution (in min)?")
 	)
 
 #Don't edit below this line unless you want to change the functionality of the script
@@ -177,7 +185,7 @@ def run(protocol: protocol_api.ProtocolContext):
 		Magmodule.engage(offset=protocol.params.MagOffset)
 		mp200.touch_tip()
 		mp200.return_tip()
-		protocol.delay(minutes=0.5)
+		protocol.delay(minutes=protocol.params.DryTime)
 		mp200.pick_up_tip()
 		mp200.aspirate(protocol.params.ElutionVolume-5, PCRplate['A'+str(col)].bottom(protocol.params.CaptureDepth), rate=protocol.params.AspirationSpeed)
 		mp200.dispense(protocol.params.ElutionVolume-5, Elutionplate['A'+str(col)])
