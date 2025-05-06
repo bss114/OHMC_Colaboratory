@@ -114,6 +114,7 @@ def run(protocol: protocol_api.ProtocolContext):
 	
 		p20.aspirate(sample_volume, source_location)
 		p20.dispense(sample_volume, epitube['A1'])
+		p20.mix(3,5)
 	
 		i=i+1
 		total_volume = total_volume + sample_volume

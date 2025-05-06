@@ -131,6 +131,7 @@ def run(protocol: protocol_api.ProtocolContext):
 		p20.pick_up_tip(tip_location)	
 		p20.aspirate(sample_volume, source_location)
 		p20.dispense(sample_volume, dest_location)
+		p20.mix(5, 5)
 		p20.drop_tip()
 		
 		
