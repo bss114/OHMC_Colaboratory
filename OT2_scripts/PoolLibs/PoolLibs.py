@@ -4,7 +4,7 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Pool Equimolar libraries from CSV', 
+	'protocolName': 'Pool Equimolar libraries from CSV v0.1', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
 	'description': 'Cherry picking protocol to generate equimolar pools of sequencing libraries. All volumes are transferred to a single 1.5mL Eppendorf tube. Can load from 96 OR 384 well plates which is specified at runtime'
 }
@@ -115,7 +115,8 @@ def run(protocol: protocol_api.ProtocolContext):
 		p20.aspirate(sample_volume, source_location)
 		p20.dispense(sample_volume, epitube['A1'])
 		p20.mix(3,5)
-	
+		p20.blow_out()
+		
 		i=i+1
 		total_volume = total_volume + sample_volume
 		if total_volume > float(protocol.params.newtube_volume):

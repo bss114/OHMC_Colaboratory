@@ -4,7 +4,7 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Transfer and Dilute Samples', 
+	'protocolName': 'Transfer and Dilute Samples v0.1', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
 	'description': 'Transfers/rearrays samples to/from 96 or 384 well plates. Controlled with input csv. See source for layout.',
 }
@@ -131,7 +131,8 @@ def run(protocol: protocol_api.ProtocolContext):
 		p20.pick_up_tip(tip_location)	
 		p20.aspirate(sample_volume, source_location)
 		p20.dispense(sample_volume, dest_location)
-		p20.mix(5, 5)
+		p20.mix(5, 3)
+		p20.blow_out()
 		p20.drop_tip()
 		
 		

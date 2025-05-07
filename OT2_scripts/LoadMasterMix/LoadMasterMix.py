@@ -4,7 +4,7 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Load Mastermix into 384 well plate', 
+	'protocolName': 'Load Mastermix into 384 well plate v0.1', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
 	'description': 'Loads master mix from 12-well reservoir to 384 well plates. This can be done in 1 or 2 plate simultaneously including for amplicon lib prep.'
 }

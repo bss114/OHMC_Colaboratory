@@ -4,7 +4,7 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Set up 384-well qPCR from 96 well plate', 
+	'protocolName': 'Set up 384-well qPCR from 96 well plate v0.1', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
 	'description': 'Loads master mix from 12-well reservoir to 384 well plates, and then add template from 96 well plate.'
 }

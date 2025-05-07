@@ -4,7 +4,7 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Demonstrate and Train on OT2', 
+	'protocolName': 'Demonstrate and Train on OT2 v0.1', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
 	'description': 'Transfers dye from A1 of a 12-well to 384 well plate in selectable pattern for training.',
 }
