@@ -37,7 +37,7 @@ Do not send any samples to lab without first discussing project with Jordan. Ple
 
 ## Virome Sequencing
 
-<br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/ViralSeq/VLPEnrichment.md) VLP enrichment by CsCl gradient
+<br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/ViralSeq/VLPEnrichment.md) VLP enrichment by filtration
 <br> [Protocol 2:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/ViralSeq/QIAmpMinEluteViral.md) QIAamp MinElute Viral DNA extraction
 <br> [Protocol 3:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/ViralSeq/xGenLibraryPrep.md) Scaled xGen ssDNA and low input DNA library prep
  
