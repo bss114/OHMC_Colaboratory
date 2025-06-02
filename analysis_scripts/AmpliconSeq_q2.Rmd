@@ -383,7 +383,7 @@ This is help to detect systematic problems that may have occurred during quantif
 loadcorr<-
 ReadTracking %>%
   left_join(
-    read_excel(TemplateXLSX, sheet="Loading.csv", skip=1) %>% dplyr::rename(Sample_Plate=plate96, Sample_Well=well96, Volume_ul=volume)
+    read_excel(TemplateXLSX, sheet="Loading.csv", skip=1) %>% dplyr::rename(Sample_ID=SampleID, Volume_ul=volume)
   )
   
 loadcorr %>%
