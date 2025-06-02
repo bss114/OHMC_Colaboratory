@@ -40,8 +40,8 @@ nohup Rscript -e "rmarkdown::render('AmpliconSeq_q2.Rmd')" > run.log &
 
 ```{bash settings}
 echo "export TemplateXLSX=/data/SequencingRuns/2024July15_NextSeq3/libraryprep_v2/NextSeq3_Tracking_2023July30.xlsx" > settings.txt #an absolute link to the location of your run template
-echo "export Project=kovac1rep|Controls" >> settings.txt # This would be the Sample_Project Column. Leave this as * if you want to get all samples from the sheet. Include |Controls to pull run controls as well.
-echo "export ReadDir=/data/SequencingRuns/2024July15_NextSeq3/runfolder/240802_VH00221_225_AAG3CLJM5/Analysis/1/Data/fastq" >> settings.txt #an absolute directory containing your demultiplexed reads
+echo "export Project=PROJECTPREFIXHERE|Controls" >> settings.txt # This would be the Sample_Project Column. Leave this as * if you want to get all samples from the sheet. Include |Controls to pull run controls as well.
+echo "export ReadDir=/data/SequencingRuns/PATHTOSEQS" >> settings.txt #an absolute directory containing your demultiplexed reads
 echo "export TrimAdapters=true" >> settings.txt  #Set to true if primer is in sequence and needs to be removed
 echo "export Fprimer=^GTGYCAGCMGCCGCGGTAA" >> settings.txt  #515Fmod, replace if different primer. Note older V4f primer is GTGCCAGCMGCCGCGGTAA
 echo "export Rprimer=^GGACTACNVGGGTWTCTAAT" >> settings.txt  #806Rmod, replace if different primer Note older V4r primer is GGACTACHVGGGTWTCTAAT
