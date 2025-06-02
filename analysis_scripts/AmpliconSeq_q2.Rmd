@@ -116,8 +116,8 @@ fastqs<-
   filter(!grepl("Undetermined_", File)) %>% # these are reads that could not be demultiplexed
   mutate(Sample_ID=basename(File) %>% gsub(Suffix, "", .) %>% gsub("\\.fastq\\.gz","", .) %>% gsub("-","_", .)) %>% #note: need to switch _ to - in file names
   mutate(Direction=case_when(
-    grepl("_R1_", .$File) ~ "Forward_Read",
-    grepl("_R2_", .$File) ~ "Reverse_Read"
+    grepl("_R1_001", .$File) ~ "Forward_Read", #note: this was hard coded to avoid a frequent problem. Must change if not using default sufix.
+    grepl("_R2_001", .$File) ~ "Reverse_Read"
   )) %>%
     spread(key=Direction, value=File)
 
