@@ -7,7 +7,7 @@
 - **Dry Spin**
 - **Elute**
 
-The kit includes the use of carrier-RNA which serves two purposes: enhance the binding of viral nucleic acids to the spin filter membrane and reduce the chance of viral RNA being degraded by RNases. The failure to include the carrier-RNA in the protocol may result in reduced viral nucleic acid recovery. It is important to note that the carrier-RNA will greatly outnumber the recovered viral nucleic acids and may impact downstream amplification processes. Adjustment of the amount of carrier-RNA is thus to be determined on a case-by-case basis and is dependent upon your downstream applications. Qiagen determined that the optimal amount of carrier-RNA to add was 5.6 µg for optimal viral nucleic acid recovery. Use of less than this amount is to be subject to validation for each particular sample type and downstream assay.  
+The kit includes an optional carrier-RNA addition. We have found that this is unnecessary and will complicate the quantification of low-yield virome extracts due to the overwhelming presence of the carrier RNA that is co-eluted with the sample.
 
 ## Materials and Reagents
 - [ ] 0.9% NaCl for samples <200 µL
@@ -36,26 +36,20 @@ If it is the first time utilizing this kit and the reagents have not been previo
 - Equilibrate samples to room temperature.
 - Equilibrate elution buffer to room temperature.
 - Prepare a 56°C heating block for lysis and drying procedures.
-- Add carrier RNA/Buffer AVE suspension to Buffer AL according to these instructions:
-	- Calculate the volume of Buffer AL-carrier RNA mixture needed for the number of samples to be processed in batch:
-	- **n** x 0.22 ml = y ml
-	- **y** ml x 28 μl/ml = z μl
-	- **n** = number of samples to be processed simultaneously
-	- **y** = calculated volume of Buffer AL
-	- **z** = volume of carrier RNA–Buffer AVE to add to Buffer AL
-- Invert the mixture 10 times to mix. Avoid vortexing as it will result in the mixture foaming.
-
 
 ## 3. Nucleic Acid Extraction Procedure
-- Add 25 μl QIAGEN Protease into a 1.5 ml microcentrifuge tube.
-- Add 200 µL of sample to the microcentrifuge tube.
-	- **Note**: If the sample volume is less than 200 µL, then bring the final volume up to 200 µL utilizing 0.9% NaCl.
-- Add 200 µL of the Buffer AL-carrier RNA mixture to the microcentrifuge tube. Pulse-vortex for 15 seconds.
+- Add 75 μl QIAGEN Protease into a 2.0 ml microcentrifuge tube.
+- Add 500 µL of sample to the microcentrifuge tube.
+	- **Note**: If the sample volume is less than 500 µL, then bring the final volume up to 500 µL utilizing 0.9% NaCl.
+- Add 500 µL of the Buffer AL mixture to the microcentrifuge tube. Pulse-vortex for 15 seconds.
 - Incubate at 56°C for 15 minutes in the heating block.
 - Briefly, centrifuge to collect the liquid that might've evaporated and cooled higher up in the microcentrifuge tube.
-- Add 250 µL of ethanol (96-100%) to the sample, pulse-vortex for 15 seconds. Incubate at room temperature for 5 minutes.
-- Briefly centrifuge the 1.5 mL microcentrifuge tube. 
-- Apply the lysate onto the QIAmp MinElute column, taking care not to wet the rim. Centrifuge at 6000 x g for 1 minute. Place columns into a new 2 mL collection tube and discard the old one. 
+- Add 600 µL of ethanol (96-100%) to the sample, pulse-vortex for 15 seconds. Incubate at room temperature for 5 minutes.
+- Briefly centrifuge the 2.0 mL microcentrifuge tube. 
+- In order to process all the of the lysate on the column, do the following:
+	- Apply 700 µL of the lysate onto the QIAmp MinElute column, taking care not to wet the rim. Centrifuge at 6000 x g for 1 minute.
+   	- Repeat as necessary to process all of the lysate in the 2.0 mL microcentrifuge tube.
+	- Place column into a new 2 mL collection tube and discard the old one. 
 - Add 500 µL of Buffer AW1 to the column. Centrifuge at 6000 x g for 1 minute. Place the column into a new 2 mL collection tube and discard the old one. 
 - Add 500 µL of Buffer AW2 to the column. Centrifuge at 6000 x g for 1 minute. Place the column into a new 2 mL collection tube and discard the old one. 
 - Add 500 µL of ethanol (96-100%) to the column. Centrifuge at 6000 x g for 1 minute. Place into a new 2 mL collection tube. 
@@ -65,7 +59,7 @@ If it is the first time utilizing this kit and the reagents have not been previo
 - Centrifuge at 20,000 x g for 1 minute.
 - Store at -80°C until ready for downstream use. 
 
-Quantity and Quality of extracted viral nucleic acids are to be checked with the Qubit and Nanodrop.
+The quantity and quality of extracted viral nucleic acids should be checked with the Qubit and Nanodrop.
 
 ## 4. References
 1. https://www.qiagen.com/us/products/discovery-and-translational-research/dna-rna-purification/multianalyte-and-virus/qiaamp-minelute-virus-kits?catno=57704
