@@ -110,27 +110,22 @@ If you are stopping, store at 2°C to 8°C for up to 30 days.
 Vortex IPB before each use. Pipette slowly. Residual beads on the side of tips can greatly skew the size selection preventing effective removal of small fragments.
 
 - [ ] Bring IPB and RSB to room temp
-- [ ] Centrifuge the PCR products from the previous step at 280 × g for 1minute to collect contents at the bottom of the well
-- [ ] Place the plate on the magnetic stand and wait until the liquid is clear (~5 minutes)
-- [ ] Transfer 9 µL supernatant from each well of the PCR plate to a new 96-well (or 384-well).
-- [ ] To each well, add 6.3 µL of of IPB (0.7x), pipette to mix.
+- [ ] Add 6.3 µL of IPB (0.7x) to a 384 well plate (label plate as Size Selection 1 Plate)
+- [ ] Add 12.6 µL of IPB (0.7x) to a second 384 well plate (label plate as Size Selection 2 Plate).  
+- [ ] Centrifuge the PCR products from the previous step at 280 × g for 1 minute to collect contents at the bottom of the well.
+- [ ] Place the PCR plate on the magnetic stand and wait until the liquid is clear (~5 minutes)
+- [ ] Transfer 9 µL supernatant from each well of the PCR plate the *Size Selection 1* Plate containing 6.3 µL IPB, mix, incubate 5 min.
 - [ ] Capture beads
-- [ ] Using slowest pipette speed, remove 15 µL supernatant and place in discard plate
-- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 12.5 µL if using 384-well plate). It is not necessary to mix at this stage
-- [ ] Capture beads, remove 12.5 µL supernatant and place in discard plate.
-- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 12.5 µL if using 384-well plate). It is not necessary to mix at this stage
-- [ ] Capture beads, remove 12.5 µL supernatant and place in discard plate.
-- [ ] Add 12.5 µL µL water to elute beads, mix by pipetting, or with plate vortex. If using a 96-well plate it is essential that water resuspends beads
-- [ ] Transfer 12 µL µL eluted DNA to a new 96-well (or 384-well) plate containing 8.4 µL IPB (0.7x)
-- [ ] Capture beads
-- [ ] Using slowest pipette speed, remove 20.4 µL supernatant and place in discard plate
-- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 12.5 µL if using 384-well plate). It is not necessary to mix at this stage
-- [ ] Capture beads, remove 12.5 µL supernatant and place in discard plate.
-- [ ] Add 80% Ethanol to the well (120µL if using 96-well plate or 12.5 µL if using 384-well plate). It is not necessary to mix at this stage
-- [ ] Capture beads, remove 12.5 µL supernatant and place in discard plate.
-- [ ] Add 12.5 µL RSB to elute beads, mix by pipetting, or with plate vortex. If using a 96-well plate it is essential that water resuspends beads
-- [ ] Transfer 11 µL eluate to a new 96 well plate. *Note: it is possible to elute in higher volumes if doing by hand. Higher volume eluates may be dried using speed vac, and resuspended in appropriate volume for downstream analysis*.
-- [ ] Store at -20 ˚C until pooling/sequencing.
+- [ ] Using slowest pipette speed, remove 15 µL supernatant and place in discard plate original PCR plate
+- [ ] EtOH Wash 1: Add 30 µL 80% Ethanol to the well. It is not necessary to mix at this stage. Capture beads, remove 30µL supernatant and discard.
+- [ ] EtOH Wash 1: Add 30 µL 80% Ethanol to the well. It is not necessary to mix at this stage. Capture beads, remove 30µL supernatant and discard.
+- [ ] Add 20 µL water to elute DNA. Pipette to mix. Incubate for 2 minutes.
+- [ ] Capture Beads and transfer 18 µL DNA to *Size selection plate 2* containing 12.6 µL IPB. Mix.
+- [ ] EtOH Wash 1: Add 30 µL 80% Ethanol to the well. It is not necessary to mix at this stage. Capture beads, remove 30µL supernatant and discard.
+- [ ] EtOH Wash 1: Add 30 µL 80% Ethanol to the well. It is not necessary to mix at this stage. Capture beads, remove 30µL supernatant and discard.
+- [ ] Add 20 µL water to elute DNA. Pipette to mix. Incubate for 2 minutes. *Note: can also use RSB here; however, using water to allow drying and concentration if required later.*
+- [ ] Transfer 18 µL eluate to a new 96 well plate.
+- [ ] Store at -20˚C until pooling/sequencing.
 
 ## QC
 
