@@ -4,10 +4,13 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Transfer and Dilute Samples v0.1', 
+	'protocolName': 'Transfer and Dilute Samples v0.11', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
 	'description': 'Transfers/rearrays samples to/from 96 or 384 well plates. Controlled with input csv. See source for layout.',
 }
+
+#Change log
+#v0.11 - added nest 96 as option for plate
 
 #Input csv format Example:
 #SSampleID,SourcePosition,SourceWell,DestPosition,DestWell,SampleConc,SampleVolume,DiluentVolume
@@ -33,6 +36,7 @@ def add_parameters(parameters):
 		default="biorad_96_wellplate_200ul_pcr",
 		choices=[
 			{"display_name": "VWR/Biorad 96", "value": "biorad_96_wellplate_200ul_pcr"},
+			{"display_name": "NEST 96", "value": "nest_96_wellplate_100ul_pcr_full_skirt"},
 			{"display_name": "Biorad 384", "value": "biorad_384_wellplate_50ul"}
 		],
 		description=("Are samples in 96 or 384 well plates?")
