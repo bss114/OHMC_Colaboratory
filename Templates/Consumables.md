@@ -23,4 +23,8 @@
 |Tapestation optical tubes |960 | Agilent | 401428 | 84.00 |
 |NextSeq P1 600 kit XLEAP | 1 | Illumina | 20100981 | 1618.00 |
 |PhiX174 | 1 | Illumina | FC-110-3001 | 207.00 |
+|-|-|-|-|-|
 |Illumina DNA prep  | 96 | Illumina | 20060059 | 3257.00 |
+|iSEQ 100 cartridge i1 reagent v2 (300 cycle) | 1 | Illumina | 20031371 | 673.00 |
+|HSD1000 Screen Tape | 112 | Agilent | 5067-5584 | 398.67 |
+|HSD1000 Sample buffer | 112 | Agilent | 5067-5603 | 64.99 |
