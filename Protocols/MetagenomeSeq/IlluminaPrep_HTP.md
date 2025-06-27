@@ -47,6 +47,8 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 **gDNA Plate:** Ensure DNA is thawed in 96 well plate. This plate should ideally have at least 15 µL of gDNA at 5 ng/µL to allow for at least 2 passes in the event of error. Plate should be centrifuged before opening.
 
+**BLT:** These are the bead linked transposons. **It is imperative that they are not placed in the freezer or stored on ice.** 
+
 **TSB Plate:** If not already prepared, transfer 25 µL of TSB to each well of a 96 well plate. This can be used for multiple runs.
 
 **Tagmentation Plate:** In a multichannel reservoir, combine 220 µL of well-mixed beads (BLT) with 220 µL tagmentation buffer (TB1). Mix well and use 10 µL multi channel to transfer 4 µL of mixture into every other column/row of a 384 well plate. **Note:** because this protocol uses multichannels and Integra mini-96s, the spacing needs to be every other well. This has the advantage of also putting an empty well between every sample which may be advantageous from a cross-contamination standpoint. It is theoretically possible to do up to 384 well samples at a time; however, this is not recommended. In effect, using your 8 channel in a vertical orientation, put the first tip into the following wells to fill the plate: A1, A3, A5, A7, A9, A11, A13, A15, A17, A19, A21, A23.
