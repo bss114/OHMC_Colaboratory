@@ -131,6 +131,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 - [ ] Cover with plate seal. **Note: a good seal is imperative to prevent evaporation. Great care should be taken to ensure this is not a problem.**
 - [ ] Briefly centrifuge the plate
 - [ ] Transfer to preheated thermocycler running program **BLT PCR** (*see thermocycler program appendix*)
+      	<br>*Note: 6 cycles is reccomended for ~30ng input DNA. For some applications such as virome, increasing cycles may be required up to 12 cycles. This may decrease fragment sizes from 500-600 to ~400-450. The decision should be made with care depending on user's needs.*
 - [ ] After BLT PCR, either proceed, or store at -20˚C.
 
 ***
