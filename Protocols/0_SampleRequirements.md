@@ -1,5 +1,5 @@
 # Sample Requirements
-As part of our [OHMC intake form](https://docs.google.com/forms/d/1_bf0vcHt3guk7WsG8oIauOn-sQyKhWgnjc6DdQ59mZg/edit?ts=668fe9ee), please include your [sample metadata sheet](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/Metadata.xlsx) and [index tracking sheet](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/IndexTrackingSheet.xlsx) (tab 2 plate map). To access the form, you will need to log in to Google with your PSU ID and password.
+As part of our [OHMC intake form](https://docs.google.com/forms/d/1_bf0vcHt3guk7WsG8oIauOn-sQyKhWgnjc6DdQ59mZg/edit?ts=668fe9ee), please include your [sample metadata sheet](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/Metadata.xlsx) and [extraction plate template](Templates/0_ExtractionPlate_Template.xlsx) (tab 2 plate map). To access the form, you will need to log in to Google with your PSU ID and password.
 All samples must start with a prefix that has been assigned for the project by Bethany. This prefix is unique and can only be used for one sequencing run.
 This allows us to efficiently track your samples through the downstream processes.
 
