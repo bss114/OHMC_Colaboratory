@@ -11,7 +11,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 2) Cleanup and PCR: beads carrying DNA are captured using magnets and the tagmentation reagents are removed. A PCR mastermix is then added to the beads which will release the DNA from the beads. Sample-specific index primers are then added before a limited-cycle PCR is performed. This makes more library, as well as adds the sample-specific indexes that allow the samples to be mixed and sequenced in a single pool. The protocol may be paused after this step.
 
-3) Size Selection: In this step, the PCR reagents are removed while simultaneously removing small fragments and adapter dimers that may cause issues in downstream sequencing. In this protocol size selection is accomplished via two 0.7X size selections. The resulting libraries are then eluted in a 10 mM Tris-HCl pH 8.5 buffer with 0.1% Tween 20 (buffer RSB) for subsequent QC and sequencing. The protocol may be paused after this step.
+3) Size Selection: In this step, the PCR reagents are removed while simultaneously removing small fragments and adapter dimers that may cause issues in downstream sequencing. In this protocol size selection is accomplished via two size selections which can be tuned based on the user's needs. The resulting libraries are then eluted in a 10 mM Tris-HCl pH 8.5 buffer with 0.1% Tween 20 (buffer RSB) for subsequent QC and sequencing. The protocol may be paused after this step.
 
 4) QC: Some (or all) libraries are analyzed for size distribution using an Agilent Tapestation to ensure appropriate size distribution and yield.
 
@@ -167,7 +167,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 **Size Selection Plate 1:** Mix IPB well and pour into a 50mL reservoir. Using 10 µL multichannel transfer **6.3 µL IPB** (0.7X) into each well corresponding to the tagmentation plate. Cover this plate with a plate lid. Good pipetting practice is essential here to obtain correct bead ratios. Use a repeated dispensing approach: Aspirate and discard beads back into reservoir leaving plunger depressed to first stop. Aspirate beads and dispense in receiver plate. Do not use blow stop. Repeat.
 
-**Size Selection Plate 2:** Mix IPB well and pour into a 50mL reservoir. Using 10 µL multichannel transfer **8.4 µL IPB** (0.7X) into each well corresponding to the tagmentation plate. Cover this plate with a plate lid. Use pipetting strategy described above.
+**Size Selection Plate 2:** Mix IPB well and pour into a 50mL reservoir. Using 10 µL multichannel transfer **7.2 µL IPB** (0.6X) into each well corresponding to the tagmentation plate. Cover this plate with a plate lid. Use pipetting strategy described above.
 
 #### Procedure
 - [ ] Briefly centrifuge the tagmentation plate
@@ -195,18 +195,20 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 	- [ ] **DO NOT** Eject tips
 - [ ] Use 125 µL Integra to collect any residual EtOH with custom program Final Dry
 - [ ] Discard tips
-- [ ] Air dry plate 5 minutes at room temperature
+- [ ] Air dry plate 2 minutes at room temperature
 - [ ] Using 125 µL Integra with the custom program IPB Transfer, elute and transfer to **Size selection plate 2**:
 	- [ ] Aspirate 15 µL from Water Reservoir
 	- [ ] Dispense and mix in **Size selection plate 1** off magnet
 	- [ ] Cover 384-well plate using plate lid, briefly centrifuge
-	- [ ] Incubate 5 minutes at room temperature
+	- [ ] Incubate 2 minutes at room temperature off magfnet
 	- [ ] Capture beads on magnet (approximately 2 minutes)
 	- [ ] Aspirate 12 µL superantant from **Size selection plate 1**
 	- [ ] Dispense and mix in **Size selection plate 2** off magnet
+ 	- [ ] Cover 384-well plate using plate lid, briefly centrifuge
+	- [ ] Incubate 5 minutes at room temperature off magnet
+	- [ ] Capture beads on magnet (approximately 2 minutes)
+	- [ ] Aspirate 22.2 µL supernatant and discard
 	- [ ] Discard tips
-- [ ] Cover 384-well plate using plate lid, briefly centrifuge
-- [ ] Incubate 5 minutes at room temperature to capture DNA
 - [ ] Using the custom program IPB Wash on the 125 µL Integra, conduct **first** wash of the **second size selection**:
 	- [ ] Aspirate 30 µL from Ethanol Reservoir
 	- [ ] Dispense and mix 10x in Size Selection plate  on magnet
@@ -228,6 +230,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 	- [ ] Aspirate 20 µL from Water Reservoir
 	- [ ] Dispense and mix 10x in Size Selection plate 2
 	- [ ] Cover 384-well plate using plate lid, briefly centrifuge
+ 	- [ ] Incubate 5 minutes at room temperature 
 	- [ ] Capture beads on magnet (approximately 2 minutes)
 	- [ ] Aspirate 17 µL to a new 96 well plate.
 - [ ] Label plate as final libraries including project name, date, and name.
@@ -286,7 +289,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 |---------------------|-------------|--------------|
 |Activation           | 68˚C        | 3 minutes    |
 |Initial denaturation | 98˚C        | 3 minutes    |
-|12 cycles\*:
+|6 cycles\*:
 |----->Denature       | 98˚C        | 45 seconds   |
 |----->Anneal         | 62˚C        | 30 seconds   |
 |----->Extend         | 68˚C        | 2 minutes    |
