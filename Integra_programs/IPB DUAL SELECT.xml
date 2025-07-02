@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-16"?>
+<CustomProgram>
+  <VialinkVersion>5.5.5</VialinkVersion>
+  <FileVersion>1.0.0.0</FileVersion>
+  <Volume>125</Volume>
+  <TipSpacingType>0</TipSpacingType>
+  <Name>IPB DUAL SELECT</Name>
+  <Description>v0.1 Illumina DNA Prep Dual Size Selection for 0.6x scale</Description>
+  <ExtendedVolume>false</ExtendedVolume>
+  <Mode>0</Mode>
+  <FirmwareType>12</FirmwareType>
+  <CreatedDate>2025-07-02T18:50:24.4991436Z</CreatedDate>
+  <LastChangedDate>2025-07-02T20:48:08.0776561Z</LastChangedDate>
+  <Generation>3</Generation>
+  <IsAssistCustomProgram>false</IsAssistCustomProgram>
+  <AssistVersion>1</AssistVersion>
+  <Steps>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>LOAD TIPS</Line1>
+      <Line2>CAPTURE PCR</Line2>
+      <Line3>ON MAGNET</Line3>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>TIPS IN TO</Line1>
+      <Line2>ASPIRATE </Line2>
+      <Line3>SUPERNATANT</Line3>
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>9</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE IN </Line1>
+      <Line2>SS PLATE 1</Line2>
+      <Line3>OFF MAGNET</Line3>
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>9</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>MIX</Line1>
+      <Line2>AND</Line2>
+      <Line3>INCUBATE 5 MIN</Line3>
+    </Step>
+    <Step ActionId="3" ActionText="Mix">
+      <Volume>70</Volume>
+      <Cycles>20</Cycles>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="29" ActionText="Timer">
+      <Unit>true</Unit>
+      <Delay>5</Delay>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>SPIN IF NEEDED</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>CHANGE TIPS</Line1>
+      <Line2>AND CAPTURE</Line2>
+      <Line3>ON MAGNET</Line3>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>TIPS IN</Line1>
+      <Line2>TO ASPIRATE</Line2>
+      <Line3>SUPERNATANT</Line3>
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>72</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>TRANSFER TO</Line1>
+      <Line2>SS PLATE 2</Line2>
+      <Line3>OFF MAGNET</Line3>
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>72</Volume>
+      <Speed>3</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>MIX AND</Line1>
+      <Line2>INCUBATE </Line2>
+      <Line3>5 MINUTES</Line3>
+    </Step>
+    <Step ActionId="3" ActionText="Mix">
+      <Volume>70</Volume>
+      <Cycles>20</Cycles>
+      <Speed>4</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="29" ActionText="Timer">
+      <Unit>true</Unit>
+      <Delay>5</Delay>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>SPIN IF NEEDED</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>CAPTURE</Line1>
+      <Line2>ON MAGNET</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE</Line1>
+      <Line2>SUPERNATANT</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>75</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISCARD SUPER</Line1>
+      <Line2>IN WASTE</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>75</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>CHANGE TIPS</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE</Line1>
+      <Line2>ETHANOL</Line2>
+      <Line3>FROM RESERVOIR</Line3>
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>125</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE IN</Line1>
+      <Line2>BOTTOM OF SS</Line2>
+      <Line3>PLATE 2 ON MAG</Line3>
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>125</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ENSURE BEADS</Line1>
+      <Line2>CAPTURED</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE</Line1>
+      <Line2>ETHANOL</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>125</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE</Line1>
+      <Line2>IN WASTE</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>125</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="19" ActionText="Loop">
+      <LoopToStep>24</LoopToStep>
+      <LoopCount>2</LoopCount>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>SPIN IF NEEDED</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>CAPTURE IF </Line1>
+      <Line2>NEEDED</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE</Line1>
+      <Line2>ANY REMAINING</Line2>
+      <Line3>ETHANOL</Line3>
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>125</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE</Line1>
+      <Line2>IN WASTE</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>125</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>AIR DRY 2 MIN</Line1>
+      <Line2> AND</Line2>
+      <Line3>CHANGE TIPS</Line3>
+    </Step>
+    <Step ActionId="29" ActionText="Timer">
+      <Unit>true</Unit>
+      <Delay>2</Delay>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE WATER</Line1>
+      <Line2>FROM RESERVOIR</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>25</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE IN </Line1>
+      <Line2>SS PLATE 2</Line2>
+      <Line3>OFF MAGNET</Line3>
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>25</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>MIX OFF MAGNET</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="3" ActionText="Mix">
+      <Volume>20</Volume>
+      <Cycles>20</Cycles>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>SPIN IF NEEDED</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>INCUBATE 2 MIN</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="29" ActionText="Timer">
+      <Unit>true</Unit>
+      <Delay>2</Delay>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>CAPTURE ON</Line1>
+      <Line2>MAGNET</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE FROM </Line1>
+      <Line2>SS PLATE 2</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>20</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE IN</Line1>
+      <Line2>FINAL</Line2>
+      <Line3>ELUTION PLATE</Line3>
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>20</Volume>
+      <Speed>4</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>REMOVE TIPS</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+  </Steps>
+</CustomProgram>

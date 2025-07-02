@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-16"?>
+<CustomProgram>
+  <VialinkVersion>5.5.5</VialinkVersion>
+  <FileVersion>1.0.0.0</FileVersion>
+  <Volume>12.5</Volume>
+  <TipSpacingType>0</TipSpacingType>
+  <Name>BLT INDEX</Name>
+  <Description>v0.1 Add indexes for illumina DNA prep and mix</Description>
+  <ExtendedVolume>false</ExtendedVolume>
+  <Mode>0</Mode>
+  <FirmwareType>12</FirmwareType>
+  <CreatedDate>2025-07-02T20:59:33.496665Z</CreatedDate>
+  <LastChangedDate>2025-07-02T21:00:54.5917774Z</LastChangedDate>
+  <Generation>3</Generation>
+  <IsAssistCustomProgram>false</IsAssistCustomProgram>
+  <AssistVersion>1</AssistVersion>
+  <Steps>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>LOAD TIPS</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE INDEXS</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>2</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE IN</Line1>
+      <Line2>TAG PLATE</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>2</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>MIX</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="3" ActionText="Mix">
+      <Volume>8.5</Volume>
+      <Cycles>10</Cycles>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>EJECT TIPS</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+  </Steps>
+</CustomProgram>

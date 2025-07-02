@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-16"?>
+<CustomProgram>
+  <VialinkVersion>5.5.5</VialinkVersion>
+  <FileVersion>1.0.0.0</FileVersion>
+  <Volume>125</Volume>
+  <TipSpacingType>0</TipSpacingType>
+  <Name>FINAL DRY</Name>
+  <Description>v0.1 Final dry step to remove remaining ethanol for bead washing followed by 2 min timer.</Description>
+  <ExtendedVolume>false</ExtendedVolume>
+  <Mode>0</Mode>
+  <FirmwareType>12</FirmwareType>
+  <CreatedDate>2025-07-02T18:50:33.1777366Z</CreatedDate>
+  <LastChangedDate>2025-07-02T20:52:34.1612295Z</LastChangedDate>
+  <Generation>3</Generation>
+  <IsAssistCustomProgram>false</IsAssistCustomProgram>
+  <AssistVersion>1</AssistVersion>
+  <Steps>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>125</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>125</Volume>
+      <Speed>8</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="29" ActionText="Timer">
+      <Unit>true</Unit>
+      <Delay>2</Delay>
+    </Step>
+  </Steps>
+</CustomProgram>
