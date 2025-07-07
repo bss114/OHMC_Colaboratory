@@ -32,7 +32,7 @@ Do not send any samples to lab without first discussing project with Jordan. Ple
 
 <br>*Under construction*
 
-<br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/MetagenomeSeq/IlluminaPrep_Scaled.md) Scaled Illumina DNA Prep (flex)
+<br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/MetagenomeSeq/IlluminaPrep_HTP.md) Scaled Illumina DNA Prep (flex)
 <br> [Protocol 2:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/MetagenomeSeq/iSeq_QC_normalization.md) QC + Normalization with iSeq
 
 ## Virome Sequencing
