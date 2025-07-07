@@ -1,6 +1,3 @@
-#UNDER CONSTRUCTION
-
-
 # Illumina DNA Prep - High Throughput
 
 ## Theory
@@ -20,7 +17,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 ***
 
 ## Change log
-- v0.1_June2025: Initial testing and optimization, under construction
+- v0.1_June2025 JB: Initial testing and optimization, ready for release
   
 ***
 
@@ -85,7 +82,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 - [ ] Nuclease free 1.5 mL microcentrifuge tube
 - [ ] 1-well reservoir (Suggested Opentrons 999-00078)
 - [ ] 200 µL PCR strip tube
-- [ ] 0.25 boxes of 12.5 µL Integra grip tips (Cat #6405) 
+- [ ] 0.5 boxes of 12.5 µL Integra grip tips (Cat #6405) 
 - [ ] 0.75 boxes of 125 µL Integra grip tips (Cat #6465) 
 - [ ] 1 tip box of 10 µL pipette tips with barriers compatible with manual multi-channel pipette
 - [ ] Plate seals (suggested to use Biorad Microplate B seals Cat# MSB1001)
@@ -114,7 +111,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 	- [ ] Cover 384-well plate using plate lid, briefly centrifuge
 	- [ ] Capture beads on magnet (approximately 2 minutes)
 	- [ ] Aspirate 20 µL supernatant and discard
-	- [ ] Eject tips
+	- [ ] Load new tips
 	- [ ] Remove tagmentation plate from magnet
 	- [ ] Aspirate 20 µL from TWB Plate.
 	- [ ] Dispense and mix 10x in tagmentation plate
@@ -149,7 +146,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 - [ ] Illumina Resuspension Buffer (RSB) - at room temperature
 - [ ] Nuclease free water
 - [ ] 2 x 1-well reservoir (Suggested Opentrons 999-00078) 
-- [ ] 1.75 boxes of 125 µL Integra grip tips (Cat #6465)
+- [ ] 1.25 boxes of 125 µL Integra grip tips (Cat #6465)
 - [ ] 0.2 x 96 tip box of 10 µL pipette tips with barriers compatible with manual multi-channel pipette
 - [ ] 0.2 x 96 tip box of 200 µL pipette tips with barriers compatible with manual multi-channel pipette
 - [ ] Plate seals (suggested to use Biorad Microplate B seals Cat# MSB1001)
@@ -166,7 +163,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 **Size Selection Plate 1:** Resuspend IPB well. In a multichannel reservoir combine 4.2 mL water with 2.7 mL IPB (42 µL water and 27 µL IPB per sample). Mix well. Using a 200 µL multichannel, carefully put 69 µL of the IPB/water mixture in each well of a 96 well plate. Temporarily cover with a seal or lid.
 
-**Size Selection Plate 2:** Mix IPB well and pour into a 50mL reservoir. Using 10 µL multichannel transfer **5 µL IPB** (0.68X) into each well of a 96 well plate. Good pipetting practice is essential here to obtain correct bead ratios. Use a repeated dispensing approach: Aspirate and discard beads back into reservoir leaving plunger depressed to first stop. Aspirate beads and dispense in receiver plate. Do not use blow stop. Repeat.
+**Size Selection Plate 2:** Mix IPB well and pour into a 50mL reservoir. Using 10 µL multichannel transfer **6 µL IPB** (0.67X) into each well of a 96 well plate. This step may be tuned depending on desired size selection. Can use 5 µL (0.65x), 7 µL (0.69x), 8 µL (0.71x), or 9 µL (0.73x). Illumina specifies 0.73x but this has given suboptimal performance in scaled format. Good pipetting practice is essential here to obtain correct bead ratios. Use a repeated dispensing approach: Aspirate and discard beads back into reservoir leaving plunger depressed to first stop. Aspirate beads and dispense in receiver plate. Do not use blow stop. Repeat. Ensure that any beads adhered to outside of pipette are not added to well.
 
 
 
