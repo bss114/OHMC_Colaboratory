@@ -43,7 +43,7 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 - [ ] Multi and single channel pipettes + tips for 10, 20, 200ul
 - [ ] Adhesive and foil seals for 96-well plates (Ex. USA Scientific 2923-0110)
 - [ ] 1.7mL centrifuge tubes (Ex. VWR 87003-294)
-- [ ] - [ ] Generic multichannel reservoirs (Suggested VWR 53504-035)
+- [ ] Generic multichannel reservoirs (Suggested VWR 53504-035)
 
 ***
 
