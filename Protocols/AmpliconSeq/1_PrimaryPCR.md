@@ -9,7 +9,7 @@ Limiting amplification cycles helps prevent against over-amplification, and thus
 
 Another advantage of this amplification strategy is that you can mix and match 16S variable regions and metagenomic sequencing (see **Table 1**). A list of primers is attached below however it is reccomended to use V4_515Fmod_Nextera and V4_806Rmod_Nextera which are the revised EMP V4 primers. It is also possible to sequence multiple variable regions or combine 16S rRNA and ITS into a single run so long as the indexes do not overlap.
 
-Before progressing, it is imperative that you have accurately captured the layout of your 96 well plate(s). Please use [this template](https://github.com/BisanzLab/OHMC_Colaboratory/edit/main/Templates/IndexTrackingSheet.xlsx) which will allow for seemless transition into sequencing. Be sure to enquire about which index plate you will use.
+Before progressing, it is imperative that you have accurately captured the layout of your 96 well plate(s). Please use [this template](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/Amplicon_RunTemplate.xlsx) which will allow for seemless transition into sequencing. Be sure to enquire about which index plate you will use.
 
 Note: the mini-96 and multichannels pipette every other well.  See [this template](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx) to understand the layout.
 
