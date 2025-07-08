@@ -32,11 +32,9 @@ Any given sequencing run produces a set number of reads: for example ~15 million
 - [ ] Review the loading volumes and manually adjust volumes >20µL to be either 20µL or the average loading volume.
 - [ ] Move to Loading.csv tab of index sheet, and click File > Save As > File Format: CSV UTF-8
 - [ ] Remove lines which do not have a loading volume from the resulting csv file
-- [ ] Download a copy of OT2_scripts/PoolAmplicons_template.py and copy and paste the pooling volumes from the CSV file into the python (.py) script.
-- [ ] Set up OT-2 as described in **Figure 2**. *Note: Up to 6 plates can be pooled simnultaneously from plates in deck positions 1-6. Place your plate in the corresponding deck position matching its number from the spread sheet*
+- [ ] On the Post PCR OT2, use the Pool Equimolar libraries from CSV program to pool samples uploading your loadings.csv file and following the instructions.
 - [ ] Prepare two lobind eppendorf tubes with labels and 20ul nuclease free water to ensure consistent delivery of volumes.
 - [ ] Add one eppendorf tube in the A1 position of the tube rack, tucking the cap into the slot. Add a full box of 20ul tips to the deck.
-- [ ] Upload scripts to OT-2 using Opentrons App.
 - [ ] Calibrate all deck positions.
 - [ ] Run protocol. **Estimated time of completion: 13 minutes/plate**
 - [ ] Note, if the total volume to be pooled is over 1200ul, the protocol will pause and ask you to insert a fresh 1.5mL eppendorf tube.
