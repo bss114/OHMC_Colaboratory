@@ -65,5 +65,9 @@ There are many ways to normalize a sequencing library, but it can be difficult (
 - [ ] On the Post PCR OT2, use the Pool Equimolar libraries from CSV program to pool samples uploading your loadings.csv file and following the instructions.
 - [ ] Store final library at -20˚C until QC/sequencing.
 
+## Step 5: Final QC
 
-
+- [ ] Run library on High Sensitivity Tape Station to confirm final size distrobution and concentration (400-1000nt).
+- [ ] Run on Qubit to get concentration
+- [ ] Novogene requires ≥130 µL at 2-30nM (>2ng/µL) per NovaSeq X 25B lane. Actual loading concentration is 150 nM; however, this is after off-board NaOH denaturation (like MiSeq). Starting material per 25B flow cell denaturation protocol is 21 µL @ 2nM.
+- [ ] If sample concentration is required, use Speedvac to dry sample to lower volume. If volume is brought up, bring up in RSB.
