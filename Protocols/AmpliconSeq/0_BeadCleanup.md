@@ -14,6 +14,8 @@ This protocol is to do a cleanup/size selection on PCR amplicons in which signif
 - [ ] 125 µL Integra mini-96
 - [ ] 96-well magnetic capture plate
 - [ ] Plate centrifuge (Suggested USA Sci 2532-2000)
+- [ ] 20 µL multi-channel pipette (Suggested Gilson P8x20L)
+
 
 ### 1.2 Consumables
 - [ ] Magnetic capture beads (Ampure XP or home-made, see [here](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Misc/DIY_SPRIBeads.md) for recipe)
@@ -21,7 +23,8 @@ This protocol is to do a cleanup/size selection on PCR amplicons in which signif
 - [ ] 80% Ethanol in a 1-well reservoir (made fresh daily)
 - [ ] Nuclease free water in a 1-well reservoir
 - [ ] 96 well plate (Suggested VWR 82006-704)
-
+- [ ] Generic multichannel reservoirs (Suggested VWR 53504-035)
+- [ ] nuclease free 20 µL tips
 
 ### 1.3 Protocol
 
