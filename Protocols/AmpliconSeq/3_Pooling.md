@@ -29,14 +29,14 @@ Any given sequencing run produces a set number of reads: for example ~15 million
 - [ ] Copy the gain setting and flourescence values to the Picogreen tab of TrackingSheet.xlsx. **Note: You may consider just using 80 for the gain setting on the Perdew lab magellan**.
 - [ ] Repeat measurement on full sample plate being sure to set gain to match the standard plate.
 - [ ] Copy and paste results into Picogreen template as per **Figure 1**.
-- [ ] Review the loading volumes and manually adjust volumes >20µL to be either 20µL or the average loading volume.
+- [ ] Review the loading volumes and adjust ng amount if needed so that the volume being pipetted is >1ul; manually adjust volumes >10µL to be either 10µL or the average loading volume.
 - [ ] Move to Loading.csv tab of index sheet, and click File > Save As > File Format: CSV UTF-8
 - [ ] Remove lines which do not have a loading volume from the resulting csv file
 - [ ] On the Post PCR OT2, use the Pool Equimolar libraries from CSV program to pool samples uploading your loadings.csv file and following the instructions.
 - [ ] Prepare two lobind eppendorf tubes with labels and 20ul nuclease free water to ensure consistent delivery of volumes.
 - [ ] Add one eppendorf tube in the A1 position of the tube rack, tucking the cap into the slot. Add a full box of 20ul tips to the deck.
 - [ ] Calibrate all deck positions.
-- [ ] Run protocol. **Estimated time of completion: 13 minutes/plate**
+- [ ] Run protocol. **Estimated time of completion: 18 minutes/plate**
 - [ ] Note, if the total volume to be pooled is over 1200ul, the protocol will pause and ask you to insert a fresh 1.5mL eppendorf tube.
 - [ ] At completion of pooling, mix all pooled 1.5mL eppendorf tubes together (if pooling >1200ul)
 - [ ] Prepare 1.2% agarose gel while OT2 is pooling.
