@@ -35,6 +35,7 @@ Note: the mini-96 and multichannels pipette every other well.  See [this templat
 - [ ] Wipe pipettes and work areas with DNaseAway or similar, treat PCR area with UV light for ~15 minutes.
 - [ ] Generate enough PCR master mix for the number of samples you will be preparing in reagent reservoir (see **Table 2**). Mix well with a 1000ul pipette and/or rocking reservoir.
 - [ ] Using 10 ul multichannel, transfer 9 ul of master mix into each well of qPCR plate which will be loaded. Be sure to consider the [96-to-384 well layout](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx).
+NOTE: if using the pre-PCR OT-2 for mastermix, keep in mind the selection of plate 1 (aliquots FULL plate) vs plate 2 (aliquots 1/2 plate, every other column) in the setup.
 - [ ] Thaw gDNA plate on ice and briefly centrifuge to prevent cross contamination. **This centrifugation is essential.**
 - [ ] Load gDNA on to Mini-96 and transfer 1 ul to qPCR plate
 - [ ] Cover 384 well plate with optically clear plate seals
