@@ -244,7 +244,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 
 
-**PTC (Tagmentation Stop)**: Reaction volume to 10µL
+**BLT PCR (Tagmentation Stop)**: Reaction volume to 10µL
 
 |Step                 | Temperature | Time         |
 |---------------------|-------------|--------------|
