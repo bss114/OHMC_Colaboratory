@@ -123,7 +123,7 @@ def run(protocol: protocol_api.ProtocolContext):
 			p20.aspirate(diluent_volume, Diluent['A1'])
 			p20.dispense(diluent_volume,dest_location)
 		
-		total_volume = total_volume + sample_volume
+		total_volume = total_volume + diluent_volume
 		
 		if total_volume > 1500:
 			protocol.home()	
