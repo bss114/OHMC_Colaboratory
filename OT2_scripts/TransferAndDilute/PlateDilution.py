@@ -12,7 +12,7 @@ metadata = {
 #Change log
 #v0.11 - added nest 96 as option for plate
 #v0.12 - added qiagen elution microtubes as option for input plate
-#v0.13 - added count of total volume in dilution tube. Pause for refill
+#v0.13 - added count of total volume in dilution tube. Pause for refill. Also shortened mix
 
 #Input csv format Example:
 #SSampleID,SourcePosition,SourceWell,DestPosition,DestWell,SampleConc,SampleVolume,DiluentVolume
@@ -148,7 +148,7 @@ def run(protocol: protocol_api.ProtocolContext):
 		p20.pick_up_tip(tip_location)	
 		p20.aspirate(sample_volume, source_location)
 		p20.dispense(sample_volume, dest_location)
-		p20.mix(5, 3)
+		p20.mix(2, 5)
 		p20.blow_out()
 		p20.drop_tip()
 		
