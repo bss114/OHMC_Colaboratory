@@ -4,7 +4,7 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Transfer and Dilute Samples v0.12', 
+	'protocolName': 'Transfer and Dilute Samples v0.13', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
 	'description': 'Transfers/rearrays samples to/from 96 or 384 well plates. Controlled with input csv. See source for layout.',
 }
@@ -12,6 +12,7 @@ metadata = {
 #Change log
 #v0.11 - added nest 96 as option for plate
 #v0.12 - added qiagen elution microtubes as option for input plate
+#v0.13 - added count of total volume in dilution tube. Pause for refill
 
 #Input csv format Example:
 #SSampleID,SourcePosition,SourceWell,DestPosition,DestWell,SampleConc,SampleVolume,DiluentVolume
@@ -106,6 +107,7 @@ def run(protocol: protocol_api.ProtocolContext):
 
 
 	#loop through every line in the csv to be transferred to get the diluent
+	total_volume = 0 # tracking the total volume in the tube
 	p20.pick_up_tip()
 	for index, row in enumerate(loading_data[1::]):
 		source_position=row[1]
@@ -120,6 +122,15 @@ def run(protocol: protocol_api.ProtocolContext):
 		if diluent_volume>0:
 			p20.aspirate(diluent_volume, Diluent['A1'])
 			p20.dispense(diluent_volume,dest_location)
+		
+		total_volume = total_volume + sample_volume
+		
+		if total_volume > 1500:
+			protocol.home()	
+			protocol.comment("Total volume of diluted used is currently" + str(total_volume) + " ul")
+			protocol.pause("Please refill 1.5mL eppendorf tube with diluent")
+			total_volume = 0
+			
 	p20.return_tip()
 
 	#loop through every line in the csv to be transferred to get the sample
