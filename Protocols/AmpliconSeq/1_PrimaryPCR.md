@@ -9,7 +9,7 @@ Limiting amplification cycles helps prevent against over-amplification, and thus
 
 Another advantage of this amplification strategy is that you can mix and match 16S variable regions and metagenomic sequencing (see **Table 1**). A list of primers is attached below however it is reccomended to use V4_515Fmod_Nextera and V4_806Rmod_Nextera which are the revised EMP V4 primers. It is also possible to sequence multiple variable regions or combine 16S rRNA and ITS into a single run so long as the indexes do not overlap.
 
-Before progressing, it is imperative that you have accurately captured the layout of your 96 well plate(s). Please use [this template](https://github.com/BisanzLab/OHMC_Colaboratory/edit/main/Templates/IndexTrackingSheet.xlsx) which will allow for seemless transition into sequencing. Be sure to enquire about which index plate you will use.
+Before progressing, it is imperative that you have accurately captured the layout of your 96 well plate(s). Please use [this template](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/Amplicon_RunTemplate.xlsx) which will allow for seemless transition into sequencing. Be sure to enquire about which index plate you will use.
 
 Note: the mini-96 and multichannels pipette every other well.  See [this template](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx) to understand the layout.
 
@@ -35,6 +35,7 @@ Note: the mini-96 and multichannels pipette every other well.  See [this templat
 - [ ] Wipe pipettes and work areas with DNaseAway or similar, treat PCR area with UV light for ~15 minutes.
 - [ ] Generate enough PCR master mix for the number of samples you will be preparing in reagent reservoir (see **Table 2**). Mix well with a 1000ul pipette and/or rocking reservoir.
 - [ ] Using 10 ul multichannel, transfer 9 ul of master mix into each well of qPCR plate which will be loaded. Be sure to consider the [96-to-384 well layout](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/96_to_384_Integra.xlsx).
+NOTE: if using the pre-PCR OT-2 for mastermix, keep in mind the selection of plate 1 (aliquots FULL plate) vs plate 2 (aliquots 1/2 plate, every other column) in the setup.
 - [ ] Thaw gDNA plate on ice and briefly centrifuge to prevent cross contamination. **This centrifugation is essential.**
 - [ ] Load gDNA on to Mini-96 and transfer 1 ul to qPCR plate
 - [ ] Cover 384 well plate with optically clear plate seals

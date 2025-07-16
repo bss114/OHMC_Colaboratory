@@ -1,3 +1,9 @@
+# Note: This protocol is depreciated.
+
+***
+***
+***
+
 # Illumina DNA Prep
 
 ## Theory

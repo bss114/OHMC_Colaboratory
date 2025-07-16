@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-16"?>
+<CustomProgram>
+  <VialinkVersion>5.5.5</VialinkVersion>
+  <FileVersion>1.0.0.0</FileVersion>
+  <Volume>125</Volume>
+  <TipSpacingType>0</TipSpacingType>
+  <Name>TWB WASH</Name>
+  <Description>v0.1 Do two rounds of TWB washes</Description>
+  <ExtendedVolume>false</ExtendedVolume>
+  <Mode>0</Mode>
+  <FirmwareType>12</FirmwareType>
+  <CreatedDate>2025-07-02T20:47:04.8045161Z</CreatedDate>
+  <LastChangedDate>2025-07-02T20:52:17.7024761Z</LastChangedDate>
+  <Generation>3</Generation>
+  <IsAssistCustomProgram>false</IsAssistCustomProgram>
+  <AssistVersion>1</AssistVersion>
+  <Steps>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>LOAD TIPS</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE FROM</Line1>
+      <Line2>TWB PLATE</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>20</Volume>
+      <Speed>3</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE IN</Line1>
+      <Line2>TAG PLATE</Line2>
+      <Line3>OFF MAGNET</Line3>
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>20</Volume>
+      <Speed>5</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>MIX OFF MAGNET</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="3" ActionText="Mix">
+      <Volume>15</Volume>
+      <Cycles>20</Cycles>
+      <Speed>4</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>SPIN</Line1>
+      <Line2>AND</Line2>
+      <Line3>CAPTURE</Line3>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>ASPIRATE</Line1>
+      <Line2>SUPERNATANT</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>20</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISPENSE IN</Line1>
+      <Line2>WASTE</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>20</Volume>
+      <Speed>8</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>EJECT TIPS</Line1>
+      <Line2 />
+      <Line3 />
+    </Step>
+    <Step ActionId="19" ActionText="Loop">
+      <LoopToStep>1</LoopToStep>
+      <LoopCount>2</LoopCount>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>SPIN AND</Line1>
+      <Line2>CAPTURE</Line2>
+      <Line3>ASPIRATE REMAIN</Line3>
+    </Step>
+    <Step ActionId="1" ActionText="Aspirate">
+      <Volume>125</Volume>
+      <Speed>1</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>DISCARD IN</Line1>
+      <Line2>WASTE</Line2>
+      <Line3 />
+    </Step>
+    <Step ActionId="2" ActionText="Dispense">
+      <Volume>125</Volume>
+      <Speed>8</Speed>
+      <Tracking>0</Tracking>
+      <PositionZ>0</PositionZ>
+    </Step>
+    <Step ActionId="7" ActionText="Prompt">
+      <Line1>EJECT TIPS</Line1>
+      <Line2>IMMEDIATELY ADD</Line2>
+      <Line3>PCR MASTERMIX</Line3>
+    </Step>
+  </Steps>
+</CustomProgram>

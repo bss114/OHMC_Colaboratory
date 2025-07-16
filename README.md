@@ -24,15 +24,15 @@ Do not send any samples to lab without first discussing project with Jordan. Ple
 ## Amplicon Sequencing
 
 <br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/AmpliconSeq/1_PrimaryPCR.md) Primary PCR
+<br> [Optional Protocol 1.5:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/AmpliconSeq/1.5_BeadCleanup.md) PCR Cleanup before indexing (for samples with significant dimer formation)
 <br> [Protocol 2:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/AmpliconSeq/2_IndexingPCR.md) Indexing PCR
 <br> [Protocol 3:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/AmpliconSeq/3_Pooling.md) Pooling
 <br> [Protocol 4:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/AmpliconSeq/4_Cleanup.md) Size selection and cleanup
 
 ## Metagenomic Sequencing
 
-<br>*Under construction*
-
-<br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/MetagenomeSeq/IlluminaPrep_Scaled.md) Scaled Illumina DNA Prep (flex)
+<br> [Protocol 1:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/MetagenomeSeq/IlluminaPrep_HTP.md) High throughput Illumina DNA Prep
+<br> [Protocol 1A:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/MetagenomeSeq/IlluminaPrep_Individual.md) Alternate protocol: Scaled Illumina DNA prep in strip tubes
 <br> [Protocol 2:](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/MetagenomeSeq/iSeq_QC_normalization.md) QC + Normalization with iSeq
 
 ## Virome Sequencing
