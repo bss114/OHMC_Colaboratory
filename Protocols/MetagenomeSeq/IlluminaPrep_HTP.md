@@ -18,7 +18,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 ## Change log
 - v0.1_June2025 JB: Initial testing and optimization, ready for release
-  
+- v0.11_July2025 JB: Clarifications and bead ratio change
 ***
 
 ## Step 1: Tagmentation
@@ -48,7 +48,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 **TSB Plate:** If not already prepared, transfer 25 µL of TSB to each well of a 96 well plate. This can be used for multiple runs.
 
-**Tagmentation Plate:** In a multichannel reservoir, combine 220 µL of well-mixed beads (BLT) with 220 µL tagmentation buffer (TB1). This is 2.2µL of both BLT and TB1 for each sample. Mix well and use 10 µL multi channel to transfer 4 µL of mixture into every other column/row of a 384 well plate. **Note:** because this protocol uses multichannels and Integra mini-96s, the spacing needs to be every other well. This has the advantage of also putting an empty well between every sample which may be advantageous from a cross-contamination standpoint. It is theoretically possible to do up to 384 well samples at a time; however, this is not recommended. In effect, using your 8 channel in a vertical orientation, put the first tip into the following wells to fill the plate: A1, A3, A5, A7, A9, A11, A13, A15, A17, A19, A21, A23.
+**Tagmentation Plate:** In a multichannel reservoir, combine 220 µL of well-mixed beads (BLT) with 220 µL tagmentation buffer (TB1). This is 2.2µL of both BLT and TB1 for each sample. Mix well and use 10 µL multi channel to transfer 4 µL of mixture into every other column/row of a 384 well plate. **Note:** because this protocol uses multichannels and Integra mini-96s, the spacing needs to be every other well. This has the advantage of also putting an empty well between every sample which may be advantageous from a cross-contamination standpoint. It is theoretically possible to do up to 384 well samples at a time; however, this is not recommended. In effect, using your 8 channel in a vertical orientation, put the first tip into the following wells to fill the plate: A1, A3, A5, A7, A9, A11, A13, A15, A17, A19, A21, A23. **Quickly spin before use.**
 
 #### Procedure
 - [ ] Using 12.5 µL Integra, use the **TAG LOAD** program to transfer 6µL from the gDNA plate to the Tagmentation plate and mix
@@ -93,7 +93,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 **TWB Plate:** If not previously done, using a generic reservoir and multichannel distribute 200 µL TWB to each well of a 96 well plate. This will be used for multiple runs.
 
-**PCR Master Mix:** In a nuclease free tube, combine 420 µL EPM with 420 µL nuclease free water. This is 4.4µL each per sample. Transfer 110 µL into each tube in a 8-tube PCR strip tube. Store strip on ice.
+**PCR Master Mix:** In a nuclease free tube, combine 420 µL EPM with 420 µL nuclease free water. This is 4.4µL each per sample. Transfer 110 µL into each tube in a 8-tube PCR strip tube. Store strip on ice. **Optional: Add 8.4µL of a 100x sample tracking buffer like Qiagen QuantiNova Yellow Template Dilution Buffer. This will help ensure that volumes are accurately delivered in the key manual mastermix loading step.**
 
 **Index Plate:** Thaw on ice. To prevent potential issues with cross contamination, it is essential these plates are briefly centrifuged before being opened. The seal must be immediately discarded and replaced with a fresh seal.
 
@@ -118,12 +118,13 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 	- [ ] Cover 384-well plate using plate lid, briefly centrifuge
 	- [ ] Capture beads on magnet (approximately 2 minutes)
 	- [ ] Aspirate 20 µL supernatant and discard being sure not to cross contaminate tips
-	- [ ] Briefly centrifuge, capture, and remove any residual TWB.
+	- [ ] Briefly centrifuge, capture, and remove any residual TWB using a tapping motion.
 - [ ] Working **very** quickly to prevent beads from drying, use 10 µL multichannel to add 8µL of the PCR Master Mix to each well. Briefly mix by pipetting to ensure beads are resuspended in Master Mix.
 - [ ] Cover 384-well plate using plate lid, briefly centrifuge
 - [ ] Using 12.5 µL Integra, use the **BLT INDEX** program to transfer 2 µL from the Index Plate to the tagmentation plate and mix
 - [ ] Cover with plate seal. **Note: a good seal is imperative to prevent evaporation. Great care should be taken to ensure this is not a problem.**
 - [ ] Briefly centrifuge the plate
+- [ ] Inspect wells of plate, if there are any wells where the beads were not resuspended, mnually mix with a 20 µL multichannel.
 - [ ] Transfer to preheated thermocycler running program **BLT PCR** (*see thermocycler program appendix*)
       	<br>*Note: 6 cycles is reccomended for ~30ng input DNA. For some applications such as virome, increasing cycles may be required up to 12 cycles. This may decrease fragment sizes from 500-600 to ~400-450. The decision should be made with care depending on user's needs.*
 - [ ] After BLT PCR, either proceed, or store at -20˚C.
@@ -161,13 +162,13 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 **Water Reservoir:** Transfer enough nuclease free water to a 1-well reservoir with enough to cover all wells.
 
-**Size Selection Plate 1:** Resuspend IPB well. In a multichannel reservoir combine 4.2 mL water with 2.7 mL IPB (42 µL water and 27 µL IPB per sample). Mix well. Using a 200 µL multichannel, carefully put 69 µL of the IPB/water mixture in each well of a 96 well plate. Temporarily cover with a seal or lid.
+**Size Selection Plate 1:** Resuspend IPB well. In a 15 mL tube combine 4.2 mL water with 2.7 mL IPB (42 µL water and 27 µL IPB per sample). Mix well and transfer to a reservoir. Using a 200 µL multichannel, carefully put 69 µL of the IPB/water mixture in each well of a 96 well plate. 
 
-**Size Selection Plate 2:** Mix IPB well and pour into a 50mL reservoir. Using 10 µL multichannel transfer **6 µL IPB** (0.67X) into each well of a 96 well plate. This step may be tuned depending on desired size selection. Can use 5 µL (0.65x), 7 µL (0.69x), 8 µL (0.71x), or 9 µL (0.73x). Illumina specifies 0.73x but this has given suboptimal performance in scaled format. Good pipetting practice is essential here to obtain correct bead ratios. Use a repeated dispensing approach: Aspirate and discard beads back into reservoir leaving plunger depressed to first stop. Aspirate beads and dispense in receiver plate. Do not use blow stop. Repeat. Ensure that any beads adhered to outside of pipette are not added to well.
-
+**Size Selection Plate 2:** Mix IPB well and pour into a 50mL reservoir. Using 10 µL multichannel transfer **7 µL IPB** (0.69X) into each well of a 96 well plate. This step may be tuned depending on desired size selection. Can use between 5 µL between and 9 µL depending on desired fragment size. Internal testing would suggest 5 µL will give 600-700nt libraries, 9µL will give 400-500 nt libraries, and 7µL will give 500-700nt libraries. Good pipetting practice is essential here to obtain correct bead ratios. Use a repeated dispensing approach: Aspirate and discard beads back into reservoir leaving plunger depressed to first stop. Aspirate beads and dispense in receiver plate. Do not use blow stop. Repeat. Ensure that any beads adhered to outside of pipette are not added to well. Temporarily cover with a seal or lid.
 
 
 #### Procedure
+- [ ] If planning to do tapestation QC, remove tape and sample buffer from fridge and allow to come up to room temperature.
 - [ ] Briefly centrifuge the tagmentation plate
 - [ ] Remove seal and transfer tagmentation plate to 384-well magnet
 - [ ] Using 125 µL Integra, use the **IPB DUAL SELECT** program to recapture the DNA on IPB Beads:
@@ -176,7 +177,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
   	- [ ] Briefly spin if necessary 
 	- [ ] Capture beads on magnet (approximately 2 minutes)
  	- [ ] Get new tips
-	- [ ] Aspirate 72 µL supernatant and transfer to Size Selection plate 2.
+	- [ ] Aspirate 72 µL supernatant and transfer to Size Selection plate 2 off magnet.
  	- [ ] Mix
   	- [ ] Incubate 5 min @ room temperature
   	- [ ] Capture
@@ -188,9 +189,9 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
   	- [ ] Aspirate 125 µL ethanol from EtOH reservoir and transfer to Size selection plate 2
   	- [ ] Allow beads to recapture if necessary and remove superantant
   	- [ ] Get new tips
- 	- [ ] Remove any remaining EtOH
+ 	- [ ] Remove any remaining EtOH, air dry 2 minutes, and change tips.
   	- [ ] Aspirate 25 µL from Water Reservoir
-  	- [ ] Mix
+  	- [ ] Mix off magnet
   	- [ ] Incubate 2 minutes at room temperature
   	- [ ] Briefly spin and capture DNA
   	- [ ] Transfer 20 µL to final elution plate
@@ -244,7 +245,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 
 
-**PTC (Tagmentation Stop)**: Reaction volume to 10µL
+**BLT PCR (Tagmentation Stop)**: Reaction volume to 10µL
 
 |Step                 | Temperature | Time         |
 |---------------------|-------------|--------------|
