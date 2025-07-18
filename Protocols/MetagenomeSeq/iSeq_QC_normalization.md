@@ -19,7 +19,7 @@ There are many ways to normalize a sequencing library, but it can be difficult (
 
 ### 1.2 Procedure
 
-- [ ] Using a strip tube and careful pipetting, transfer 1 µL from each sample library into a strip tube
+- [ ] Using a strip tube and careful pipetting, transfer 1 µL from each sample library into a strip tube. **Alternatively: use the OT2 BlindPool.py script found in the OT2_scripts directory.**
 - [ ] Combine the individual wells of the strip tube into a single microcentrifuge tube
 - [ ] Measure concentration of pool using Qubit dsDNA kit
 - [ ] Mix 2 µL tapestation sample buffer with 2 µL of pool
