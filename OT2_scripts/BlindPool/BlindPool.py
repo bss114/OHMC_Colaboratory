@@ -4,7 +4,7 @@ requirements = {"robotType": "OT-2", "apiLevel": "2.21"}
 
 # metadata
 metadata = {
-	'protocolName': 'Blind Pool Libraries v0.1', 
+	'protocolName': 'Blind Pool Libraries v0.11', 
 	'author': 'J Bisanz, jordan.bisanz@gmail.com',
 	'description': 'Loads a fixed volume of every well of a 96 well plate (in deck 1) into a the first column of a new  (deck 2). For iSeq QC runs.'
 }
@@ -62,6 +62,6 @@ def run(protocol: protocol_api.ProtocolContext):
 	for col in range(protocol.params.StartingColumn, protocol.params.EndingColumn+1):
 		mp20.pick_up_tip(tips['A'+str(col)])
 		mp20.aspirate(mm_volume, LibraryPlate['A'+str(col)])
-		mp20.dispense(mm_volume, PoolingPlate['A'+str(col)])
+		mp20.dispense(mm_volume, PoolingPlate['A1'])
 		mp20.mix(repetitions=2, volume=mm_volume, location=PoolingPlate['A'+str(col)])
 		mp20.drop_tip()
