@@ -63,5 +63,5 @@ def run(protocol: protocol_api.ProtocolContext):
 		mp20.pick_up_tip(tips['A'+str(col)])
 		mp20.aspirate(mm_volume, LibraryPlate['A'+str(col)])
 		mp20.dispense(mm_volume, PoolingPlate['A1'])
-		mp20.mix(repetitions=2, volume=mm_volume, location=PoolingPlate['A'+str(col)])
+		mp20.mix(repetitions=2, volume=mm_volume, location=PoolingPlate['A1'])
 		mp20.drop_tip()
