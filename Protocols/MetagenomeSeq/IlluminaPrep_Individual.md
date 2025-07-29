@@ -2,11 +2,11 @@
 
 ## Use Case
 
-This protocol is a derived from the high throughput protocol and is intended for users with a limited number of samples where it does not make sense to use a 96-well plate format and instead can do 1 or more samples in strip tubes. It may also be useful to catch samples which failed iSeq QC. **Note: If a Co-Lab user is doing this protocol, it is imperative that they arrange their indexes ahead of time and get alloquotes from Bethany. This protocol will not create enough material for NovaSeq sequencing on < 50 samples and must be pooled with other projects.**
+This protocol is a derived from the high throughput protocol and is intended for users with a limited number of samples where it does not make sense to use a 96-well plate format and instead can do 1 or more samples in strip tubes. It may also be useful to catch samples which failed iSeq QC. **Note: If a Co-Lab user is doing this protocol, it is imperative that they arrange their indexes ahead of time and get aliquots from Bethany. This protocol will not create enough material for NovaSeq sequencing on < 50 samples and must be pooled with other projects.**
 
 ## Theory
 
-This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/illumina_prep/illumina-dna-prep-reference-guide-1000000025416-10.pdf); however, reaction volumes have been scaled for cost savings, and all steps are performed on 96 samples simultaneously. Also, to aid in cost reductions, optional substitutions of some illumina reagents are included which may facilitate higher throughput processing. Broadly speaking, this library step involves 4 steps:
+This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/illumina_prep/illumina-dna-prep-reference-guide-1000000025416-10.pdf); however, reaction volumes have been scaled for cost savings, and all steps should be performed on samples simultaneously in strip tibes using a multichannel pipettor. Also, to aid in cost reductions, optional substitutions of some illumina reagents are included which may facilitate higher throughput processing. Broadly speaking, this library step involves 4 steps:
 
 1) Tagmentation: in this step, DNA becomes bound to magnetic beads and an enzymatic process shears the DNA while leaving handles that will allow for subsequent amplification and indexing. The reaction takes place on a thermocycler and is stopped by the addition of SDS (buffer TSB). The protocol must continue to step 2 immediately on completion.
 
@@ -68,10 +68,10 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 
 ### 1.2 Protocol
 
-- [ ] For each sample to be prepared, combine 2.2µL of TB1 and 2.2 µL of BLT in a microcentrigue tube.
+- [ ] For each sample to be prepared, combine 2.2µL of TB1 and 2.2 µL of BLT in a microcentrifuge tube.
 - [ ] Transfer 4 µL of the TB1/BLT mixture to strip tube
 - [ ] Working quickly, add 6 µL of gDNA to each tube in the strip. Pipette 10x to mix.
-- [ ] Briefly centrigue strip tube
+- [ ] Briefly centrifuge strip tube
 - [ ] Transfer to preheated thermocycler running program **TAG** (*see thermocycler program appendix*)
 - [ ] After TAG cycle, briefly centrifuge
 - [ ] Working quickly, transfer 2 µL from the TSB plate to the tagmentation plate. Pipette 10x to mix.
@@ -97,19 +97,19 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 
 #### Preparation
 
-**PCR Master Mix:** In a nuclease free tube, combine 4.4 µL of EPM with 4.4 µL nuclease free water. If doing a larger number of samples, divide between a strip tube to allow multichannel usage. Storage on ice
+**PCR Master Mix:** In a nuclease free tube, combine 4.4 µL of EPM with 4.4 µL nuclease free water per library prep. If doing a larger number of samples, divide between a strip tube to allow multichannel usage. Storage on ice
 
 
 #### Procedure
 *Note:* In this procedure the beads cannot be allowed to dry. Work quickly any time the beads are not in solution.
 - [ ] Briefly centrifuge
-- [ ] Capture beads (will take approximately 2 minutes)
+- [ ] Capture beads on magnet (will take approximately 2 minutes)
 - [ ] Remove and discard superantant
-- [ ] First wash: Add 20 µL of TWB, pipette to mix
+- [ ] First wash: Add 20 µL of TWB, pipette to mix (off magnet)
 - [ ] Briefly centrifuge
 - [ ] Capture beads (will take approximately 2 minutes)
 - [ ] Remove and discard superantant
-- [ ] Second wash: Add 20 µL of TWB, pipette to mix
+- [ ] Second wash: Add 20 µL of TWB, pipette to mix (off magnet)
 - [ ] Briefly centrifuge
 - [ ] Capture beads (will take approximately 2 minutes)
 - [ ] Remove and discard supernatant
@@ -141,13 +141,13 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 
 **Size Selection Strip 1:**  Resuspend IPB well. In a microcentrifuge tube, combine 46µL nuclease free water and 29.7 µL IPB per sample. Transfer 69 µL to each well of a strip tube for the requried number of samples.
 
-**Size Selection Struo 2:** Resuspend IPB well. In a strip tube, add 6 µL of IPB for each sample to be prepared.  This step may be tuned depending on desired size selection. Can also use 5 µL (0.65x), 7 µL (0.69x), 8 µL (0.71x), or 9 µL (0.73x). Illumina specifies 0.73x but this has given suboptimal performance in scaled format. Good pipetting practice is essential here to obtain correct bead ratios. Ensure that any beads adhered to outside of pipette are not added to well.
+**Size Selection Strip 2:** Resuspend IPB well. In a strip tube, add 6 µL of IPB for each sample to be prepared.  This step may be tuned depending on desired size selection. Can also use 5 µL (0.65x), 7 µL (0.69x), 8 µL (0.71x), or 9 µL (0.73x). Illumina specifies 0.73x but this has given suboptimal performance in scaled format. Good pipetting practice is essential here to obtain correct bead ratios. Ensure that any beads adhered to outside of pipette are not added to well.
 
 
 #### Procedure
 - [ ] Briefly centrifuge
 - [ ] Capture beads on magnet (~ 2 minutes)
-- [ ] Transfer 9 µL from each tube, to the 72 µL IPB/water in **Size Selection Strip 1**. Pipette to mix.
+- [ ] Transfer 9 µL from each tube, to the 69 µL IPB/water in **Size Selection Strip 1**. Pipette to mix.
 - [ ] Incubate at room temp for 5 minutes.
 - [ ] Capture beads on magnet. *Target DNA is now in the supernatant with large mass DNA adhered to the beads*.
 - [ ] Transfer 75 µL from **Size Selection Strip 1** to **Size Selection Strip 2** off magnet. Pipette to mix.
@@ -155,7 +155,7 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 - [ ] Capture beads on magnet. *Target DNA is now adhered to the beads small DNA in the supernatant*.
 - [ ] Discard supernatant
 - [ ] Wash 2x by adding 200 µL 80% Ethanol, it is not necessary to mix the beads and they can be left captured on the magnet
-- [ ] Briefly centrifuge and remove any remaining ethanol
+- [ ] Briefly centrifuge and remove any remaining ethanol using a P2 pipettor
 - [ ] Air dry for 2 minutes
 - [ ] Add 25 µL of nuclease free water (or Illumina RSB) to elute DNA off magnet. Pipette to mix.
 - [ ] Briefly centrifuge.
@@ -204,7 +204,7 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 
 
 
-**PTC (Tagmentation Stop)**: Reaction volume to 10µL
+**BLT PCR**: Reaction volume to 10µL
 
 |Step                 | Temperature | Time         |
 |---------------------|-------------|--------------|
