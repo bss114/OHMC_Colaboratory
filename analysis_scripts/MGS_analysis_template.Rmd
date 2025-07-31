@@ -1,5 +1,5 @@
 ---
-title: "PFAS 2 MGS analysis"
+title: "MGS Analysis Template"
 author: Your name here
 date: '`r format(Sys.time(), "%Y-%m-%d %H:%M")`'
 output: 
@@ -23,6 +23,9 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=F)
 
 
 # Background
+
+
+Note: This markdown document is for a simple cross sectional analysis of metagenomic data processed using the mgs_humann_pipeline.sh slurm array job script.
 
 ## Purpose
 
