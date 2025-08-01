@@ -217,13 +217,6 @@ return(diff_abun)
 ##############################################################################################################
 ##############################################################################################################
 ##############################################################################################################
-
-
-res<-
-  TaxTable %>%
-  left_join(metadata) %>%
-  DoParallel_lmer(., 4, "Taxon", "log2Abundance~Group*DaysOnDiet + (1|ParticipantID)")
-
   
 DoParallel_lmer<-function(df, nthreads, featureid, lmerformula){
   message(paste("Starting at ", date()))
@@ -269,7 +262,8 @@ diff_abun<-
   diff_abun %>%
   group_by(Term) %>%
   mutate(FDR=p.adjust(Pvalue, method="BH")) %>%
-  ungroup()
+  ungroup()  %>%
+  dplyr::rename(!!featureid:=FEATURE)
 
 message(paste("Finished at ", date())) # approx 26 sec for 250,000 features
 message(message("Note: fold change calculations assume that data was log2 transformed or CLR transformed with a log2 base")) # approx 26 sec for 250,000 features
