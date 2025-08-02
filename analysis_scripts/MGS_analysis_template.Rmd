@@ -22,15 +22,13 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=F)
 ```
 
 
-
-
 # Background
 
 ## Purpose
 
 Information describing the experiment and the goals for analysis here.
 
-Note: This template is for simple cross sectional analyses, but contains the code for importing and processing any study design. See also the inclusion of a parallel function for linear mixed effects models for more complex study designs.
+Note: This template is for simple cross sectional analyses, but contains the code for importing and processing any study design. See also the inclusion of a parallel function for linear mixed effects models for more complex study designs including repeated measures designs.
 
 ## Experimental Methods
 
@@ -282,6 +280,35 @@ return(diff_abun)
 ```{r}
 metadata<-read_excel(metadatafile) # Should contain at least two columns, SampleID with names matching the SampleIDs in the file names, and Group which describes at least one experimental variable.
 interactive_table(metadata)
+```
+
+## Read Depth QC
+
+```{r}
+QC_data<-
+list.files(paste0(indir, "/fastp/"), pattern="\\json$", full.names=TRUE) %>%
+  grep(prefix, ., value=TRUE) %>%
+  lapply(., function(x){
+    tmp<-jsonlite::fromJSON(txt=x)
+    tibble(
+    SampleID=basename(x) %>% gsub("\\.json","", .),
+    Percent_Duplication=tmp$duplication$rate*100,
+    PreQC_Reads=tmp$summary$before_filtering$total_reads,
+    PreQC_Gb=tmp$summary$before_filtering$total_bases/1e9,
+    PostQC_Reads=tmp$summary$after_filtering$total_reads,
+    PostQC_Gb=tmp$summary$after_filtering$total_bases/1e9
+    )
+  }) %>%
+  bind_rows(.)
+  
+interactive_table(QC_data)
+write_tsv(QC_data, "processed_data/QC_data.tsv")
+
+QC_data %>%
+  pivot_longer(!SampleID, names_to = "Metric") %>%
+  group_by(Metric) %>%
+  summarize_at("value", lst(mean,median,sd,min,max)) %>%
+  interactive_table()
 ```
 
 ## Normalizers
