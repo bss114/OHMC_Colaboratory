@@ -34,7 +34,7 @@ Note: This template is for simple cross sectional analyses, but contains the cod
 
 Information on how samples were prepared and sequenced here. For Example if using standard lab workflow:
 
-gDNA was extracted from fecal pellets using a DNeasy 96 PowerSoil Pro QIAcube HT Kit with liquid handling performed by a Integra mini-96 1250µL multichannel and a QIAcube HTP extraction platform. Samples were normalized to 6 ng/µL with 6 µL was used as the input to a 1/5th scale Illumina DNA Prep protocol using unique dual indexes based on the Illumina Tagmentation Set A-D. The resulting library was balanced using an Illumina iSeq100 2x150 run before full sequencing on a paired-end 150 NovaSeq X 25B lane (Novogene USA). Samples were sequenced with 43,196,663±5,747,337 (mean±sd) reads. Strain abundances were determined using StrainR2 with default parameters as previously described (22). All input strains were detected in the input community administered to mice.
+Genomic DNA was extracted from fecal pellets using a DNeasy 96 PowerSoil Pro QIAcube HT Kit with liquid handling performed by a Integra mini-96 1250µL multichannel and a QIAcube HTP extraction platform. Samples were normalized to 6 ng/µL with 6 µL was used as the input to a 1/5th scale Illumina DNA Prep protocol using unique dual indexes based on the Illumina Tagmentation Set A-D. The resulting library was balanced using an Illumina iSeq100 2x150 run before full sequencing on a paired-end 150 NovaSeq X 25B lane (Novogene USA). Samples were sequenced with 43,196,663±5,747,337 (mean±sd) reads. Strain abundances were determined using StrainR2 with default parameters as previously described (22). All input strains were detected in the input community administered to mice.
 
 
 ## Version/change log
@@ -725,9 +725,14 @@ ggsave("figures/GENE_brayPCoA.pdf", height=7.5, width=10, useDingbats=F)
 ## Gene Differential Abundance
 
 ```{r, eval=TRUE}
+NSamps<-length(unique(metadata$SampleID))*0.2 # 0.2 = feature must occur in at least 20% of samples to do statistical analysis
+ToFilter<-GeneAbundances_filled %>% group_by(GeneFamily) %>% summarize_at("RPKG", list(Keep=function(x) sum(x>0)>=NSamps)) %>% filter(Keep) # only test features where they occur it at least 20% of samples as will not be informative and gene-level data can be very sparse.
+
+
 Gene_differential<-
   GeneAbundances_filled %>%
   #filter(GeneFamily %in% sample(unique(GeneFamily), 1000)) %>% # for testing on small subset
+  filter(GeneFamily %in% ToFilter$GeneFamily) %>%
   left_join(metadata) %>%
   DoParallel_ttest(., 10, "GeneFamily","Group","log2RPKG")
 
