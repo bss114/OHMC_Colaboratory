@@ -561,9 +561,9 @@ ggsave("figures/TAXA_volcano.pdf", height=7.5, width=10, useDingbats=F)
 
 ***
 
-## PATHWAYS
+# PATHWAYS
 
-### Pathway Composition
+## Pathway Composition
 
 ```{r}
 Pathway_filled<-
@@ -579,7 +579,7 @@ Pathway_filled %>%
 ggsave("figures/PATHWAY_heatmap.pdf", height=7.5, width=10, useDingbats=F)
 ```
 
-### Pathway Ordination
+## Pathway Ordination
 
 ```{r}
 TaxPC<-ape::pcoa(vegan::vegdist(t(Pathway_filled), method = "bray", ))
@@ -600,7 +600,7 @@ adonis2(TaxDists~Group, data=metadata[match(labels(TaxDists), metadata$SampleID)
   print()
 ```
 
-### Pathway Differential Abundance
+## Pathway Differential Abundance
 
 ```{r}
 PathTable<-
@@ -635,7 +635,7 @@ ggsave("figures/PATHWAY_Volcano.pdf", height=7.5, width=10, useDingbats=F)
 ***
 
 
-## GENES
+# GENES
 
 ```{r}
 GeneAbundances_filled<-
@@ -650,7 +650,7 @@ GeneAbundances_filled<-
 ```
 
 
-### Gene Diversity
+## Gene Diversity
 
 ```{r}
 Gene_Shannon<-
@@ -696,7 +696,7 @@ Gene_Diversity %>%
   interactive_table()
 ```
 
-### Gene Ordination
+## Gene Ordination
 
 ```{r}
 GeneDist<-
@@ -722,7 +722,7 @@ TaxPC$vectors %>%
 ggsave("figures/GENE_brayPCoA.pdf", height=7.5, width=10, useDingbats=F)
 ```
 
-### Gene Differential Abundance
+## Gene Differential Abundance
 
 ```{r, eval=TRUE}
 Gene_differential<-
