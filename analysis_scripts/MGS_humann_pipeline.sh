@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=18
 #SBATCH --mem=128GB
-#SBATCH --array=1-15 # the number of input files for parallel processing. This would do 15 samples from the manifest. Note that the headerline is not counted.
+#SBATCH --array=1-130 # the number of input files for parallel processing. This would do 15 samples from the manifest. Note that the headerline is not counted.
 #SBATCH --output humann_pipeline.log
 #SBATCH --error humann_pipeline.err
 #SBATCH --partition=sla-prio
@@ -13,7 +13,7 @@
 #SBATCH --mail-user=jpb6325@psu.edu
 
 ######################################################################################################################################################################################
-# Metagenome Pipeline v0.01 JB
+# Metagenome Pipeline v0.011 JB
 # Notes:
 # -if interactive session is needed: salloc --nodes=1 --ntasks=4 --mem=32G --time=03:00:00
 # --array=1-2 which lines of the file to go through. This would do the first two samples (note the headerline is not counted)
@@ -25,7 +25,7 @@
 ######################################################################################################################################################################################
 # Change log:
 # - 30 Apr 2025 - initial setup and debugging
-#
+# - 28 July 2025 - changed handling of postqc reads, added explicit polyG removal assuming all data will be novaseq/nextseq, although this would have been occurring by default
 #
 #
 #
@@ -48,19 +48,21 @@ conda activate humann_30Apr2025
 # Tasks -> set true or false as desired
 RunFastP=true # do QC on reads
 RemoveHost=true #Note: adjust as needed below, defaulting to mouse host
-KeepQCReads=false # should the QC reads be kept? This might not be preferable for storage reasons
+HostSpecies="mouse" # can be mouse or human which controls reference genome for removing host reads
+KeepQCReads=true # should the QC reads be kept? This might not be preferable for storage reasons, depends on application. Be sure to store the reads somewhere with sufficient storage (i.e. not home directory)
 RunMicrobeCensus=true # calculate genome equivalent calculations
 RunMetaplan=true # Should metaphlan be run? 
 RunHumann=true # Should metaphlan be run? Note: do not have this be true if humann is also running as they will be redundant
 RunMetaSpades=false # Should assembly be done?
 
 
+
 ######################################################################################################################################################################################
 #Input/Putput parameters -> be sure to use absolute file paths for cluster
-OutDir="/storage/home/jpb6325/McReynoldsDSS/output"
+OutDir="/storage/home/jpb6325/MGS2_processed/output"
 Reads="/scratch/jpb6325/reads/" # a directory containing all fastq files to be processed with no subdirectory structure. This will be the absolute path prefix for the files listed in the manfiest
-Manifest="/storage/home/jpb6325/McReynoldsDSS/mgs_manifest.tsv" # a tsv file with the following columns: SampleID, Lib1_F, Lib1_R, Lib2_F, Lib2_R where F and R are the forward and reverse reads, and lib1 and lib2 are if the sample was sequenced multiple times
-
+QCReads="/scratch/jpb6325/qcreads/" # this is optional
+Manifest="/storage/home/jpb6325/MGS2_processed/MGS2_processing_manifest.tsv" # a tsv file with the following columns: SampleID, Lib1_F, Lib1_R, Lib2_F, Lib2_R where F and R are the forward and reverse reads, and lib1 and lib2 are if the sample was sequenced multiple times
 
 #Example Manifest
 #SampleID	Lib1_F	Lib1_R	Lib2_F	Lib2_R
@@ -131,6 +133,7 @@ if $RunFastP; then
 		--out1 $WorkDir/fastpout/${SampleID}_L${i}_1.fastq.gz \
 		--out2 $WorkDir/fastpout/${SampleID}_L${i}_2.fastq.gz \
 		--detect_adapter_for_pe \
+		--trim_poly_g \
 		--cut_front \
 		--cut_tail \
 		--cut_window_size 4 \
@@ -149,6 +152,13 @@ fi
 #############################################################################################################################################################################################
 # Remove Host Reads using KneadData (bowtie2)
 #Note databases are /storage/work/jpb6325/humann_databases/hosts/Homo_sapiens_hg39_T2T_Bowtie2_v0.1/bowtie2-index/ and /storage/work/jpb6325/humann_databases/hosts/mouse_C57BL_6NJ_Bowtie2_v0.1
+
+if [ "$HostSpecies" == "mouse" ]; then 
+	KNDB=/storage/work/jpb6325/humann_databases/hosts/mouse_C57BL_6NJ_Bowtie2_v0.1
+elif [ "$HostSpecies" == "human" ]; then
+	KNDB=/storage/work/jpb6325/humann_databases/hosts/Homo_sapiens_hg39_T2T_Bowtie2_v0.1/bowtie2-index/
+fi
+
 if $RemoveHost; then
 	echo $(date) Starting hostgenome removal
 	for i in $(seq 1 $LibNumber); do
@@ -158,7 +168,7 @@ if $RemoveHost; then
 		--remove-intermediate-output \
 		--threads $Nthreads \
 		--scratch $WorkDir \
-		-db /storage/work/jpb6325/humann_databases/hosts/mouse_C57BL_6NJ_Bowtie2_v0.1 \
+		-db $KNDB \
 		--input1 $WorkDir/reads/${SampleID}_L${i}_R1.fastq.gz \
 		--input2 $WorkDir/reads/${SampleID}_L${i}_R2.fastq.gz \
 		--output $WorkDir/hosttrim \
@@ -173,9 +183,11 @@ fi
 #############################################################################################################################################################################################
 #Move Reads if needed
 if $KeepQCReads; then
-	mkdir -p ${OutDir}/cleaned_reads
-	cp $WorkDir/reads/${SampleID}_L${i}_R1.fastq.gz ${OutDir}/cleaned_reads/${SampleID}_L${i}_R1.fastq.gz
-	cp $WorkDir/reads/${SampleID}_L${i}_R2.fastq.gz ${OutDir}/cleaned_reads/${SampleID}_L${i}_R2.fastq.gz
+	mkdir -p $QCReads
+	for i in $(seq 1 $LibNumber); do
+		cp $WorkDir/reads/${SampleID}_L${i}_R1.fastq.gz ${QCReads}/${SampleID}_L${i}_R1.fastq.gz
+		cp $WorkDir/reads/${SampleID}_L${i}_R2.fastq.gz ${QCReads}/${SampleID}_L${i}_R2.fastq.gz
+	done
 fi
 
 #############################################################################################################################################################################################
@@ -277,3 +289,4 @@ fi
 #############################################################################################################################################################################################
 echo $(date) Finished $SampleID 
 rm -r $WorkDir
+

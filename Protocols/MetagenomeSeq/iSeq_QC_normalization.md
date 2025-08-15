@@ -4,6 +4,8 @@
 
 There are many ways to normalize a sequencing library, but it can be difficult (and expensive) to perfectly normalize a pool. Because there are many variables (such as size) that can effect clustering efficiency, one of the best ways to normalize a sequencing library is to... sequence it. This can be accomplished using an iSeq 100 which utilizes the same chemistry and flow cell as the NovaSeq x, but at a significantly lower cost and read depth. Essentially, in this protocol, 1 µL of each library is combined in a tube, and run on the iSeq. The resulting read depths per sample are then used to adjust the pooling volumes for sequencing on a NovaSeq run. **Note: libraries that were prepared from at least 30ng of DNA should be relatively well normalized already and it is possible to directly proceed to this protocol. For samples that might have extreme differences in yield (this can be determined by looking at the tapestation QC), a pre-normalization to 1nM should be performed.
 
+Based on previous runs, the iSeq libraries will exhibit a co-efficient of variation of ~30% which drops to ~12% after normalization for a NovaSeq 25B lane.
+
 ***
 
 ## Step 1: Prepare QC pool
@@ -19,7 +21,7 @@ There are many ways to normalize a sequencing library, but it can be difficult (
 
 ### 1.2 Procedure
 
-- [ ] Using a strip tube and careful pipetting, transfer 1 µL from each sample library into a strip tube
+- [ ] Using a strip tube and careful pipetting, transfer 1 µL from each sample library into a strip tube. **Alternatively: use the OT2 BlindPool.py script found in the OT2_scripts directory.**
 - [ ] Combine the individual wells of the strip tube into a single microcentrifuge tube
 - [ ] Measure concentration of pool using Qubit dsDNA kit
 - [ ] Mix 2 µL tapestation sample buffer with 2 µL of pool
