@@ -6,7 +6,7 @@
 |NEST 1 well reservoirs | 50 | Opentrons | 999-00078 | 225.00 |
 |Integra 12.5 ul GRIPTIPS sterile, filter, long| 5 racks of 384 tips | Integra | 6405 | 345.00 |
 |Integra 125 ul GRIPTIPS sterile, filter| 5 racks of 384 tips | Integra | 6465 | 345.00 |
-|Integra 1250 ul GRIPTIPS sterile, filter| 5 racks of 384 tips | Integra | 6445 | 345.00 |
+|Integra 1250 ul GRIPTIPS sterile, filter| 5 racks of 96 tips | Integra | 6445 | 95.00 |
 |OT2 20 ul filter tips | 9600 | Opentrons | 999-00099 | 917.43 |
 |Optically Clear Plate Seals | 100 | BioRad | MSB1001 | 231.00 |
 |Armadillo PCR Plate (384) | 50 | Fisher | AB3384 | 443.65 |
@@ -28,3 +28,11 @@
 |iSEQ 100 cartridge i1 reagent v2 (300 cycle) | 1 | Illumina | 20031371 | 673.00 |
 |HSD1000 Screen Tape | 112 | Agilent | 5067-5584 | 398.67 |
 |HSD1000 Sample buffer | 112 | Agilent | 5067-5603 | 64.99 |
+|-|-|-|-|-|
+|DNeasy 96 PowerSoil Pro QIAcube HT | 5x96 plates |	Qiagen | 47021 | 2575.92 |
+|QIAcube HT Plasticware |	5x96 plates | Qiagen | 950067 | 419.81 |
+|QIAcube Reagent Trough (70mL) | 10 reservoirs | Qiagen | 990554 | 103.78 |
+|QIAcube Reagent Trough (170mL) | 10 reservoirs | Qiagen | 990556	| 167.36 |
+|PowerBead Pro Plates | 4x96 plates |	Qiagen | 19311 | 481.52 |
+|S blocks	| 24 blocks | Qiagen | 19576 | 329.12 |
+|100% Ethanol | 4x1 gallon (need 0.21 gal per kit) | VWR | TX895172PSU_U	| 93.44 |
