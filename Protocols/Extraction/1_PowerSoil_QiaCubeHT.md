@@ -9,6 +9,9 @@ This protocol uses the current iteration of the PowerSoil reagents (previously M
 As this is a high throughput approach, users must be careful to maximize plate layouts. **Samples must be processed in multiples of 8 and loaded top to bottom, left to right.** A minimum of 24 samples can be run; however, this is not time efficient and would be better done by hand using the conventional PowerSoil Reagents, [protocol here](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/Extraction/1A_PowerSoil_Manual.md) (Cat No 12855). 
 If doing partial plates, cover the unused wells on the silica membrane plate with a sealing film. If a user has a limited number of samples, it may make more sense to use individual column tubes rather than 96 well format. These can be arrayed into plates for downstream analysis. 
 
+All extraction plates MUST include at least one blank well labeled Extraction Control (ExtCon).
+It is ideal to include a positive control such as the Zymo Community.
+
 A template has been provided to track sample layouts in 96 well plates. Download [here](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Templates/0_ExtractionPlate_Template.xlsx). Please utilize it to ensure smooth integration into later workflows. Print a copy and keep in your lab book as well as a copy in the Sequencing Run log book. If samples will be submitted to the collaboratory, they must be arrayed in 96-well full skirted plates and follow these [naming conventions](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/Protocols/0_SampleRequirements.md).
 
 
@@ -50,9 +53,8 @@ A template has been provided to track sample layouts in 96 well plates. Download
 the O-ring on the spigot into the drain.
 - [ ] Place the channeling block into the channeling block holder.
 - [ ] Place the QIAamp 96 Plate in the transfer carriage. Load the carriage with the QIAamp
-96 Plate into the left (waste) chamber of the vacuum chamber.
-- [ ] Ensure that the carriage is positioned to the left inside the vacuum chamber. Place the
-riser block EMTR in the right (elution) chamber of the vacuum chamber, with the pin of
+96 Plate into the left (waste) chamber of the vacuum chamber. **Ensure that the carriage is positioned all the way to the left inside the vacuum chamber.**
+- [ ]  Place the riser block EMTR in the right (elution) chamber of the vacuum chamber, with the pin of
 the riser block EMTR in top-right position. Load EMTR (without lid) into elution chamber.
 
 ![fig1](https://github.com/BisanzLab/OHMC_Colaboratory/blob/main/images/qiacube_vacuum_powersoil.jpg)
@@ -110,11 +112,13 @@ the riser block EMTR in top-right position. Load EMTR (without lid) into elution
 - [ ] Follow instructions in software for cleaning instrument
 - [ ] Cover any tip racks that have leftover tips. Label them with your name and date. Place in drawer under QIAcube.
 - [ ] Remove and discard all residual reagents in DNA extraction waste collection (satellite accumulation area).
-- [ ] Discard tips in disposal box
-- [ ] Clean any metal surfaces with ethanol
+- [ ] Discard tips in disposal box and rinse
+- [ ] Wipe the deck first with water, then with ethanol, paying extra attention to remove buffer salts. Do not wipe the blue hood with ethanol!
+- [ ] Rinse and clean any metal surfaces with water followed by ethanol
 - [ ] Clean any plastic surfaces with a quat disinfectant
 
 ## QC
 
 DNA yield does not necessarily dictate performance in downstream applications. Users must also be aware that they may not be able to detect DNA in low-biomass samples. Cherry picking samples and measuring DNA concentration with Nanodrop/QuBit may be performed. If using Nanodrop (>50ng/ul), double check 260/230 ratio to ensure >1.4. A ratio less than 1.4 may indicate carryover of wash buffers which will cause problem in down stream reactions. If this is observed for high yield samples, they may be diluted 100x before downstream processes. If the samples are lower yield samples, they may be cleaned up using a magnetic capture protocol like AmpureXP beads.
+
 
