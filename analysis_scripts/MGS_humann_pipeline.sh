@@ -7,7 +7,7 @@
 #SBATCH --output humann_pipeline.log
 #SBATCH --error humann_pipeline.err
 #SBATCH --partition=sla-prio
-#SBATCH --account=one
+#SBATCH --account=one_sc_default
 #SBATCH --time=48:00:00 #change as needed
 #SBATCH --mail-type=START,END,FAIL
 #SBATCH --mail-user=jpb6325@psu.edu
