@@ -563,9 +563,9 @@ ggsave("figures/TAXA_volcano.pdf", height=7.5, width=10, useDingbats=F)
 
 ***
 
-# PATHWAYS
+## PATHWAYS
 
-## Pathway Composition
+### Pathway Composition
 
 ```{r}
 Pathway_filled<-
@@ -581,28 +581,29 @@ Pathway_filled %>%
 ggsave("figures/PATHWAY_heatmap.pdf", height=7.5, width=10, useDingbats=F)
 ```
 
-## Pathway Ordination
+### Pathway Ordination
 
 ```{r}
-TaxPC<-ape::pcoa(vegan::vegdist(t(Pathway_filled), method = "bray", ))
+PathDists<-vegan::vegdist(t(Pathway_filled), method = "bray")
+PathPC<-ape::pcoa(PathDist)
 
-TaxPC$vectors %>%
+PathPC$vectors %>%
   as.data.frame() %>%
   rownames_to_column("SampleID") %>%
   left_join(metadata) %>%
   ggplot(aes(x=Axis.1, y=Axis.2, fill=Group, label=SampleID, color=Group)) +
   geom_point(shape=21) +
   ggrepel::geom_text_repel(size=3) +
-  xlab(paste0("PC1:", round(TaxPC$values$Rel_corr_eig[1]*100, 2), "%")) +
-  ylab(paste0("PC2:", round(TaxPC$values$Rel_corr_eig[2]*100, 2), "%"))
+  xlab(paste0("PC1:", round(PathPC$values$Rel_corr_eig[1]*100, 2), "%")) +
+  ylab(paste0("PC2:", round(PathPC$values$Rel_corr_eig[2]*100, 2), "%"))
 
 ggsave("figures/PATHWAY_brayPCoA.pdf", height=7.5, width=10, useDingbats=F)
 
-adonis2(TaxDists~Group, data=metadata[match(labels(TaxDists), metadata$SampleID),]) %>%
+adonis2(PathDists~Group, data=metadata[match(labels(PathDists), metadata$SampleID),]) %>%
   print()
 ```
 
-## Pathway Differential Abundance
+### Pathway Differential Abundance
 
 ```{r}
 PathTable<-
@@ -637,7 +638,7 @@ ggsave("figures/PATHWAY_Volcano.pdf", height=7.5, width=10, useDingbats=F)
 ***
 
 
-# GENES
+## GENES
 
 ```{r}
 GeneAbundances_filled<-
@@ -652,7 +653,7 @@ GeneAbundances_filled<-
 ```
 
 
-## Gene Diversity
+### Gene Diversity
 
 ```{r}
 Gene_Shannon<-
@@ -698,10 +699,10 @@ Gene_Diversity %>%
   interactive_table()
 ```
 
-## Gene Ordination
+### Gene Ordination
 
 ```{r}
-GeneDist<-
+GeneDists<-
   GeneAbundances_filled %>%
   dplyr::select(SampleID, GeneFamily, RPKG) %>%
   pivot_wider(names_from = SampleID, values_from = RPKG) %>%
@@ -709,22 +710,25 @@ GeneDist<-
   t() %>%
   vegdist(., method="bray")
 
-TaxPC<-ape::pcoa(GeneDist)
+GenePC<-ape::pcoa(GeneDists)
 
-TaxPC$vectors %>%
+GenePC$vectors %>%
   as.data.frame() %>%
   rownames_to_column("SampleID") %>%
   left_join(metadata) %>%
   ggplot(aes(x=Axis.1, y=Axis.2, fill=Group, label=SampleID, color=Group)) +
   geom_point(shape=21) +
   ggrepel::geom_text_repel(size=3) +
-  xlab(paste0("PC1:", round(TaxPC$values$Rel_corr_eig[1]*100, 2), "%")) +
-  ylab(paste0("PC2:", round(TaxPC$values$Rel_corr_eig[2]*100, 2), "%"))
+  xlab(paste0("PC1:", round(GenePC$values$Rel_corr_eig[1]*100, 2), "%")) +
+  ylab(paste0("PC2:", round(GenePC$values$Rel_corr_eig[2]*100, 2), "%"))
 
 ggsave("figures/GENE_brayPCoA.pdf", height=7.5, width=10, useDingbats=F)
+
+adonis2(GeneDists~Group, data=metadata[match(labels(GeneDists), metadata$SampleID),]) %>%
+  print()
 ```
 
-## Gene Differential Abundance
+### Gene Differential Abundance
 
 ```{r, eval=TRUE}
 NSamps<-length(unique(metadata$SampleID))*0.2 # 0.2 = feature must occur in at least 20% of samples to do statistical analysis
