@@ -23,6 +23,7 @@
 |Tapestation optical tubes |960 | Agilent | 401428 | 84.00 |
 |NextSeq P1 600 kit XLEAP | 1 | Illumina | 20100981 | 1618.00 |
 |PhiX174 | 1 | Illumina | FC-110-3001 | 207.00 |
+|GRI Service Contract | 1 | iLab | - | 707.80 |
 |-|-|-|-|-|
 |Illumina DNA prep  | 96 | Illumina | 20060059 | 3257.00 |
 |iSEQ 100 cartridge i1 reagent v2 (300 cycle) | 1 | Illumina | 20031371 | 673.00 |
