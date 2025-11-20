@@ -10,7 +10,7 @@ This protocol uses the [Illumina DNA Prep protocol](https://support.illumina.com
 
 1) Tagmentation: in this step, DNA becomes bound to magnetic beads and an enzymatic process shears the DNA while leaving handles that will allow for subsequent amplification and indexing. The reaction takes place on a thermocycler and is stopped by the addition of SDS (buffer TSB). The protocol must continue to step 2 immediately on completion.
 
-2) Cleanup and PCR: beads carrying DNA are captured using magnets and the tagmentation reagents are removed. A PCR mastermix is then added to the beads which will release the DNA from the beads. Sample-specific index primers are then added before a limited-cycle PCR is performed. This makes more library, as well as adds the sample-specific indexes that allow the samples to be mixed and sequenced in a single pool. The protocol may be paused after this step.
+2) Cleanup and PCR: beads carrying DNA are captured using magnets and the tagmentation reagents are removed. A PCR mastermix is then added to the beads which will release the DNA from the beads. Sample-specific index primers are then added followed by a limited-cycle PCR. This makes more library, as well as adds the sample-specific indexes that allow the samples to be mixed and sequenced in a single pool. The protocol may be paused after this step.
 
 3) Size Selection: In this step, the PCR reagents are removed while simultaneously removing small fragments and adapter dimers that may cause issues in downstream sequencing. The resulting libraries are then eluted in for subsequent QC and sequencing. The protocol may be paused after this step.
 
@@ -74,7 +74,7 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 - [ ] Briefly centrifuge strip tube
 - [ ] Transfer to preheated thermocycler running program **TAG** (*see thermocycler program appendix*)
 - [ ] After TAG cycle, briefly centrifuge
-- [ ] Working quickly, transfer 2 µL from the TSB plate to the tagmentation plate. Pipette 10x to mix.
+- [ ] Working quickly, transfer 2 µL from the TSB plate to the tagmentation tubes. Pipette 10x to mix.
 - [ ] Briefly centrifuge
 - [ ] Transfer to preheated thermocycler running program **PTC**
 - [ ] Immediately proceed to Step 2. It may be beneficial to do step 2 preparations while PTC runs.
@@ -114,10 +114,10 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 - [ ] Capture beads (will take approximately 2 minutes)
 - [ ] Remove and discard supernatant
 - [ ] Working **very** quickly to prevent beads from drying, add 8µL of the PCR Master Mix to each tube. Briefly mix by pipetting to ensure beads are resuspended in Master Mix.
-- [ ] Transfer 2 µL of matching index to each well and mix by pipetting
-- [ ] Briefly centrifuge
+- [ ] Transfer 2 µL of corresponding index to each well and mix by pipetting
+- [ ] Briefly centrifuge, ensure there are no bubbles
 - [ ] Transfer to preheated thermocycler running program **BLT PCR** (*see thermocycler program appendix*)
-      	<br>*Note: 6 cycles is reccomended for ~30ng input DNA. For some applications such as virome, increasing cycles may be required up to 12 cycles. This may decrease fragment sizes from 500-600 to ~400-450. The decision should be made with care depending on user's needs.*
+      	<br>*Note: 6 cycles is recommended for ~30ng input DNA. For some applications such as virome, increasing cycles may be required up to 12 cycles. This may decrease fragment sizes from 500-600 to ~400-450. The decision should be made with care depending on user's needs.*
 - [ ] After BLT PCR, either proceed, or store at -20˚C.
 
 ***
@@ -126,7 +126,7 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 
 ### 3.1 Consumables
 - [ ] 100% EtOH
-- [ ] Illumina Purificaiton Beads (IPB) - at room temperature
+- [ ] Illumina Purification Beads (IPB) - at room temperature
 - [ ] Nuclease free water
 - [ ] 3x 200 µL PCR strip tube
 - [ ] 10 µL tips
@@ -161,7 +161,7 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 - [ ] Briefly centrifuge.
 - [ ] Incubate 2 minutes at room temperature
 - [ ] Capture beads on magnet
-- [ ] Transfer supernatant containing library to new strip tube.
+- [ ] Transfer 20 µL supernatant containing library to new strip tube.
 - [ ] Label strip tube including project name, date, and name.
 - [ ] Freeze at -20˚C or proceed to QC
 	
@@ -179,7 +179,7 @@ This protocol is adapted from Illumina's [DNA Prep protocol](https://support.ill
 ### 4.2 Protocols
 - [ ] For the number of libraries prepared, put 2 µL of Sample buffer in the corresponding tube of the optical strip tube.
 - [ ] Add 2 µL of each library to the corresponding tube.
-- [ ] Add caps, vortex for the automatic time period (1 minute), and centrifuge for 1 minute
+- [ ] Add caps, vortex on the IKA for the automatic time period (1 minute), and centrifuge for 1 minute
 - [ ] Run on tape station using electronic ladder. Be sure to load sample names ahead of time
 - [ ] In analysis program you are looking for an average size from ~500-600 nt, with an integrated area from ~400-800 of at least 1nM.
 - [ ] Check for presense of dimers (~150 nt), if there is a peak here, an additional cleanup of the pooled libraries may be required.

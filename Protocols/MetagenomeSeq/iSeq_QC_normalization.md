@@ -47,7 +47,10 @@ Based on previous runs, the iSeq libraries will exhibit a co-efficient of variat
 - [ ] Thaw iSeq Cartridge the night before. Remove the cartidge from the box, but leave it in the tinfoil bag. Place the cartridge on the desk. At room temperature, cartridge needs to tbe thawed for between 9-18h. This corresponds to starting thawing at 5pm and starting the sequencing run before 11am the next day. See discussion [here](https://knowledge.illumina.com/instrumentation/iseq-100/instrumentation-iseq-100-reference_material-list/000002118).
 - [ ] Bring flow cell out of fridge and leave at room temperature for at least 15 minutes
 - [ ] To the 1nM library/PhiX mixture prepared in step 1.2, add 270 RSB/tween to dilute to the loading concentration of 100 pM
-- [ ] Pipette 20 µL of the 100 pM library/phix into the appropriate well of the sequencing cartridge.
+- [ ] Invert iSeq Cartridge 5 times to mix
+- [ ] Tap iSeq Cartridge 5 times on table to settle reagents
+- [ ] Pierce the tin foil cover on the orange library well of the iSeq Cartridge
+- [ ] Pipette 20 µL of the 100 pM library/phix into the library well of the sequencing cartridge.
 - [ ] Follow the instructions on the iSeq to start run
 - [ ] When setting up the run, select the library prep kit as "Illumina DNA Prep", and the index adapter kit as "Illumina DNA-RNA UD Indexes Set A Tagmentation (v3)". Put any sample name under the first row of the sample sheet, and select well position "A1". **Note: the iSeq software makes uploading custom samplesheets somewhat of a pain, the proper sample sheet can be uploaded after the run is done; however, we need to make sure it captures 151x10x10x151 bases, and this will ensure it does.
 - [ ] Monitor instrument for next 15 minutes as it does prerun checks. If any issues arise, immediately contact Illumina customer support.
