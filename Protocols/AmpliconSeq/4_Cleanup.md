@@ -1,7 +1,9 @@
 # Protocol 4: Pool cleanup
 
 ## Theory
-Before sequencing, it is crucial to remove any free adapter and/or primer dimers which will cause a loss of reads during sequencing and/or resulting in enhanced barcode hoping. For more on the idea of barcode hoping, see [here](https://www.illumina.com/techniques/sequencing/ngs-library-prep/multiplexing/index-hopping.html). For the patterned flow cells, it advised to **first** do gel extraction, **then** do a magnetic capture as, particularily for low biomass samples, appreciable dimer formation may occur. *Note: an automated size selection method such as a pippin prep can be used as well if available*.
+Before sequencing, it is crucial to remove any free adapter and/or primer dimers which will cause a loss of reads during sequencing and/or resulting in enhanced barcode hoping. For more on the idea of barcode hoping, see [here](https://www.illumina.com/techniques/sequencing/ngs-library-prep/multiplexing/index-hopping.html). For the patterned flow cells, it advised to **first** do gel extraction, **then** do a magnetic capture as, particularily for low biomass samples, appreciable dimer formation may occur. Alternatively, a double bead clean up may be performed to retain higher MW fragments resulting from ITS amplicons and remove residual dimers: follow Protocol B and repeat.
+
+*Note: an automated size selection method such as a pippin prep can be used as well if available*.
 
 ## Materials
 
@@ -10,6 +12,7 @@ Before sequencing, it is crucial to remove any free adapter and/or primer dimers
 - [ ] TBE or TAE (BioRad 1610773)
 - [ ] Agarose for Molecular Biology (BioRad 1613100)
 - [ ] Quick-Load 100bp DNA Ladder (NEB N0467S)
+
 **Protocol B**
 - [ ] Ampure XP beads (Beckman A63881) or DIY alternative
 - [ ] Freshly made 80% ethanol
@@ -34,7 +37,9 @@ Before sequencing, it is crucial to remove any free adapter and/or primer dimers
 - [ ] Save 1ul to visualize on Tapestation.
 
 ## Protocol B: Magnetic Capture
-- [ ] Mix 11ul of pooled library with 6.6µL ampure XP beads (0.6x bead volume has been picked to remove adapter dimers and free adapter)
+- [ ] Mix 11ul of pooled library with 6.6µL Ampure XP beads (0.6x bead volume has been picked to remove adapter dimers and free adapter); pipet mix 20X.
+
+*Note: If performing double bead clean up start with 25ul library and 15ul Ampure beads*
 - [ ] Incubate 10 min at room temperature
 - [ ] Capture for ~ 3 min
 - [ ] Discard supernatant
@@ -44,6 +49,9 @@ Before sequencing, it is crucial to remove any free adapter and/or primer dimers
 - [ ] Discard ethanol
 - [ ] briefly centrigue, recapture, and use pipette to remove any ethanol at bottom of tube
 - [ ] Airdry beads for ~ 5 min at room temperature until no visible ethanol remains
-- [ ] Add 30 ul nuclease free water and mix well
+- [ ] Add 30 ul nuclease free water and pipet mix 20X
 - [ ] Capture beads
-- [ ] Transfer supernatant to fresh tube and quantify using Qubit, Tapestation, and qPCR.
+- [ ] Transfer 25ul supernatant to fresh tube and quantify using Qubit, Tapestation, and qPCR.
+
+*Note: For double bead clean up, add 15ul Ampure beads and repeat. QC final library.*
+
